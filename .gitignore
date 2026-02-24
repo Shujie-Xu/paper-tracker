@@ -1,0 +1,3 @@
+fetch-result.json
+*.log
+node_modules/

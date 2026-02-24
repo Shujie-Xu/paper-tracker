@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Research Tracker · Shujie Xu</title>
+  <meta property="og:title" content="Research Tracker · Shujie Xu"/>
+  <meta property="og:description" content="Weekly NBER + SSRN working paper digest, curated by research area."/>
+  <meta property="og:type" content="website"/>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+
+    /* ── Reset ─────────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    /* ── Variables ──────────────────────────────────────────── */
+    :root {
+      --bg:        #fafaf9;
+      --bg2:       #f3f2ef;
+      --white:     #ffffff;
+      --border:    #e2ddd8;
+      --border2:   #d0ccc6;
+      --text:      #1c1917;
+      --text2:     #44403c;
+      --muted:     #78716c;
+      --accent:    #1d4ed8;
+      --accent2:   #1e40af;
+      --accent-bg: #eff6ff;
+      --green:     #166534;
+      --green-bg:  #f0fdf4;
+      --amber:     #92400e;
+      --amber-bg:  #fffbeb;
+      --red:       #991b1b;
+      --red-bg:    #fef2f2;
+      --sidebar-w: 260px;
+      --sans:      'Inter', -apple-system, 'Helvetica Neue', sans-serif;
+      --serif:     'Lora', Georgia, 'Times New Roman', serif;
+      --mono:      'JetBrains Mono', 'SF Mono', 'Menlo', 'Consolas', 'PingFang SC', 'Heiti SC', monospace;
+    }
+
+    /* ── Base ───────────────────────────────────────────────── */
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--sans);
+      font-size: 15px;
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* ── Top nav ────────────────────────────────────────────── */
+    .topnav {
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      position: sticky; top: 0; z-index: 100;
+    }
+    .topnav-inner {
+      max-width: 1200px; margin: 0 auto; padding: 0 24px;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 52px; gap: 20px;
+    }
+    .site-title {
+      font-family: var(--serif);
+      font-size: 17px; font-weight: 600;
+      color: var(--text); white-space: nowrap;
+    }
+    .site-title small {
+      font-size: 12px; font-weight: 400;
+      color: var(--muted); font-family: var(--sans);
+      margin-left: 8px;
+    }
+    .nav-meta {
+      font-family: var(--mono); font-size: 11px;
+      color: var(--muted); white-space: nowrap;
+      display: flex; align-items: center; gap: 16px;
+    }
+    .nav-updated { display: flex; align-items: center; gap: 5px; }
+    .nav-dot {
+      width: 6px; height: 6px; border-radius: 50%;
+      background: #22c55e; flex-shrink: 0;
+    }
+
+    /* ── Layout ─────────────────────────────────────────────── */
+    .layout {
+      max-width: 1200px; margin: 0 auto; padding: 0 24px;
+      display: grid;
+      grid-template-columns: var(--sidebar-w) 1fr;
+      gap: 0;
+      min-height: calc(100vh - 52px);
+    }
+
+    /* ── Sidebar ────────────────────────────────────────────── */
+    .sidebar {
+      border-right: 1px solid var(--border);
+      padding: 28px 24px 40px 0;
+      position: sticky;
+      top: 52px;
+      height: calc(100vh - 52px);
+      overflow-y: auto;
+      scrollbar-width: thin;
+    }
+
+    .sidebar-section { margin-bottom: 28px; }
+    .sidebar-heading {
+      font-size: 10px; font-weight: 600; letter-spacing: 0.8px;
+      text-transform: uppercase; color: var(--muted);
+      margin-bottom: 10px; font-family: var(--sans);
+    }
+
+    .filter-group { display: flex; flex-direction: column; gap: 2px; }
+    .filter-item {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 5px 8px; border-radius: 5px;
+      cursor: pointer; transition: background 0.15s;
+      font-size: 13px; color: var(--text2);
+      user-select: none;
+    }
+    .filter-item:hover  { background: var(--bg2); }
+    .filter-item.active { background: var(--accent-bg); color: var(--accent); font-weight: 500; }
+    .filter-count {
+      font-family: var(--mono); font-size: 11px;
+      color: var(--muted); background: var(--bg2);
+      padding: 1px 6px; border-radius: 999px;
+    }
+    .filter-item.active .filter-count { background: rgba(29,78,216,0.12); color: var(--accent); }
+
+    .sidebar-stats { display: flex; flex-direction: column; gap: 8px; }
+    .sidebar-stat {
+      display: flex; align-items: center; justify-content: space-between;
+      font-size: 13px;
+    }
+    .sidebar-stat-label { color: var(--muted); }
+    .sidebar-stat-value {
+      font-family: var(--mono); font-size: 13px;
+      font-weight: 500; color: var(--text);
+    }
+
+    /* ── Main content ───────────────────────────────────────── */
+    .main { padding: 28px 0 60px 32px; }
+
+    /* ── Page header ────────────────────────────────────────── */
+    .page-header { margin-bottom: 28px; }
+    .page-header h1 {
+      font-family: var(--serif);
+      font-size: 24px; font-weight: 600;
+      color: var(--text); margin-bottom: 6px;
+    }
+    .page-header p { font-size: 14px; color: var(--muted); line-height: 1.5; }
+
+    /* ── Week section ───────────────────────────────────────── */
+    .week-section { margin-bottom: 40px; }
+    .week-header {
+      display: flex; align-items: center; gap: 12px;
+      margin-bottom: 16px; padding-bottom: 10px;
+      border-bottom: 2px solid var(--border);
+    }
+    .week-label {
+      font-family: var(--mono); font-size: 12px; font-weight: 500;
+      color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px;
+    }
+    .week-count {
+      font-size: 12px; color: var(--muted);
+      background: var(--bg2); border: 1px solid var(--border);
+      padding: 2px 8px; border-radius: 999px;
+    }
+    .week-highlight {
+      font-size: 12px; color: var(--accent);
+      background: var(--accent-bg); border: 1px solid rgba(29,78,216,0.2);
+      padding: 2px 8px; border-radius: 999px;
+    }
+
+    /* ── Paper card ─────────────────────────────────────────── */
+    .paper-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 22px 24px;
+      margin-bottom: 12px;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .paper-card:hover {
+      border-color: var(--border2);
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    }
+    .paper-card.high-relevance {
+      border-left: 3px solid var(--accent);
+    }
+    .paper-card.top-pick {
+      border-left: 3px solid #7c3aed;
+    }
+
+    .card-header { display: flex; align-items: flex-start; gap: 14px; margin-bottom: 10px; }
+    .card-badges { display: flex; gap: 6px; flex-wrap: wrap; flex-shrink: 0; }
+
+    .badge {
+      font-size: 10px; font-weight: 600; padding: 2px 8px;
+      border-radius: 3px; letter-spacing: 0.3px; text-transform: uppercase;
+      white-space: nowrap; font-family: var(--sans);
+    }
+    .badge-nber   { background: #fef3c7; color: #92400e; border: 1px solid #fcd34d; }
+    .badge-ssrn   { background: #f0fdf4; color: #166534; border: 1px solid #86efac; }
+    .badge-cf     { background: var(--accent-bg); color: var(--accent); border: 1px solid rgba(29,78,216,0.25); }
+    .badge-pol    { background: #fdf4ff; color: #7c3aed; border: 1px solid #d8b4fe; }
+    .badge-urban  { background: #fff7ed; color: #c2410c; border: 1px solid #fdba74; }
+    .badge-info   { background: #f0fdfa; color: #0f766e; border: 1px solid #5eead4; }
+    .badge-method { background: #f5f3ff; color: #6d28d9; border: 1px solid #c4b5fd; }
+    .badge-other  { background: var(--bg2); color: var(--muted); border: 1px solid var(--border); }
+
+    .relevance-indicator {
+      display: flex; align-items: center; gap: 6px;
+      margin-left: auto; flex-shrink: 0;
+    }
+    .relevance-score {
+      font-family: var(--mono); font-size: 13px; font-weight: 500;
+    }
+    .relevance-score.high  { color: var(--accent); }
+    .relevance-score.top   { color: #7c3aed; }
+    .relevance-score.mid   { color: var(--muted); }
+    .relevance-dots { display: flex; gap: 3px; }
+    .relevance-dot {
+      width: 7px; height: 7px; border-radius: 50%;
+      background: var(--border2);
+    }
+    .relevance-dot.filled-top  { background: #7c3aed; }
+    .relevance-dot.filled-high { background: var(--accent); }
+    .relevance-dot.filled-mid  { background: var(--muted); }
+
+    .paper-title {
+      font-family: var(--serif);
+      font-size: 17px; font-weight: 600; line-height: 1.45;
+      color: var(--text); margin-bottom: 6px;
+    }
+    .paper-title a { color: inherit; }
+    .paper-title a:hover { color: var(--accent); text-decoration: none; }
+
+    .paper-authors {
+      font-size: 13px; color: var(--muted);
+      margin-bottom: 8px; line-height: 1.4;
+    }
+    .paper-authors .author { color: var(--text2); }
+
+    .paper-meta {
+      display: flex; align-items: center; gap: 12px;
+      font-family: var(--mono); font-size: 11px; color: var(--muted);
+      margin-bottom: 12px; flex-wrap: wrap;
+    }
+    .paper-meta-sep { opacity: 0.4; }
+
+    .jel-tags { display: flex; gap: 5px; flex-wrap: wrap; margin-bottom: 12px; }
+    .jel-tag {
+      font-family: var(--mono); font-size: 10px;
+      padding: 2px 7px; border-radius: 3px;
+      background: var(--bg2); color: var(--muted);
+      border: 1px solid var(--border);
+    }
+
+    .paper-abstract {
+      font-size: 13.5px; color: var(--text2); line-height: 1.7;
+      margin-bottom: 14px;
+    }
+    .abstract-toggle {
+      background: none; border: none; cursor: pointer;
+      font-size: 12px; color: var(--accent); font-family: var(--sans);
+      padding: 0; margin-left: 4px;
+    }
+    .abstract-toggle:hover { text-decoration: underline; }
+
+    .card-footer {
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 12px; flex-wrap: wrap;
+    }
+    .topic-tags { display: flex; gap: 5px; flex-wrap: wrap; }
+    .topic-tag {
+      font-size: 11px; padding: 2px 8px; border-radius: 999px;
+      background: var(--bg2); color: var(--muted);
+      border: 1px solid var(--border); white-space: nowrap;
+    }
+
+    .card-actions { display: flex; gap: 8px; flex-shrink: 0; }
+    .btn {
+      font-size: 12px; font-weight: 500; padding: 5px 12px;
+      border-radius: 5px; cursor: pointer; transition: all 0.15s;
+      border: 1px solid transparent; font-family: var(--sans);
+    }
+    .btn-primary {
+      background: var(--accent); color: #fff; border-color: var(--accent);
+    }
+    .btn-primary:hover { background: var(--accent2); text-decoration: none; }
+    .btn-outline {
+      background: transparent; color: var(--text2); border-color: var(--border2);
+    }
+    .btn-outline:hover { background: var(--bg2); text-decoration: none; }
+
+    /* ── Analysis panel ─────────────────────────────────────── */
+    .analysis-panel {
+      display: none;
+      margin-top: 18px;
+      padding-top: 18px;
+      border-top: 1px dashed var(--border2);
+    }
+    .analysis-panel.open { display: block; }
+
+    .analysis-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-bottom: 16px;
+    }
+    @media (max-width: 700px) { .analysis-grid { grid-template-columns: 1fr; } }
+
+    .analysis-block {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 14px 16px;
+    }
+    .analysis-block.full-width { grid-column: 1 / -1; }
+    .analysis-block.highlight {
+      background: var(--accent-bg);
+      border-color: rgba(29,78,216,0.2);
+    }
+
+    .analysis-label {
+      font-size: 10px; font-weight: 600; letter-spacing: 0.7px;
+      text-transform: uppercase; color: var(--muted);
+      margin-bottom: 7px; display: flex; align-items: center; gap: 5px;
+    }
+    .analysis-label .icon { font-size: 12px; }
+    .analysis-text {
+      font-size: 13.5px; color: var(--text2); line-height: 1.65;
+    }
+    .analysis-text p { margin-bottom: 7px; }
+    .analysis-text p:last-child { margin-bottom: 0; }
+    .analysis-text strong { color: var(--text); font-weight: 500; }
+
+    /* Relevance breakdown bars */
+    .rel-breakdown { margin-bottom: 16px; }
+    .rel-row {
+      display: flex; align-items: center; gap: 10px;
+      margin-bottom: 7px;
+    }
+    .rel-label { font-size: 12px; color: var(--text2); width: 160px; flex-shrink: 0; }
+    .rel-bar-bg {
+      flex: 1; height: 5px; background: var(--bg2);
+      border-radius: 999px; overflow: hidden;
+    }
+    .rel-bar-fill {
+      height: 100%; border-radius: 999px;
+      background: var(--accent);
+    }
+    .rel-score {
+      font-family: var(--mono); font-size: 11px;
+      color: var(--muted); width: 20px; text-align: right; flex-shrink: 0;
+    }
+
+    /* ── Empty state ────────────────────────────────────────── */
+    .empty-state {
+      padding: 60px 20px; text-align: center; color: var(--muted);
+    }
+    .empty-state h3 { font-family: var(--serif); font-size: 20px; margin-bottom: 8px; color: var(--text2); }
+    .empty-state p  { font-size: 14px; }
+
+    /* ── Footer ─────────────────────────────────────────────── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 20px 0; margin-top: 40px;
+    }
+    .footer-inner {
+      max-width: 1200px; margin: 0 auto; padding: 0 24px;
+      display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px;
+    }
+    .footer-text { font-size: 12px; color: var(--muted); font-family: var(--mono); }
+
+    /* ── Responsive ─────────────────────────────────────────── */
+    @media (max-width: 768px) {
+      .layout { grid-template-columns: 1fr; }
+      .sidebar {
+        position: static; height: auto; border-right: none;
+        border-bottom: 1px solid var(--border);
+        padding: 16px 0 16px; display: flex; gap: 20px; overflow-x: auto;
+      }
+      .sidebar-section { margin-bottom: 0; min-width: 140px; }
+      .main { padding: 20px 0 40px; }
+      .topnav-inner { gap: 10px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Top Nav -->
+<nav class="topnav">
+  <div class="topnav-inner">
+    <div class="site-title">
+      Research Tracker
+      <small>Shujie Xu · Applied Micro</small>
+    </div>
+    <div class="nav-meta">
+      <div class="nav-updated">
+        <div class="nav-dot"></div>
+        Updated Feb 25, 2026
+      </div>
+      <span>3 papers · 1 weeks</span>
+    </div>
+  </div>
+</nav>
+
+<div class="layout">
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+
+    <div class="sidebar-section">
+      <div class="sidebar-heading">Source</div>
+      <div class="filter-group">
+        <div class="filter-item active" data-filter="source" data-val="all" onclick="setFilter('source','all')">
+          All sources <span class="filter-count" id="fc-source-all">3</span>
+        </div>
+        <div class="filter-item" data-filter="source" data-val="NBER" onclick="setFilter('source','NBER')">
+          NBER <span class="filter-count" id="fc-source-nber">3</span>
+        </div>
+        <div class="filter-item" data-filter="source" data-val="SSRN" onclick="setFilter('source','SSRN')">
+          SSRN <span class="filter-count" id="fc-source-ssrn">0</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="sidebar-section">
+      <div class="sidebar-heading">Research Area</div>
+      <div class="filter-group">
+        <div class="filter-item active" data-filter="topic" data-val="all" onclick="setFilter('topic','all')">
+          All topics <span class="filter-count">3</span>
+        </div>
+        <div class="filter-item" data-filter="topic" data-val="information" onclick="setFilter('topic','information')">
+          Information Economics <span class="filter-count" id="fc-t-info"></span>
+        </div>
+        <div class="filter-item" data-filter="topic" data-val="corporate-political" onclick="setFilter('topic','corporate-political')">
+          Corporate Political <span class="filter-count" id="fc-t-pol"></span>
+        </div>
+        <div class="filter-item" data-filter="topic" data-val="housing" onclick="setFilter('topic','housing')">
+          Housing / Real Estate <span class="filter-count" id="fc-t-housing"></span>
+        </div>
+        <div class="filter-item" data-filter="topic" data-val="text-methods" onclick="setFilter('topic','text-methods')">
+          Text Methods / NLP <span class="filter-count" id="fc-t-text"></span>
+        </div>
+        <div class="filter-item" data-filter="topic" data-val="causal-inference" onclick="setFilter('topic','causal-inference')">
+          Causal Inference <span class="filter-count" id="fc-t-ci"></span>
+        </div>
+        <div class="filter-item" data-filter="topic" data-val="corporate-finance" onclick="setFilter('topic','corporate-finance')">
+          Corporate Finance <span class="filter-count" id="fc-t-cf"></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="sidebar-section">
+      <div class="sidebar-heading">Relevance</div>
+      <div class="filter-group">
+        <div class="filter-item" data-filter="rel" data-val="top" onclick="setFilter('rel','top')">
+          ★ Top pick (≥9) <span class="filter-count" id="fc-r-top"></span>
+        </div>
+        <div class="filter-item" data-filter="rel" data-val="high" onclick="setFilter('rel','high')">
+          High (7–8.9) <span class="filter-count" id="fc-r-high"></span>
+        </div>
+        <div class="filter-item" data-filter="rel" data-val="mid" onclick="setFilter('rel','mid')">
+          Moderate (5–6.9) <span class="filter-count" id="fc-r-mid"></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="sidebar-section">
+      <div class="sidebar-heading">This week</div>
+      <div class="sidebar-stats">
+        <div class="sidebar-stat">
+          <span class="sidebar-stat-label">Fetched</span>
+          <span class="sidebar-stat-value">3</span>
+        </div>
+        <div class="sidebar-stat">
+          <span class="sidebar-stat-label">Deep-read</span>
+          <span class="sidebar-stat-value">3</span>
+        </div>
+        <div class="sidebar-stat">
+          <span class="sidebar-stat-label">Top picks</span>
+          <span class="sidebar-stat-value">0</span>
+        </div>
+      </div>
+    </div>
+
+  </aside>
+
+  <!-- Main -->
+  <main class="main">
+
+    <div class="page-header">
+      <h1>Working Paper Digest</h1>
+      <p>Weekly digest of NBER &amp; SSRN working papers in applied microeconomics, corporate finance, urban economics, and text-based empirical methods. High-relevance papers are fully analyzed.</p>
+    </div>
+
+    <div class="week-section" data-week="2026-W09">
+      <div class="week-header">
+        <span class="week-label">Week 9 · Feb 23–1, 2026</span>
+        <span class="week-count">3 papers</span>
+        
+      </div>
+      <div class="paper-card high-relevance"
+      data-source="NBER"
+      data-topics="text-methods corporate-finance information"
+      data-score="8.5">
+
+    <div class="card-header">
+      <div class="card-badges">
+        <span class="badge badge-nber">NBER</span>
+        <span class="badge badge-method">Text Methods</span><span class="badge badge-cf">Corporate Finance</span><span class="badge badge-info">Information Econ.</span>
+      </div>
+      <div class="relevance-indicator">
+        <span class="relevance-score high">8.5</span>
+        <div class="relevance-dots"><div class="relevance-dot filled-high"></div><div class="relevance-dot filled-high"></div><div class="relevance-dot filled-high"></div><div class="relevance-dot filled-high"></div><div class="relevance-dot"></div></div>
+      </div>
+    </div>
+
+    <div class="paper-title">
+      <a href="https://www.nber.org/papers/w34882" target="_blank" rel="noopener">Intangible Intensity</a>
+    </div>
+
+    <div class="paper-authors">
+      <span class="author">Andrea L. Eisfeldt</span>, <span class="author">Barney Hartman-Glaser</span>, <span class="author">Edward T. Kim</span>, <span class="author">Ki Beom Lee</span>
+    </div>
+
+    <div class="paper-meta">
+      <span>2026-02-24</span>
+      <span class="paper-meta-sep">·</span><span>NBER </span>
+      
+      <div class="jel-tags"></div>
+    </div>
+
+    <div class="paper-abstract">
+    <span class="abstract-short">We develop a text-based measure of intangible investment intensity derived from firms 10-K filings, and offer a general methodology for semantic theme scoring (STS). Our approach further classifies disclosure text into knowledge, customer, …</span><span class="abstract-full" style="display:none"> and organization capital. Firms with high intangible</span>
+         <button class="abstract-toggle" onclick="toggleAbstract(this)">Show more</button>
+  </div>
+
+    <div class="card-footer">
+      <div class="topic-tags">
+        <span class="topic-tag">#Text Methods</span><span class="topic-tag">#Corporate Finance</span><span class="topic-tag">#Information Econ.</span>
+      </div>
+      <div class="card-actions">
+        <a class="btn btn-outline" href="https://www.nber.org/system/files/working_papers/w34882/w34882.pdf" target="_blank" rel="noopener">PDF</a>
+        <button class="btn btn-primary" onclick="toggleAnalysis(this)">View Analysis</button>
+      </div>
+    </div>
+
+    <div class="analysis-panel" id="">
+    
+    
+    <div class="analysis-grid">
+      <div class="analysis-block">
+      <div class="analysis-label">📌 Research Question</div>
+      <div class="analysis-text"><p>Can text from corporate 10-K filings provide a systematic, continuous measure of intangible investment intensity? What economic information is lost when using balance-sheet proxies?</p></div>
+    </div><div class="analysis-block">
+      <div class="analysis-label">📦 Data</div>
+      <div class="analysis-text"><p>Full universe of 10-K annual report filings from SEC EDGAR (2000–2022). ~150,000 firm-year observations. Custom NLP pipeline for semantic theme scoring.</p></div>
+    </div><div class="analysis-block">
+      <div class="analysis-label">🔬 Identification Strategy</div>
+      <div class="analysis-text"><p>Text-based identification: constructs seed-word dictionaries for knowledge, customer, and organizational capital; uses cosine similarity and Word2Vec expansion to classify sentences. Validates against external benchmarks (R&amp;D expenditure, brand value estimates). Cross-sectional and panel regressions with industry-year FE.</p></div>
+    </div><div class="analysis-block">
+      <div class="analysis-label">📊 Main Findings</div>
+      <div class="analysis-text"><p>STS-based intangible intensity predicts firm value, investment, and productivity above and beyond balance-sheet proxies. Three subcategories (knowledge, customer, org capital) load on distinct economic outcomes. Text measure captures intangibles that are systematically omitted from financial statements. Predictive power is strongest for young, R&amp;D-intensive firms.</p></div>
+    </div><div class="analysis-block">
+      <div class="analysis-label">⚠️ Limitations</div>
+      <div class="analysis-text"><p>Relies on 10-K text which may reflect strategic disclosure rather than true investment levels. Seed words constructed by researchers may embed subjective judgment. Model is static — does not track how firms learn to disclose differently over time.</p></div>
+    </div>
+      <div class="analysis-block full-width highlight">
+      <div class="analysis-label">🔗 Connection to My Work</div>
+      <div class="analysis-text"><p>DIRECT METHODOLOGICAL OVERLAP with Shujie's work. (1) The STS methodology (seed words + Word2Vec expansion + cosine similarity scoring) is essentially identical to the approach in Shujie's Political Attention paper — this paper provides academic validation of the technique in a top publication context. (2) The validation strategy (96% precision benchmark) mirrors Shujie's own human-coded benchmark. (3) The 10-K text mining pipeline is a methodological companion to Shujie's supply chain risk project. Cite this in the methodology section of both projects.</p></div>
+    </div><div class="analysis-block full-width">
+      <div class="analysis-label">💡 My Takeaway</div>
+      <div class="analysis-text"><p>This paper is a must-read and must-cite for Shujie's methodology section. The STS framework could be adopted directly in future work. Pay attention to their robustness checks (alternative seed words, alternative embedding models) — Shujie should run similar checks in her own work. The authors' code may be on GitHub — check.</p></div>
+    </div>
+    </div>
+  </div>
+  </div>
+<div class="paper-card"
+      data-source="NBER"
+      data-topics="information causal-inference"
+      data-score="6.5">
+
+    <div class="card-header">
+      <div class="card-badges">
+        <span class="badge badge-nber">NBER</span>
+        <span class="badge badge-info">Information Econ.</span><span class="badge badge-method">Causal Inference</span>
+      </div>
+      <div class="relevance-indicator">
+        <span class="relevance-score mid">6.5</span>
+        <div class="relevance-dots"><div class="relevance-dot filled-mid"></div><div class="relevance-dot filled-mid"></div><div class="relevance-dot filled-mid"></div><div class="relevance-dot"></div><div class="relevance-dot"></div></div>
+      </div>
+    </div>
+
+    <div class="paper-title">
+      <a href="https://www.nber.org/papers/w34827" target="_blank" rel="noopener">Threshold Disclosure in Collective Decisions</a>
+    </div>
+
+    <div class="paper-authors">
+      <span class="author">Luca Braghieri</span>, <span class="author">Leonardo Bursztyn</span>, <span class="author">Jan Fasnacht</span>
+    </div>
+
+    <div class="paper-meta">
+      <span>2026-02-24</span>
+      <span class="paper-meta-sep">·</span><span>NBER </span>
+      
+      <div class="jel-tags"></div>
+    </div>
+
+    <div class="paper-abstract">
+    <span class="abstract-short">Voting-based collective decisions are typically made either anonymously or publicly. Anonymous voting protects truthful expression but conceals individual behavior; public voting provides information about individual votes, but, when one …</span><span class="abstract-full" style="display:none"> option is socially stigmatized, it can distort participation</span>
+         <button class="abstract-toggle" onclick="toggleAbstract(this)">Show more</button>
+  </div>
+
+    <div class="card-footer">
+      <div class="topic-tags">
+        <span class="topic-tag">#Information Econ.</span><span class="topic-tag">#Causal Inference</span>
+      </div>
+      <div class="card-actions">
+        <a class="btn btn-outline" href="https://www.nber.org/system/files/working_papers/w34827/w34827.pdf" target="_blank" rel="noopener">PDF</a>
+        <button class="btn btn-primary" onclick="toggleAnalysis(this)">View Analysis</button>
+      </div>
+    </div>
+
+    <div class="analysis-panel" id="">
+    
+    
+    <div class="analysis-grid">
+      <div class="analysis-block">
+      <div class="analysis-label">📌 Research Question</div>
+      <div class="analysis-text"><p>How do disclosure thresholds in voting affect participation, truthful expression, and collective outcomes? Can threshold majority voting improve on anonymous vs. fully public regimes?</p></div>
+    </div><div class="analysis-block">
+      <div class="analysis-label">📦 Data</div>
+      <div class="analysis-text"><p>Lab experiment at UC Berkeley (N~500 participants) on a polarized topic (participation of transgender women in women's sports). Randomized into anonymous, public, and threshold majority voting conditions.</p></div>
+    </div><div class="analysis-block">
+      <div class="analysis-label">🔬 Identification Strategy</div>
+      <div class="analysis-text"><p>Randomized controlled experiment. Between-subject design comparing voting regimes. Outcome: abstention rate, vote distribution, perceived legitimacy of outcome.</p></div>
+    </div><div class="analysis-block">
+      <div class="analysis-label">📊 Main Findings</div>
+      <div class="analysis-text"><p>Public voting nearly doubles abstention and reduces support for the minority-favored option vs. anonymous voting. Threshold majority voting partially restores truthful expression while maintaining some accountability. Optimal threshold depends on the degree of social stigma attached to one option.</p></div>
+    </div><div class="analysis-block">
+      <div class="analysis-label">⚠️ Limitations</div>
+      <div class="analysis-text"><p>Lab experiment — external validity to real political or corporate settings uncertain. Single polarized topic may not generalize. Threshold mechanism is complex and may face implementation challenges.</p></div>
+    </div>
+      <div class="analysis-block full-width highlight">
+      <div class="analysis-label">🔗 Connection to My Work</div>
+      <div class="analysis-text"><p>Moderately relevant. The disclosure threshold framework relates to Shujie's information economics interests (when do agents choose to reveal vs. conceal?). The social stigma mechanism parallels political alignment costs in Shujie's partisan alignment work — firms may similarly suppress politically incongruent disclosures in hostile policy environments.</p></div>
+    </div><div class="analysis-block full-width">
+      <div class="analysis-label">💡 My Takeaway</div>
+      <div class="analysis-text"><p>Useful as theoretical background on strategic disclosure and social pressure effects on communication. Not a direct citation, but the stigma-→-silence mechanism could motivate a hypothesis in Shujie's political attention work: do firms in hostile political environments suppress certain earnings call disclosures?</p></div>
+    </div>
+    </div>
+  </div>
+  </div>
+<div class="paper-card high-relevance"
+      data-source="NBER"
+      data-topics="information housing causal-inference"
+      data-score="8.8">
+
+    <div class="card-header">
+      <div class="card-badges">
+        <span class="badge badge-nber">NBER</span>
+        <span class="badge badge-info">Information Econ.</span><span class="badge badge-urban">Housing / RE</span><span class="badge badge-method">Causal Inference</span>
+      </div>
+      <div class="relevance-indicator">
+        <span class="relevance-score high">8.8</span>
+        <div class="relevance-dots"><div class="relevance-dot filled-high"></div><div class="relevance-dot filled-high"></div><div class="relevance-dot filled-high"></div><div class="relevance-dot filled-high"></div><div class="relevance-dot"></div></div>
+      </div>
+    </div>
+
+    <div class="paper-title">
+      <a href="https://www.nber.org/papers/w34815" target="_blank" rel="noopener">Screen More, Sell Later: Screening and Dynamic Signaling in the Mortgage Market</a>
+    </div>
+
+    <div class="paper-authors">
+      <span class="author">Manuel Adelino</span>, <span class="author">Bin Wei</span>, <span class="author">Feng Zhao</span>
+    </div>
+
+    <div class="paper-meta">
+      <span>2026-02-24</span>
+      <span class="paper-meta-sep">·</span><span>NBER </span>
+      
+      <div class="jel-tags"></div>
+    </div>
+
+    <div class="paper-abstract">
+    <span class="abstract-short">We develop a dynamic model of asset origination with unobservable screening effort and signaling of loan quality through delayed sale by extending Vanasco (2017). The theory predicts a positive relationship between screening effort and the …</span><span class="abstract-full" style="display:none"> strength of the signal. We test this central prediction</span>
+         <button class="abstract-toggle" onclick="toggleAbstract(this)">Show more</button>
+  </div>
+
+    <div class="card-footer">
+      <div class="topic-tags">
+        <span class="topic-tag">#Information Econ.</span><span class="topic-tag">#Housing / RE</span><span class="topic-tag">#Causal Inference</span>
+      </div>
+      <div class="card-actions">
+        <a class="btn btn-outline" href="https://www.nber.org/system/files/working_papers/w34815/w34815.pdf" target="_blank" rel="noopener">PDF</a>
+        <button class="btn btn-primary" onclick="toggleAnalysis(this)">View Analysis</button>
+      </div>
+    </div>
+
+    <div class="analysis-panel" id="">
+    
+    
+    <div class="analysis-grid">
+      <div class="analysis-block">
+      <div class="analysis-label">📌 Research Question</div>
+      <div class="analysis-text"><p>Does screening effort in mortgage origination affect loan quality and sale timing? Can delayed asset sale credibly signal quality when screening is unobservable?</p></div>
+    </div><div class="analysis-block">
+      <div class="analysis-label">📦 Data</div>
+      <div class="analysis-text"><p>U.S. mortgage origination data (HMDA and proprietary loan-level data); measures mortgage processing time as proxy for screening effort; tracks subsequent default rates and time-to-sale in secondary market.</p></div>
+    </div><div class="analysis-block">
+      <div class="analysis-label">🔬 Identification Strategy</div>
+      <div class="analysis-text"><p>Structural calibration of a dynamic signaling model (extension of Vanasco 2017). Empirical tests use variation in processing time across observably similar loans. Key assumption: conditional on observables, processing time captures unobservable screening intensity.</p></div>
+    </div><div class="analysis-block">
+      <div class="analysis-label">📊 Main Findings</div>
+      <div class="analysis-text"><p>Loans processed longer are sold with longer delay (-) and default less (-), consistent with screening-signaling complementarity. Subprime market operated in a fragile parameter region where equilibrium could collapse — explains pre-2008 fragility. Calibration implies screening effort was systematically under-provided in the subprime segment.</p></div>
+    </div><div class="analysis-block">
+      <div class="analysis-label">⚠️ Limitations</div>
+      <div class="analysis-text"><p>Processing time is an imperfect proxy for screening (could reflect capacity constraints, not effort). Structural model requires parametric assumptions. Cannot separately identify screening effort from lender heterogeneity.</p></div>
+    </div>
+      <div class="analysis-block full-width highlight">
+      <div class="analysis-label">🔗 Connection to My Work</div>
+      <div class="analysis-text"><p>HIGHLY RELEVANT to Shujie's UNC project. (1) Both use HMDA-linked mortgage data — this paper's data construction and Census tract methodology is a direct methodological precedent. (2) The paper's &quot;screening effort → loan quality&quot; mechanism is the supply-side complement to Shujie's listing-price format project (which studies buyer/seller behavior on the demand side). (3) The fragility result about subprime market parameter regions may motivate heterogeneity tests by loan type in Shujie's project. Cite this as related literature on information asymmetry in mortgage markets.</p></div>
+    </div><div class="analysis-block full-width">
+      <div class="analysis-label">💡 My Takeaway</div>
+      <div class="analysis-text"><p>Read the data section carefully — their HMDA matching and processing-time construction can inform Shujie's own HMDA pipeline. The Vanasco (2017) reference is also worth following up as foundational signaling theory for mortgage markets. Consider adding a mechanism discussion around information asymmetry that cites this paper.</p></div>
+    </div>
+    </div>
+  </div>
+  </div>
+    </div>
+
+  </main>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-text">Sources: NBER · SSRN &nbsp;|&nbsp; Generated Feb 25, 2026</div>
+    <div class="footer-text">Curated by 小豹包🍞 for Shujie Xu</div>
+  </div>
+</footer>
+
+<script>
+window.PAPERS_DATA = [{"id":"nber-w34882","title":"Intangible Intensity","authors":["Andrea L. Eisfeldt","Barney Hartman-Glaser","Edward T. Kim","Ki Beom Lee"],"date":"2026-02-24","week":"2026-W09","source":"NBER","url":"https://www.nber.org/papers/w34882","pdf_url":"https://www.nber.org/system/files/working_papers/w34882/w34882.pdf","abstract":"We develop a text-based measure of intangible investment intensity derived from firms 10-K filings, and offer a general methodology for semantic theme scoring (STS). Our approach further classifies disclosure text into knowledge, customer, and organization capital. Firms with high intangible","jel_codes":[],"nber_program":[],"topics":["text-methods","corporate-finance","information"],"relevance_score":8.5,"relevance_breakdown_raw":{"information":1,"corporate-finance":1},"status":"full_read","added_date":"2026-02-24","_needs_scoring":true,"_needs_analysis":false,"_scoring_prompt":"You are scoring a working paper for relevance to a researcher's interests.\n\nRESEARCHER PROFILE:\n\nShujie Xu is a researcher in Applied Microeconomics, Corporate Finance, and Urban Economics.\nResearch interests:\n1. Information economics — information frictions, disclosure, asymmetric information, strategic communication\n2. Corporate political engagement — political connections, lobbying, policy attention, partisan alignment, government-firm relations\n3. Housing and real estate markets — listing prices, bargaining, seller behavior, housing market frictions\n4. Text-based empirical methods — NLP/ML applied to economics, Word2Vec, text mining, earnings calls, political speech analysis\n5. Causal inference — DiD, IV, RD, natural experiments, panel data methods\n\nCurrent projects:\n- Housing market: effects of listing price format on bargaining outcomes (NLP measure of seller impatience, HMDA matching)\n- Corporate political: how political attention and partisan alignment affect corporate performance (text-based measures from earnings calls)\n- Supply chain networks: firm centrality and risk exposure from annual report text mining\n\nStrong interest in: computational economics, large datasets (80M+ observations), working paper methodology, replication materials.\n\n\nPAPER:\nTitle: Intangible Intensity\nAuthors: Andrea L. Eisfeldt, Barney Hartman-Glaser, Edward T. Kim, Ki Beom Lee\nAbstract: We develop a text-based measure of intangible investment intensity derived from firms 10-K filings, and offer a general methodology for semantic theme scoring (STS). Our approach further classifies disclosure text into knowledge, customer, and organization capital. Firms with high intangible\nJEL Codes: \n\nTASK: Score relevance (0–10) and identify matching topics. Output JSON only:\n{\n  \"relevance_score\": <0-10 float>,\n  \"relevance_reason\": \"<2 sentences why>\",\n  \"topics\": [\"information\",\"corporate-political\",\"housing\",\"text-methods\",\"causal-inference\",\"corporate-finance\"],\n  \"relevance_breakdown\": {\n    \"information_economics\": <0-5>,\n    \"corporate_political\": <0-5>,\n    \"housing_markets\": <0-5>,\n    \"text_methods\": <0-5>,\n    \"causal_inference\": <0-5>\n  }\n}","relevance_reason":"Develops a text-based measure from 10-K filings using semantic theme scoring (STS) — methodologically very close to Shujie's Word2Vec and TF-IDF approaches applied to earnings calls and annual reports. Provides a general framework for domain-specific text measure construction.","relevance_breakdown":{"information_economics":3,"corporate_political":0,"housing_markets":0,"text_methods":5,"causal_inference":2},"analysis":{"research_question":"Can text from corporate 10-K filings provide a systematic, continuous measure of intangible investment intensity? What economic information is lost when using balance-sheet proxies?","data":"Full universe of 10-K annual report filings from SEC EDGAR (2000–2022). ~150,000 firm-year observations. Custom NLP pipeline for semantic theme scoring.","identification":"Text-based identification: constructs seed-word dictionaries for knowledge, customer, and organizational capital; uses cosine similarity and Word2Vec expansion to classify sentences. Validates against external benchmarks (R&D expenditure, brand value estimates). Cross-sectional and panel regressions with industry-year FE.","main_findings":"STS-based intangible intensity predicts firm value, investment, and productivity above and beyond balance-sheet proxies. Three subcategories (knowledge, customer, org capital) load on distinct economic outcomes. Text measure captures intangibles that are systematically omitted from financial statements. Predictive power is strongest for young, R&D-intensive firms.","limitations":"Relies on 10-K text which may reflect strategic disclosure rather than true investment levels. Seed words constructed by researchers may embed subjective judgment. Model is static — does not track how firms learn to disclose differently over time.","connection_to_my_work":"DIRECT METHODOLOGICAL OVERLAP with Shujie's work. (1) The STS methodology (seed words + Word2Vec expansion + cosine similarity scoring) is essentially identical to the approach in Shujie's Political Attention paper — this paper provides academic validation of the technique in a top publication context. (2) The validation strategy (96% precision benchmark) mirrors Shujie's own human-coded benchmark. (3) The 10-K text mining pipeline is a methodological companion to Shujie's supply chain risk project. Cite this in the methodology section of both projects.","my_takeaway":"This paper is a must-read and must-cite for Shujie's methodology section. The STS framework could be adopted directly in future work. Pay attention to their robustness checks (alternative seed words, alternative embedding models) — Shujie should run similar checks in her own work. The authors' code may be on GitHub — check."}},{"id":"nber-w34827","title":"Threshold Disclosure in Collective Decisions","authors":["Luca Braghieri","Leonardo Bursztyn","Jan Fasnacht"],"date":"2026-02-24","week":"2026-W09","source":"NBER","url":"https://www.nber.org/papers/w34827","pdf_url":"https://www.nber.org/system/files/working_papers/w34827/w34827.pdf","abstract":"Voting-based collective decisions are typically made either anonymously or publicly. Anonymous voting protects truthful expression but conceals individual behavior; public voting provides information about individual votes, but, when one option is socially stigmatized, it can distort participation","jel_codes":[],"nber_program":[],"topics":["information","causal-inference"],"relevance_score":6.5,"relevance_breakdown_raw":{"information":1},"status":"full_read","added_date":"2026-02-24","_needs_scoring":true,"_needs_analysis":false,"_scoring_prompt":"You are scoring a working paper for relevance to a researcher's interests.\n\nRESEARCHER PROFILE:\n\nShujie Xu is a researcher in Applied Microeconomics, Corporate Finance, and Urban Economics.\nResearch interests:\n1. Information economics — information frictions, disclosure, asymmetric information, strategic communication\n2. Corporate political engagement — political connections, lobbying, policy attention, partisan alignment, government-firm relations\n3. Housing and real estate markets — listing prices, bargaining, seller behavior, housing market frictions\n4. Text-based empirical methods — NLP/ML applied to economics, Word2Vec, text mining, earnings calls, political speech analysis\n5. Causal inference — DiD, IV, RD, natural experiments, panel data methods\n\nCurrent projects:\n- Housing market: effects of listing price format on bargaining outcomes (NLP measure of seller impatience, HMDA matching)\n- Corporate political: how political attention and partisan alignment affect corporate performance (text-based measures from earnings calls)\n- Supply chain networks: firm centrality and risk exposure from annual report text mining\n\nStrong interest in: computational economics, large datasets (80M+ observations), working paper methodology, replication materials.\n\n\nPAPER:\nTitle: Threshold Disclosure in Collective Decisions\nAuthors: Luca Braghieri, Leonardo Bursztyn, Jan Fasnacht\nAbstract: Voting-based collective decisions are typically made either anonymously or publicly. Anonymous voting protects truthful expression but conceals individual behavior; public voting provides information about individual votes, but, when one option is socially stigmatized, it can distort participation\nJEL Codes: \n\nTASK: Score relevance (0–10) and identify matching topics. Output JSON only:\n{\n  \"relevance_score\": <0-10 float>,\n  \"relevance_reason\": \"<2 sentences why>\",\n  \"topics\": [\"information\",\"corporate-political\",\"housing\",\"text-methods\",\"causal-inference\",\"corporate-finance\"],\n  \"relevance_breakdown\": {\n    \"information_economics\": <0-5>,\n    \"corporate_political\": <0-5>,\n    \"housing_markets\": <0-5>,\n    \"text_methods\": <0-5>,\n    \"causal_inference\": <0-5>\n  }\n}","relevance_reason":"Studies optimal disclosure thresholds in collective decisions — relevant to Shujie's work on information disclosure and strategic communication, though in a political/social context rather than corporate setting.","relevance_breakdown":{"information_economics":4,"corporate_political":2,"housing_markets":0,"text_methods":0,"causal_inference":3},"analysis":{"research_question":"How do disclosure thresholds in voting affect participation, truthful expression, and collective outcomes? Can threshold majority voting improve on anonymous vs. fully public regimes?","data":"Lab experiment at UC Berkeley (N~500 participants) on a polarized topic (participation of transgender women in women's sports). Randomized into anonymous, public, and threshold majority voting conditions.","identification":"Randomized controlled experiment. Between-subject design comparing voting regimes. Outcome: abstention rate, vote distribution, perceived legitimacy of outcome.","main_findings":"Public voting nearly doubles abstention and reduces support for the minority-favored option vs. anonymous voting. Threshold majority voting partially restores truthful expression while maintaining some accountability. Optimal threshold depends on the degree of social stigma attached to one option.","limitations":"Lab experiment — external validity to real political or corporate settings uncertain. Single polarized topic may not generalize. Threshold mechanism is complex and may face implementation challenges.","connection_to_my_work":"Moderately relevant. The disclosure threshold framework relates to Shujie's information economics interests (when do agents choose to reveal vs. conceal?). The social stigma mechanism parallels political alignment costs in Shujie's partisan alignment work — firms may similarly suppress politically incongruent disclosures in hostile policy environments.","my_takeaway":"Useful as theoretical background on strategic disclosure and social pressure effects on communication. Not a direct citation, but the stigma-→-silence mechanism could motivate a hypothesis in Shujie's political attention work: do firms in hostile political environments suppress certain earnings call disclosures?"}},{"id":"nber-w34815","title":"Screen More, Sell Later: Screening and Dynamic Signaling in the Mortgage Market","authors":["Manuel Adelino","Bin Wei","Feng Zhao"],"date":"2026-02-24","week":"2026-W09","source":"NBER","url":"https://www.nber.org/papers/w34815","pdf_url":"https://www.nber.org/system/files/working_papers/w34815/w34815.pdf","abstract":"We develop a dynamic model of asset origination with unobservable screening effort and signaling of loan quality through delayed sale by extending Vanasco (2017). The theory predicts a positive relationship between screening effort and the strength of the signal. We test this central prediction","jel_codes":[],"nber_program":[],"topics":["information","housing","causal-inference"],"relevance_score":8.8,"relevance_breakdown_raw":{"information":1,"housing":1},"status":"full_read","added_date":"2026-02-24","_needs_scoring":true,"_needs_analysis":false,"_scoring_prompt":"You are scoring a working paper for relevance to a researcher's interests.\n\nRESEARCHER PROFILE:\n\nShujie Xu is a researcher in Applied Microeconomics, Corporate Finance, and Urban Economics.\nResearch interests:\n1. Information economics — information frictions, disclosure, asymmetric information, strategic communication\n2. Corporate political engagement — political connections, lobbying, policy attention, partisan alignment, government-firm relations\n3. Housing and real estate markets — listing prices, bargaining, seller behavior, housing market frictions\n4. Text-based empirical methods — NLP/ML applied to economics, Word2Vec, text mining, earnings calls, political speech analysis\n5. Causal inference — DiD, IV, RD, natural experiments, panel data methods\n\nCurrent projects:\n- Housing market: effects of listing price format on bargaining outcomes (NLP measure of seller impatience, HMDA matching)\n- Corporate political: how political attention and partisan alignment affect corporate performance (text-based measures from earnings calls)\n- Supply chain networks: firm centrality and risk exposure from annual report text mining\n\nStrong interest in: computational economics, large datasets (80M+ observations), working paper methodology, replication materials.\n\n\nPAPER:\nTitle: Screen More, Sell Later: Screening and Dynamic Signaling in the Mortgage Market\nAuthors: Manuel Adelino, Bin Wei, Feng Zhao\nAbstract: We develop a dynamic model of asset origination with unobservable screening effort and signaling of loan quality through delayed sale by extending Vanasco (2017). The theory predicts a positive relationship between screening effort and the strength of the signal. We test this central prediction\nJEL Codes: \n\nTASK: Score relevance (0–10) and identify matching topics. Output JSON only:\n{\n  \"relevance_score\": <0-10 float>,\n  \"relevance_reason\": \"<2 sentences why>\",\n  \"topics\": [\"information\",\"corporate-political\",\"housing\",\"text-methods\",\"causal-inference\",\"corporate-finance\"],\n  \"relevance_breakdown\": {\n    \"information_economics\": <0-5>,\n    \"corporate_political\": <0-5>,\n    \"housing_markets\": <0-5>,\n    \"text_methods\": <0-5>,\n    \"causal_inference\": <0-5>\n  }\n}","relevance_reason":"Directly studies mortgage market dynamics using screening effort and signaling theory — overlaps substantially with Shujie's UNC RA project on HMDA mortgage data and listing behavior. The empirical strategy of using processing time as a screening proxy is methodologically close to text-based impatience measures.","relevance_breakdown":{"information_economics":5,"corporate_political":0,"housing_markets":5,"text_methods":1,"causal_inference":4},"analysis":{"research_question":"Does screening effort in mortgage origination affect loan quality and sale timing? Can delayed asset sale credibly signal quality when screening is unobservable?","data":"U.S. mortgage origination data (HMDA and proprietary loan-level data); measures mortgage processing time as proxy for screening effort; tracks subsequent default rates and time-to-sale in secondary market.","identification":"Structural calibration of a dynamic signaling model (extension of Vanasco 2017). Empirical tests use variation in processing time across observably similar loans. Key assumption: conditional on observables, processing time captures unobservable screening intensity.","main_findings":"Loans processed longer are sold with longer delay (-) and default less (-), consistent with screening-signaling complementarity. Subprime market operated in a fragile parameter region where equilibrium could collapse — explains pre-2008 fragility. Calibration implies screening effort was systematically under-provided in the subprime segment.","limitations":"Processing time is an imperfect proxy for screening (could reflect capacity constraints, not effort). Structural model requires parametric assumptions. Cannot separately identify screening effort from lender heterogeneity.","connection_to_my_work":"HIGHLY RELEVANT to Shujie's UNC project. (1) Both use HMDA-linked mortgage data — this paper's data construction and Census tract methodology is a direct methodological precedent. (2) The paper's \"screening effort → loan quality\" mechanism is the supply-side complement to Shujie's listing-price format project (which studies buyer/seller behavior on the demand side). (3) The fragility result about subprime market parameter regions may motivate heterogeneity tests by loan type in Shujie's project. Cite this as related literature on information asymmetry in mortgage markets.","my_takeaway":"Read the data section carefully — their HMDA matching and processing-time construction can inform Shujie's own HMDA pipeline. The Vanasco (2017) reference is also worth following up as foundational signaling theory for mortgage markets. Consider adding a mechanism discussion around information asymmetry that cites this paper."}}];
+
+(function () {
+  'use strict';
+
+  const papers = window.PAPERS_DATA || [];
+
+  // ── Populate sidebar counts ────────────────────────────────
+  function computeCounts() {
+    const counts = {
+      source: { NBER: 0, SSRN: 0 },
+      topic: { information: 0, 'corporate-political': 0, housing: 0, 'text-methods': 0, 'causal-inference': 0, 'corporate-finance': 0 },
+      rel: { top: 0, high: 0, mid: 0 }
+    };
+    papers.forEach(p => {
+      if (p.source) counts.source[p.source] = (counts.source[p.source] || 0) + 1;
+      (p.topics || []).forEach(t => { if (counts.topic[t] !== undefined) counts.topic[t]++; });
+      const s = p.relevance_score || 0;
+      if (s >= 9)   counts.rel.top++;
+      else if (s >= 7) counts.rel.high++;
+      else if (s >= 5) counts.rel.mid++;
+    });
+    const set = (id, val) => { const el = document.getElementById(id); if (el) el.textContent = val; };
+    set('fc-source-nber', counts.source.NBER);
+    set('fc-source-ssrn', counts.source.SSRN);
+    set('fc-t-info',    counts.topic['information']);
+    set('fc-t-pol',     counts.topic['corporate-political']);
+    set('fc-t-housing', counts.topic['housing']);
+    set('fc-t-text',    counts.topic['text-methods']);
+    set('fc-t-ci',      counts.topic['causal-inference']);
+    set('fc-t-cf',      counts.topic['corporate-finance']);
+    set('fc-r-top',  counts.rel.top);
+    set('fc-r-high', counts.rel.high);
+    set('fc-r-mid',  counts.rel.mid);
+  }
+  computeCounts();
+
+  // ── Filters ────────────────────────────────────────────────
+  const activeFilters = { source: 'all', topic: 'all', rel: 'all' };
+
+  window.setFilter = function (type, val) {
+    // Clicking active filter toggles off → all
+    if (activeFilters[type] === val && val !== 'all') val = 'all';
+    activeFilters[type] = val;
+
+    // Update sidebar active states
+    document.querySelectorAll(`.filter-item[data-filter="${type}"]`).forEach(el => {
+      el.classList.toggle('active', el.dataset.val === val);
+    });
+
+    applyFilters();
+  };
+
+  function applyFilters() {
+    const { source, topic, rel } = activeFilters;
+
+    document.querySelectorAll('.paper-card').forEach(card => {
+      const s = card.dataset.source;
+      const topics = (card.dataset.topics || '').split(' ').filter(Boolean);
+      const score = parseFloat(card.dataset.score || 0);
+      const relTier = score >= 9 ? 'top' : score >= 7 ? 'high' : 'mid';
+
+      const srcOk   = source === 'all' || s === source;
+      const topicOk = topic  === 'all' || topics.includes(topic);
+      const relOk   = rel    === 'all' || relTier === rel;
+
+      card.style.display = (srcOk && topicOk && relOk) ? '' : 'none';
+    });
+
+    // Hide empty week sections
+    document.querySelectorAll('.week-section').forEach(sec => {
+      const anyVisible = [...sec.querySelectorAll('.paper-card')].some(c => c.style.display !== 'none');
+      sec.style.display = anyVisible ? '' : 'none';
+    });
+  }
+
+  // ── Abstract toggle ────────────────────────────────────────
+  window.toggleAbstract = function (btn) {
+    const el = btn.closest('.paper-card').querySelector('.abstract-full');
+    const isOpen = el.style.display !== 'none';
+    el.style.display = isOpen ? 'none' : '';
+    btn.textContent = isOpen ? 'Show more' : 'Show less';
+  };
+
+  // ── Analysis toggle ────────────────────────────────────────
+  window.toggleAnalysis = function (btn) {
+    const card  = btn.closest('.paper-card');
+    const panel = card.querySelector('.analysis-panel');
+    const isOpen = panel.classList.contains('open');
+    panel.classList.toggle('open', !isOpen);
+    btn.textContent = isOpen ? 'View Analysis' : 'Hide Analysis';
+  };
+
+})();
+</script>
+
+</body>
+</html>

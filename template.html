@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Research Tracker · {{SITE_TITLE}}</title>
+  <meta property="og:title" content="Research Tracker · Shujie Xu"/>
+  <meta property="og:description" content="Weekly NBER + SSRN working paper digest, curated by research area."/>
+  <meta property="og:type" content="website"/>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap');
+
+    /* ── Reset ─────────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    /* ── Variables ──────────────────────────────────────────── */
+    :root {
+      --bg:        #fafaf9;
+      --bg2:       #f3f2ef;
+      --white:     #ffffff;
+      --border:    #e2ddd8;
+      --border2:   #d0ccc6;
+      --text:      #1c1917;
+      --text2:     #44403c;
+      --muted:     #78716c;
+      --accent:    #1d4ed8;
+      --accent2:   #1e40af;
+      --accent-bg: #eff6ff;
+      --green:     #166534;
+      --green-bg:  #f0fdf4;
+      --amber:     #92400e;
+      --amber-bg:  #fffbeb;
+      --red:       #991b1b;
+      --red-bg:    #fef2f2;
+      --sidebar-w: 260px;
+      --sans:      'Inter', -apple-system, 'Helvetica Neue', sans-serif;
+      --serif:     'Lora', Georgia, 'Times New Roman', serif;
+      --mono:      'JetBrains Mono', 'SF Mono', 'Menlo', 'Consolas', 'PingFang SC', 'Heiti SC', monospace;
+    }
+
+    /* ── Base ───────────────────────────────────────────────── */
+    html { scroll-behavior: smooth; }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--sans);
+      font-size: 15px;
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* ── Top nav ────────────────────────────────────────────── */
+    .topnav {
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      position: sticky; top: 0; z-index: 100;
+    }
+    .topnav-inner {
+      max-width: 1200px; margin: 0 auto; padding: 0 24px;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 52px; gap: 20px;
+    }
+    .site-title {
+      font-family: var(--serif);
+      font-size: 17px; font-weight: 600;
+      color: var(--text); white-space: nowrap;
+    }
+    .site-title small {
+      font-size: 12px; font-weight: 400;
+      color: var(--muted); font-family: var(--sans);
+      margin-left: 8px;
+    }
+    .nav-meta {
+      font-family: var(--mono); font-size: 11px;
+      color: var(--muted); white-space: nowrap;
+      display: flex; align-items: center; gap: 16px;
+    }
+    .nav-updated { display: flex; align-items: center; gap: 5px; }
+    .nav-dot {
+      width: 6px; height: 6px; border-radius: 50%;
+      background: #22c55e; flex-shrink: 0;
+    }
+
+    /* ── Layout ─────────────────────────────────────────────── */
+    .layout {
+      max-width: 1200px; margin: 0 auto; padding: 0 24px;
+      display: grid;
+      grid-template-columns: var(--sidebar-w) 1fr;
+      gap: 0;
+      min-height: calc(100vh - 52px);
+    }
+
+    /* ── Sidebar ────────────────────────────────────────────── */
+    .sidebar {
+      border-right: 1px solid var(--border);
+      padding: 28px 24px 40px 0;
+      position: sticky;
+      top: 52px;
+      height: calc(100vh - 52px);
+      overflow-y: auto;
+      scrollbar-width: thin;
+    }
+
+    .sidebar-section { margin-bottom: 28px; }
+    .sidebar-heading {
+      font-size: 10px; font-weight: 600; letter-spacing: 0.8px;
+      text-transform: uppercase; color: var(--muted);
+      margin-bottom: 10px; font-family: var(--sans);
+    }
+
+    .filter-group { display: flex; flex-direction: column; gap: 2px; }
+    .filter-item {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 5px 8px; border-radius: 5px;
+      cursor: pointer; transition: background 0.15s;
+      font-size: 13px; color: var(--text2);
+      user-select: none;
+    }
+    .filter-item:hover  { background: var(--bg2); }
+    .filter-item.active { background: var(--accent-bg); color: var(--accent); font-weight: 500; }
+    .filter-count {
+      font-family: var(--mono); font-size: 11px;
+      color: var(--muted); background: var(--bg2);
+      padding: 1px 6px; border-radius: 999px;
+    }
+    .filter-item.active .filter-count { background: rgba(29,78,216,0.12); color: var(--accent); }
+
+    .sidebar-stats { display: flex; flex-direction: column; gap: 8px; }
+    .sidebar-stat {
+      display: flex; align-items: center; justify-content: space-between;
+      font-size: 13px;
+    }
+    .sidebar-stat-label { color: var(--muted); }
+    .sidebar-stat-value {
+      font-family: var(--mono); font-size: 13px;
+      font-weight: 500; color: var(--text);
+    }
+
+    /* ── Main content ───────────────────────────────────────── */
+    .main { padding: 28px 0 60px 32px; }
+
+    /* ── Page header ────────────────────────────────────────── */
+    .page-header { margin-bottom: 28px; }
+    .page-header h1 {
+      font-family: var(--serif);
+      font-size: 24px; font-weight: 600;
+      color: var(--text); margin-bottom: 6px;
+    }
+    .page-header p { font-size: 14px; color: var(--muted); line-height: 1.5; }
+
+    /* ── Week section ───────────────────────────────────────── */
+    .week-section { margin-bottom: 40px; }
+    .week-header {
+      display: flex; align-items: center; gap: 12px;
+      margin-bottom: 16px; padding-bottom: 10px;
+      border-bottom: 2px solid var(--border);
+    }
+    .week-label {
+      font-family: var(--mono); font-size: 12px; font-weight: 500;
+      color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px;
+    }
+    .week-count {
+      font-size: 12px; color: var(--muted);
+      background: var(--bg2); border: 1px solid var(--border);
+      padding: 2px 8px; border-radius: 999px;
+    }
+    .week-highlight {
+      font-size: 12px; color: var(--accent);
+      background: var(--accent-bg); border: 1px solid rgba(29,78,216,0.2);
+      padding: 2px 8px; border-radius: 999px;
+    }
+
+    /* ── Paper card ─────────────────────────────────────────── */
+    .paper-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 22px 24px;
+      margin-bottom: 12px;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .paper-card:hover {
+      border-color: var(--border2);
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    }
+    .paper-card.high-relevance {
+      border-left: 3px solid var(--accent);
+    }
+    .paper-card.top-pick {
+      border-left: 3px solid #7c3aed;
+    }
+
+    .card-header { display: flex; align-items: flex-start; gap: 14px; margin-bottom: 10px; }
+    .card-badges { display: flex; gap: 6px; flex-wrap: wrap; flex-shrink: 0; }
+
+    .badge {
+      font-size: 10px; font-weight: 600; padding: 2px 8px;
+      border-radius: 3px; letter-spacing: 0.3px; text-transform: uppercase;
+      white-space: nowrap; font-family: var(--sans);
+    }
+    .badge-nber   { background: #fef3c7; color: #92400e; border: 1px solid #fcd34d; }
+    .badge-ssrn   { background: #f0fdf4; color: #166534; border: 1px solid #86efac; }
+    .badge-cf     { background: var(--accent-bg); color: var(--accent); border: 1px solid rgba(29,78,216,0.25); }
+    .badge-pol    { background: #fdf4ff; color: #7c3aed; border: 1px solid #d8b4fe; }
+    .badge-urban  { background: #fff7ed; color: #c2410c; border: 1px solid #fdba74; }
+    .badge-info   { background: #f0fdfa; color: #0f766e; border: 1px solid #5eead4; }
+    .badge-method { background: #f5f3ff; color: #6d28d9; border: 1px solid #c4b5fd; }
+    .badge-other  { background: var(--bg2); color: var(--muted); border: 1px solid var(--border); }
+
+    .relevance-indicator {
+      display: flex; align-items: center; gap: 6px;
+      margin-left: auto; flex-shrink: 0;
+    }
+    .relevance-score {
+      font-family: var(--mono); font-size: 13px; font-weight: 500;
+    }
+    .relevance-score.high  { color: var(--accent); }
+    .relevance-score.top   { color: #7c3aed; }
+    .relevance-score.mid   { color: var(--muted); }
+    .relevance-dots { display: flex; gap: 3px; }
+    .relevance-dot {
+      width: 7px; height: 7px; border-radius: 50%;
+      background: var(--border2);
+    }
+    .relevance-dot.filled-top  { background: #7c3aed; }
+    .relevance-dot.filled-high { background: var(--accent); }
+    .relevance-dot.filled-mid  { background: var(--muted); }
+
+    .paper-title {
+      font-family: var(--serif);
+      font-size: 17px; font-weight: 600; line-height: 1.45;
+      color: var(--text); margin-bottom: 6px;
+    }
+    .paper-title a { color: inherit; }
+    .paper-title a:hover { color: var(--accent); text-decoration: none; }
+
+    .paper-authors {
+      font-size: 13px; color: var(--muted);
+      margin-bottom: 8px; line-height: 1.4;
+    }
+    .paper-authors .author { color: var(--text2); }
+
+    .paper-meta {
+      display: flex; align-items: center; gap: 12px;
+      font-family: var(--mono); font-size: 11px; color: var(--muted);
+      margin-bottom: 12px; flex-wrap: wrap;
+    }
+    .paper-meta-sep { opacity: 0.4; }
+
+    .jel-tags { display: flex; gap: 5px; flex-wrap: wrap; margin-bottom: 12px; }
+    .jel-tag {
+      font-family: var(--mono); font-size: 10px;
+      padding: 2px 7px; border-radius: 3px;
+      background: var(--bg2); color: var(--muted);
+      border: 1px solid var(--border);
+    }
+
+    .paper-abstract {
+      font-size: 13.5px; color: var(--text2); line-height: 1.7;
+      margin-bottom: 14px;
+    }
+    .abstract-toggle {
+      background: none; border: none; cursor: pointer;
+      font-size: 12px; color: var(--accent); font-family: var(--sans);
+      padding: 0; margin-left: 4px;
+    }
+    .abstract-toggle:hover { text-decoration: underline; }
+
+    .card-footer {
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 12px; flex-wrap: wrap;
+    }
+    .topic-tags { display: flex; gap: 5px; flex-wrap: wrap; }
+    .topic-tag {
+      font-size: 11px; padding: 2px 8px; border-radius: 999px;
+      background: var(--bg2); color: var(--muted);
+      border: 1px solid var(--border); white-space: nowrap;
+    }
+
+    .card-actions { display: flex; gap: 8px; flex-shrink: 0; }
+    .btn {
+      font-size: 12px; font-weight: 500; padding: 5px 12px;
+      border-radius: 5px; cursor: pointer; transition: all 0.15s;
+      border: 1px solid transparent; font-family: var(--sans);
+    }
+    .btn-primary {
+      background: var(--accent); color: #fff; border-color: var(--accent);
+    }
+    .btn-primary:hover { background: var(--accent2); text-decoration: none; }
+    .btn-outline {
+      background: transparent; color: var(--text2); border-color: var(--border2);
+    }
+    .btn-outline:hover { background: var(--bg2); text-decoration: none; }
+
+    /* ── Analysis panel ─────────────────────────────────────── */
+    .analysis-panel {
+      display: none;
+      margin-top: 18px;
+      padding-top: 18px;
+      border-top: 1px dashed var(--border2);
+    }
+    .analysis-panel.open { display: block; }
+
+    .analysis-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-bottom: 16px;
+    }
+    @media (max-width: 700px) { .analysis-grid { grid-template-columns: 1fr; } }
+
+    .analysis-block {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 14px 16px;
+    }
+    .analysis-block.full-width { grid-column: 1 / -1; }
+    .analysis-block.highlight {
+      background: var(--accent-bg);
+      border-color: rgba(29,78,216,0.2);
+    }
+
+    .analysis-label {
+      font-size: 10px; font-weight: 600; letter-spacing: 0.7px;
+      text-transform: uppercase; color: var(--muted);
+      margin-bottom: 7px; display: flex; align-items: center; gap: 5px;
+    }
+    .analysis-label .icon { font-size: 12px; }
+    .analysis-text {
+      font-size: 13.5px; color: var(--text2); line-height: 1.65;
+    }
+    .analysis-text p { margin-bottom: 7px; }
+    .analysis-text p:last-child { margin-bottom: 0; }
+    .analysis-text strong { color: var(--text); font-weight: 500; }
+
+    /* Relevance breakdown bars */
+    .rel-breakdown { margin-bottom: 16px; }
+    .rel-row {
+      display: flex; align-items: center; gap: 10px;
+      margin-bottom: 7px;
+    }
+    .rel-label { font-size: 12px; color: var(--text2); width: 160px; flex-shrink: 0; }
+    .rel-bar-bg {
+      flex: 1; height: 5px; background: var(--bg2);
+      border-radius: 999px; overflow: hidden;
+    }
+    .rel-bar-fill {
+      height: 100%; border-radius: 999px;
+      background: var(--accent);
+    }
+    .rel-score {
+      font-family: var(--mono); font-size: 11px;
+      color: var(--muted); width: 20px; text-align: right; flex-shrink: 0;
+    }
+
+    /* ── Empty state ────────────────────────────────────────── */
+    .empty-state {
+      padding: 60px 20px; text-align: center; color: var(--muted);
+    }
+    .empty-state h3 { font-family: var(--serif); font-size: 20px; margin-bottom: 8px; color: var(--text2); }
+    .empty-state p  { font-size: 14px; }
+
+    /* ── Footer ─────────────────────────────────────────────── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 20px 0; margin-top: 40px;
+    }
+    .footer-inner {
+      max-width: 1200px; margin: 0 auto; padding: 0 24px;
+      display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px;
+    }
+    .footer-text { font-size: 12px; color: var(--muted); font-family: var(--mono); }
+
+    /* ── Responsive ─────────────────────────────────────────── */
+    @media (max-width: 768px) {
+      .layout { grid-template-columns: 1fr; }
+      .sidebar {
+        position: static; height: auto; border-right: none;
+        border-bottom: 1px solid var(--border);
+        padding: 16px 0 16px; display: flex; gap: 20px; overflow-x: auto;
+      }
+      .sidebar-section { margin-bottom: 0; min-width: 140px; }
+      .main { padding: 20px 0 40px; }
+      .topnav-inner { gap: 10px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Top Nav -->
+<nav class="topnav">
+  <div class="topnav-inner">
+    <div class="site-title">
+      Research Tracker
+      <small>Shujie Xu · Applied Micro</small>
+    </div>
+    <div class="nav-meta">
+      <div class="nav-updated">
+        <div class="nav-dot"></div>
+        Updated {{UPDATE_DATE}}
+      </div>
+      <span>{{TOTAL_PAPERS}} papers · {{WEEKS_COVERED}} weeks</span>
+    </div>
+  </div>
+</nav>
+
+<div class="layout">
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+
+    <div class="sidebar-section">
+      <div class="sidebar-heading">Source</div>
+      <div class="filter-group">
+        <div class="filter-item active" data-filter="source" data-val="all" onclick="setFilter('source','all')">
+          All sources <span class="filter-count" id="fc-source-all">{{TOTAL_PAPERS}}</span>
+        </div>
+        <div class="filter-item" data-filter="source" data-val="NBER" onclick="setFilter('source','NBER')">
+          NBER <span class="filter-count" id="fc-source-nber">{{COUNT_NBER}}</span>
+        </div>
+        <div class="filter-item" data-filter="source" data-val="SSRN" onclick="setFilter('source','SSRN')">
+          SSRN <span class="filter-count" id="fc-source-ssrn">{{COUNT_SSRN}}</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="sidebar-section">
+      <div class="sidebar-heading">Research Area</div>
+      <div class="filter-group">
+        <div class="filter-item active" data-filter="topic" data-val="all" onclick="setFilter('topic','all')">
+          All topics <span class="filter-count">{{TOTAL_PAPERS}}</span>
+        </div>
+        <div class="filter-item" data-filter="topic" data-val="information" onclick="setFilter('topic','information')">
+          Information Economics <span class="filter-count" id="fc-t-info"></span>
+        </div>
+        <div class="filter-item" data-filter="topic" data-val="corporate-political" onclick="setFilter('topic','corporate-political')">
+          Corporate Political <span class="filter-count" id="fc-t-pol"></span>
+        </div>
+        <div class="filter-item" data-filter="topic" data-val="housing" onclick="setFilter('topic','housing')">
+          Housing / Real Estate <span class="filter-count" id="fc-t-housing"></span>
+        </div>
+        <div class="filter-item" data-filter="topic" data-val="text-methods" onclick="setFilter('topic','text-methods')">
+          Text Methods / NLP <span class="filter-count" id="fc-t-text"></span>
+        </div>
+        <div class="filter-item" data-filter="topic" data-val="causal-inference" onclick="setFilter('topic','causal-inference')">
+          Causal Inference <span class="filter-count" id="fc-t-ci"></span>
+        </div>
+        <div class="filter-item" data-filter="topic" data-val="corporate-finance" onclick="setFilter('topic','corporate-finance')">
+          Corporate Finance <span class="filter-count" id="fc-t-cf"></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="sidebar-section">
+      <div class="sidebar-heading">Relevance</div>
+      <div class="filter-group">
+        <div class="filter-item" data-filter="rel" data-val="top" onclick="setFilter('rel','top')">
+          ★ Top pick (≥9) <span class="filter-count" id="fc-r-top"></span>
+        </div>
+        <div class="filter-item" data-filter="rel" data-val="high" onclick="setFilter('rel','high')">
+          High (7–8.9) <span class="filter-count" id="fc-r-high"></span>
+        </div>
+        <div class="filter-item" data-filter="rel" data-val="mid" onclick="setFilter('rel','mid')">
+          Moderate (5–6.9) <span class="filter-count" id="fc-r-mid"></span>
+        </div>
+      </div>
+    </div>
+
+    <div class="sidebar-section">
+      <div class="sidebar-heading">This week</div>
+      <div class="sidebar-stats">
+        <div class="sidebar-stat">
+          <span class="sidebar-stat-label">Fetched</span>
+          <span class="sidebar-stat-value">{{WEEK_FETCHED}}</span>
+        </div>
+        <div class="sidebar-stat">
+          <span class="sidebar-stat-label">Deep-read</span>
+          <span class="sidebar-stat-value">{{WEEK_DEEPREAD}}</span>
+        </div>
+        <div class="sidebar-stat">
+          <span class="sidebar-stat-label">Top picks</span>
+          <span class="sidebar-stat-value">{{WEEK_TOPPICKS}}</span>
+        </div>
+      </div>
+    </div>
+
+  </aside>
+
+  <!-- Main -->
+  <main class="main">
+
+    <div class="page-header">
+      <h1>Working Paper Digest</h1>
+      <p>Weekly digest of NBER &amp; SSRN working papers in applied microeconomics, corporate finance, urban economics, and text-based empirical methods. High-relevance papers are fully analyzed.</p>
+    </div>
+
+    {{SECTIONS}}
+
+  </main>
+</div>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-text">Sources: NBER · SSRN &nbsp;|&nbsp; Generated {{UPDATE_DATE}}</div>
+    <div class="footer-text">Curated by 小豹包🍞 for Shujie Xu</div>
+  </div>
+</footer>
+
+<script>
+window.PAPERS_DATA = {{PAPERS_JSON}};
+
+(function () {
+  'use strict';
+
+  const papers = window.PAPERS_DATA || [];
+
+  // ── Populate sidebar counts ────────────────────────────────
+  function computeCounts() {
+    const counts = {
+      source: { NBER: 0, SSRN: 0 },
+      topic: { information: 0, 'corporate-political': 0, housing: 0, 'text-methods': 0, 'causal-inference': 0, 'corporate-finance': 0 },
+      rel: { top: 0, high: 0, mid: 0 }
+    };
+    papers.forEach(p => {
+      if (p.source) counts.source[p.source] = (counts.source[p.source] || 0) + 1;
+      (p.topics || []).forEach(t => { if (counts.topic[t] !== undefined) counts.topic[t]++; });
+      const s = p.relevance_score || 0;
+      if (s >= 9)   counts.rel.top++;
+      else if (s >= 7) counts.rel.high++;
+      else if (s >= 5) counts.rel.mid++;
+    });
+    const set = (id, val) => { const el = document.getElementById(id); if (el) el.textContent = val; };
+    set('fc-source-nber', counts.source.NBER);
+    set('fc-source-ssrn', counts.source.SSRN);
+    set('fc-t-info',    counts.topic['information']);
+    set('fc-t-pol',     counts.topic['corporate-political']);
+    set('fc-t-housing', counts.topic['housing']);
+    set('fc-t-text',    counts.topic['text-methods']);
+    set('fc-t-ci',      counts.topic['causal-inference']);
+    set('fc-t-cf',      counts.topic['corporate-finance']);
+    set('fc-r-top',  counts.rel.top);
+    set('fc-r-high', counts.rel.high);
+    set('fc-r-mid',  counts.rel.mid);
+  }
+  computeCounts();
+
+  // ── Filters ────────────────────────────────────────────────
+  const activeFilters = { source: 'all', topic: 'all', rel: 'all' };
+
+  window.setFilter = function (type, val) {
+    // Clicking active filter toggles off → all
+    if (activeFilters[type] === val && val !== 'all') val = 'all';
+    activeFilters[type] = val;
+
+    // Update sidebar active states
+    document.querySelectorAll(`.filter-item[data-filter="${type}"]`).forEach(el => {
+      el.classList.toggle('active', el.dataset.val === val);
+    });
+
+    applyFilters();
+  };
+
+  function applyFilters() {
+    const { source, topic, rel } = activeFilters;
+
+    document.querySelectorAll('.paper-card').forEach(card => {
+      const s = card.dataset.source;
+      const topics = (card.dataset.topics || '').split(' ').filter(Boolean);
+      const score = parseFloat(card.dataset.score || 0);
+      const relTier = score >= 9 ? 'top' : score >= 7 ? 'high' : 'mid';
+
+      const srcOk   = source === 'all' || s === source;
+      const topicOk = topic  === 'all' || topics.includes(topic);
+      const relOk   = rel    === 'all' || relTier === rel;
+
+      card.style.display = (srcOk && topicOk && relOk) ? '' : 'none';
+    });
+
+    // Hide empty week sections
+    document.querySelectorAll('.week-section').forEach(sec => {
+      const anyVisible = [...sec.querySelectorAll('.paper-card')].some(c => c.style.display !== 'none');
+      sec.style.display = anyVisible ? '' : 'none';
+    });
+  }
+
+  // ── Abstract toggle ────────────────────────────────────────
+  window.toggleAbstract = function (btn) {
+    const el = btn.closest('.paper-card').querySelector('.abstract-full');
+    const isOpen = el.style.display !== 'none';
+    el.style.display = isOpen ? 'none' : '';
+    btn.textContent = isOpen ? 'Show more' : 'Show less';
+  };
+
+  // ── Analysis toggle ────────────────────────────────────────
+  window.toggleAnalysis = function (btn) {
+    const card  = btn.closest('.paper-card');
+    const panel = card.querySelector('.analysis-panel');
+    const isOpen = panel.classList.contains('open');
+    panel.classList.toggle('open', !isOpen);
+    btn.textContent = isOpen ? 'View Analysis' : 'Hide Analysis';
+  };
+
+})();
+</script>
+
+</body>
+</html>

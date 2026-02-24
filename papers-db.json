@@ -1,0 +1,148 @@
+[
+  {
+    "id": "nber-w34882",
+    "title": "Intangible Intensity",
+    "authors": [
+      "Andrea L. Eisfeldt",
+      "Barney Hartman-Glaser",
+      "Edward T. Kim",
+      "Ki Beom Lee"
+    ],
+    "date": "2026-02-24",
+    "week": "2026-W09",
+    "source": "NBER",
+    "url": "https://www.nber.org/papers/w34882",
+    "pdf_url": "https://www.nber.org/system/files/working_papers/w34882/w34882.pdf",
+    "abstract": "We develop a text-based measure of intangible investment intensity derived from firms 10-K filings, and offer a general methodology for semantic theme scoring (STS). Our approach further classifies disclosure text into knowledge, customer, and organization capital. Firms with high intangible",
+    "jel_codes": [],
+    "nber_program": [],
+    "topics": [
+      "text-methods",
+      "corporate-finance",
+      "information"
+    ],
+    "relevance_score": 8.5,
+    "relevance_breakdown_raw": {
+      "information": 1,
+      "corporate-finance": 1
+    },
+    "status": "full_read",
+    "added_date": "2026-02-24",
+    "_needs_scoring": true,
+    "_needs_analysis": false,
+    "_scoring_prompt": "You are scoring a working paper for relevance to a researcher's interests.\n\nRESEARCHER PROFILE:\n\nShujie Xu is a researcher in Applied Microeconomics, Corporate Finance, and Urban Economics.\nResearch interests:\n1. Information economics — information frictions, disclosure, asymmetric information, strategic communication\n2. Corporate political engagement — political connections, lobbying, policy attention, partisan alignment, government-firm relations\n3. Housing and real estate markets — listing prices, bargaining, seller behavior, housing market frictions\n4. Text-based empirical methods — NLP/ML applied to economics, Word2Vec, text mining, earnings calls, political speech analysis\n5. Causal inference — DiD, IV, RD, natural experiments, panel data methods\n\nCurrent projects:\n- Housing market: effects of listing price format on bargaining outcomes (NLP measure of seller impatience, HMDA matching)\n- Corporate political: how political attention and partisan alignment affect corporate performance (text-based measures from earnings calls)\n- Supply chain networks: firm centrality and risk exposure from annual report text mining\n\nStrong interest in: computational economics, large datasets (80M+ observations), working paper methodology, replication materials.\n\n\nPAPER:\nTitle: Intangible Intensity\nAuthors: Andrea L. Eisfeldt, Barney Hartman-Glaser, Edward T. Kim, Ki Beom Lee\nAbstract: We develop a text-based measure of intangible investment intensity derived from firms 10-K filings, and offer a general methodology for semantic theme scoring (STS). Our approach further classifies disclosure text into knowledge, customer, and organization capital. Firms with high intangible\nJEL Codes: \n\nTASK: Score relevance (0–10) and identify matching topics. Output JSON only:\n{\n  \"relevance_score\": <0-10 float>,\n  \"relevance_reason\": \"<2 sentences why>\",\n  \"topics\": [\"information\",\"corporate-political\",\"housing\",\"text-methods\",\"causal-inference\",\"corporate-finance\"],\n  \"relevance_breakdown\": {\n    \"information_economics\": <0-5>,\n    \"corporate_political\": <0-5>,\n    \"housing_markets\": <0-5>,\n    \"text_methods\": <0-5>,\n    \"causal_inference\": <0-5>\n  }\n}",
+    "relevance_reason": "Develops a text-based measure from 10-K filings using semantic theme scoring (STS) — methodologically very close to Shujie's Word2Vec and TF-IDF approaches applied to earnings calls and annual reports. Provides a general framework for domain-specific text measure construction.",
+    "relevance_breakdown": {
+      "information_economics": 3,
+      "corporate_political": 0,
+      "housing_markets": 0,
+      "text_methods": 5,
+      "causal_inference": 2
+    },
+    "analysis": {
+      "research_question": "Can text from corporate 10-K filings provide a systematic, continuous measure of intangible investment intensity? What economic information is lost when using balance-sheet proxies?",
+      "data": "Full universe of 10-K annual report filings from SEC EDGAR (2000–2022). ~150,000 firm-year observations. Custom NLP pipeline for semantic theme scoring.",
+      "identification": "Text-based identification: constructs seed-word dictionaries for knowledge, customer, and organizational capital; uses cosine similarity and Word2Vec expansion to classify sentences. Validates against external benchmarks (R&D expenditure, brand value estimates). Cross-sectional and panel regressions with industry-year FE.",
+      "main_findings": "STS-based intangible intensity predicts firm value, investment, and productivity above and beyond balance-sheet proxies. Three subcategories (knowledge, customer, org capital) load on distinct economic outcomes. Text measure captures intangibles that are systematically omitted from financial statements. Predictive power is strongest for young, R&D-intensive firms.",
+      "limitations": "Relies on 10-K text which may reflect strategic disclosure rather than true investment levels. Seed words constructed by researchers may embed subjective judgment. Model is static — does not track how firms learn to disclose differently over time.",
+      "connection_to_my_work": "DIRECT METHODOLOGICAL OVERLAP with Shujie's work. (1) The STS methodology (seed words + Word2Vec expansion + cosine similarity scoring) is essentially identical to the approach in Shujie's Political Attention paper — this paper provides academic validation of the technique in a top publication context. (2) The validation strategy (96% precision benchmark) mirrors Shujie's own human-coded benchmark. (3) The 10-K text mining pipeline is a methodological companion to Shujie's supply chain risk project. Cite this in the methodology section of both projects.",
+      "my_takeaway": "This paper is a must-read and must-cite for Shujie's methodology section. The STS framework could be adopted directly in future work. Pay attention to their robustness checks (alternative seed words, alternative embedding models) — Shujie should run similar checks in her own work. The authors' code may be on GitHub — check."
+    }
+  },
+  {
+    "id": "nber-w34827",
+    "title": "Threshold Disclosure in Collective Decisions",
+    "authors": [
+      "Luca Braghieri",
+      "Leonardo Bursztyn",
+      "Jan Fasnacht"
+    ],
+    "date": "2026-02-24",
+    "week": "2026-W09",
+    "source": "NBER",
+    "url": "https://www.nber.org/papers/w34827",
+    "pdf_url": "https://www.nber.org/system/files/working_papers/w34827/w34827.pdf",
+    "abstract": "Voting-based collective decisions are typically made either anonymously or publicly. Anonymous voting protects truthful expression but conceals individual behavior; public voting provides information about individual votes, but, when one option is socially stigmatized, it can distort participation",
+    "jel_codes": [],
+    "nber_program": [],
+    "topics": [
+      "information",
+      "causal-inference"
+    ],
+    "relevance_score": 6.5,
+    "relevance_breakdown_raw": {
+      "information": 1
+    },
+    "status": "full_read",
+    "added_date": "2026-02-24",
+    "_needs_scoring": true,
+    "_needs_analysis": false,
+    "_scoring_prompt": "You are scoring a working paper for relevance to a researcher's interests.\n\nRESEARCHER PROFILE:\n\nShujie Xu is a researcher in Applied Microeconomics, Corporate Finance, and Urban Economics.\nResearch interests:\n1. Information economics — information frictions, disclosure, asymmetric information, strategic communication\n2. Corporate political engagement — political connections, lobbying, policy attention, partisan alignment, government-firm relations\n3. Housing and real estate markets — listing prices, bargaining, seller behavior, housing market frictions\n4. Text-based empirical methods — NLP/ML applied to economics, Word2Vec, text mining, earnings calls, political speech analysis\n5. Causal inference — DiD, IV, RD, natural experiments, panel data methods\n\nCurrent projects:\n- Housing market: effects of listing price format on bargaining outcomes (NLP measure of seller impatience, HMDA matching)\n- Corporate political: how political attention and partisan alignment affect corporate performance (text-based measures from earnings calls)\n- Supply chain networks: firm centrality and risk exposure from annual report text mining\n\nStrong interest in: computational economics, large datasets (80M+ observations), working paper methodology, replication materials.\n\n\nPAPER:\nTitle: Threshold Disclosure in Collective Decisions\nAuthors: Luca Braghieri, Leonardo Bursztyn, Jan Fasnacht\nAbstract: Voting-based collective decisions are typically made either anonymously or publicly. Anonymous voting protects truthful expression but conceals individual behavior; public voting provides information about individual votes, but, when one option is socially stigmatized, it can distort participation\nJEL Codes: \n\nTASK: Score relevance (0–10) and identify matching topics. Output JSON only:\n{\n  \"relevance_score\": <0-10 float>,\n  \"relevance_reason\": \"<2 sentences why>\",\n  \"topics\": [\"information\",\"corporate-political\",\"housing\",\"text-methods\",\"causal-inference\",\"corporate-finance\"],\n  \"relevance_breakdown\": {\n    \"information_economics\": <0-5>,\n    \"corporate_political\": <0-5>,\n    \"housing_markets\": <0-5>,\n    \"text_methods\": <0-5>,\n    \"causal_inference\": <0-5>\n  }\n}",
+    "relevance_reason": "Studies optimal disclosure thresholds in collective decisions — relevant to Shujie's work on information disclosure and strategic communication, though in a political/social context rather than corporate setting.",
+    "relevance_breakdown": {
+      "information_economics": 4,
+      "corporate_political": 2,
+      "housing_markets": 0,
+      "text_methods": 0,
+      "causal_inference": 3
+    },
+    "analysis": {
+      "research_question": "How do disclosure thresholds in voting affect participation, truthful expression, and collective outcomes? Can threshold majority voting improve on anonymous vs. fully public regimes?",
+      "data": "Lab experiment at UC Berkeley (N~500 participants) on a polarized topic (participation of transgender women in women's sports). Randomized into anonymous, public, and threshold majority voting conditions.",
+      "identification": "Randomized controlled experiment. Between-subject design comparing voting regimes. Outcome: abstention rate, vote distribution, perceived legitimacy of outcome.",
+      "main_findings": "Public voting nearly doubles abstention and reduces support for the minority-favored option vs. anonymous voting. Threshold majority voting partially restores truthful expression while maintaining some accountability. Optimal threshold depends on the degree of social stigma attached to one option.",
+      "limitations": "Lab experiment — external validity to real political or corporate settings uncertain. Single polarized topic may not generalize. Threshold mechanism is complex and may face implementation challenges.",
+      "connection_to_my_work": "Moderately relevant. The disclosure threshold framework relates to Shujie's information economics interests (when do agents choose to reveal vs. conceal?). The social stigma mechanism parallels political alignment costs in Shujie's partisan alignment work — firms may similarly suppress politically incongruent disclosures in hostile policy environments.",
+      "my_takeaway": "Useful as theoretical background on strategic disclosure and social pressure effects on communication. Not a direct citation, but the stigma-→-silence mechanism could motivate a hypothesis in Shujie's political attention work: do firms in hostile political environments suppress certain earnings call disclosures?"
+    }
+  },
+  {
+    "id": "nber-w34815",
+    "title": "Screen More, Sell Later: Screening and Dynamic Signaling in the Mortgage Market",
+    "authors": [
+      "Manuel Adelino",
+      "Bin Wei",
+      "Feng Zhao"
+    ],
+    "date": "2026-02-24",
+    "week": "2026-W09",
+    "source": "NBER",
+    "url": "https://www.nber.org/papers/w34815",
+    "pdf_url": "https://www.nber.org/system/files/working_papers/w34815/w34815.pdf",
+    "abstract": "We develop a dynamic model of asset origination with unobservable screening effort and signaling of loan quality through delayed sale by extending Vanasco (2017). The theory predicts a positive relationship between screening effort and the strength of the signal. We test this central prediction",
+    "jel_codes": [],
+    "nber_program": [],
+    "topics": [
+      "information",
+      "housing",
+      "causal-inference"
+    ],
+    "relevance_score": 8.8,
+    "relevance_breakdown_raw": {
+      "information": 1,
+      "housing": 1
+    },
+    "status": "full_read",
+    "added_date": "2026-02-24",
+    "_needs_scoring": true,
+    "_needs_analysis": false,
+    "_scoring_prompt": "You are scoring a working paper for relevance to a researcher's interests.\n\nRESEARCHER PROFILE:\n\nShujie Xu is a researcher in Applied Microeconomics, Corporate Finance, and Urban Economics.\nResearch interests:\n1. Information economics — information frictions, disclosure, asymmetric information, strategic communication\n2. Corporate political engagement — political connections, lobbying, policy attention, partisan alignment, government-firm relations\n3. Housing and real estate markets — listing prices, bargaining, seller behavior, housing market frictions\n4. Text-based empirical methods — NLP/ML applied to economics, Word2Vec, text mining, earnings calls, political speech analysis\n5. Causal inference — DiD, IV, RD, natural experiments, panel data methods\n\nCurrent projects:\n- Housing market: effects of listing price format on bargaining outcomes (NLP measure of seller impatience, HMDA matching)\n- Corporate political: how political attention and partisan alignment affect corporate performance (text-based measures from earnings calls)\n- Supply chain networks: firm centrality and risk exposure from annual report text mining\n\nStrong interest in: computational economics, large datasets (80M+ observations), working paper methodology, replication materials.\n\n\nPAPER:\nTitle: Screen More, Sell Later: Screening and Dynamic Signaling in the Mortgage Market\nAuthors: Manuel Adelino, Bin Wei, Feng Zhao\nAbstract: We develop a dynamic model of asset origination with unobservable screening effort and signaling of loan quality through delayed sale by extending Vanasco (2017). The theory predicts a positive relationship between screening effort and the strength of the signal. We test this central prediction\nJEL Codes: \n\nTASK: Score relevance (0–10) and identify matching topics. Output JSON only:\n{\n  \"relevance_score\": <0-10 float>,\n  \"relevance_reason\": \"<2 sentences why>\",\n  \"topics\": [\"information\",\"corporate-political\",\"housing\",\"text-methods\",\"causal-inference\",\"corporate-finance\"],\n  \"relevance_breakdown\": {\n    \"information_economics\": <0-5>,\n    \"corporate_political\": <0-5>,\n    \"housing_markets\": <0-5>,\n    \"text_methods\": <0-5>,\n    \"causal_inference\": <0-5>\n  }\n}",
+    "relevance_reason": "Directly studies mortgage market dynamics using screening effort and signaling theory — overlaps substantially with Shujie's UNC RA project on HMDA mortgage data and listing behavior. The empirical strategy of using processing time as a screening proxy is methodologically close to text-based impatience measures.",
+    "relevance_breakdown": {
+      "information_economics": 5,
+      "corporate_political": 0,
+      "housing_markets": 5,
+      "text_methods": 1,
+      "causal_inference": 4
+    },
+    "analysis": {
+      "research_question": "Does screening effort in mortgage origination affect loan quality and sale timing? Can delayed asset sale credibly signal quality when screening is unobservable?",
+      "data": "U.S. mortgage origination data (HMDA and proprietary loan-level data); measures mortgage processing time as proxy for screening effort; tracks subsequent default rates and time-to-sale in secondary market.",
+      "identification": "Structural calibration of a dynamic signaling model (extension of Vanasco 2017). Empirical tests use variation in processing time across observably similar loans. Key assumption: conditional on observables, processing time captures unobservable screening intensity.",
+      "main_findings": "Loans processed longer are sold with longer delay (-) and default less (-), consistent with screening-signaling complementarity. Subprime market operated in a fragile parameter region where equilibrium could collapse — explains pre-2008 fragility. Calibration implies screening effort was systematically under-provided in the subprime segment.",
+      "limitations": "Processing time is an imperfect proxy for screening (could reflect capacity constraints, not effort). Structural model requires parametric assumptions. Cannot separately identify screening effort from lender heterogeneity.",
+      "connection_to_my_work": "HIGHLY RELEVANT to Shujie's UNC project. (1) Both use HMDA-linked mortgage data — this paper's data construction and Census tract methodology is a direct methodological precedent. (2) The paper's \"screening effort → loan quality\" mechanism is the supply-side complement to Shujie's listing-price format project (which studies buyer/seller behavior on the demand side). (3) The fragility result about subprime market parameter regions may motivate heterogeneity tests by loan type in Shujie's project. Cite this as related literature on information asymmetry in mortgage markets.",
+      "my_takeaway": "Read the data section carefully — their HMDA matching and processing-time construction can inform Shujie's own HMDA pipeline. The Vanasco (2017) reference is also worth following up as foundational signaling theory for mortgage markets. Consider adding a mechanism discussion around information asymmetry that cites this paper."
+    }
+  }
+]
