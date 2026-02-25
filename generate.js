@@ -285,6 +285,7 @@ const weekSections = weeks.map(w => {
   return `## ${label} {#${anchorId}}\n\n\`\`\`{=html}\n${papers.map(paperCard).join('\n')}\n\`\`\`\n`;
 }).join('\n');
 
+const ogDesc = `${totalPapers} papers tracked · ${nberCount} NBER · ${weeks.length} weeks · Updated ${updateDate}`;
 const indexQmd = `---
 title: "Research Tracker"
 subtitle: "Shujie Xu · Applied Micro & Corporate Finance"
@@ -293,8 +294,16 @@ toc-location: left
 toc-title: "Weeks"
 toc-depth: 1
 page-layout: full
-image: "https://shujie-xu.github.io/paper-tracker/preview.png"
-description: "${totalPapers} papers tracked · ${nberCount} NBER · ${ssrnCount > 0 ? ssrnCount + ' SSRN · ' : ''}${weeks.length} weeks · Updated ${updateDate}"
+include-in-header:
+  text: |
+    <meta property="og:title" content="Research Tracker · Shujie Xu">
+    <meta property="og:description" content="${ogDesc}">
+    <meta property="og:image" content="https://shujie-xu.github.io/paper-tracker/preview.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://shujie-xu.github.io/paper-tracker/preview.png">
 ---
 
 \`\`\`{=html}

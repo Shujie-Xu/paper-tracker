@@ -6,8 +6,16 @@ toc-location: left
 toc-title: "Weeks"
 toc-depth: 1
 page-layout: full
-image: "https://shujie-xu.github.io/paper-tracker/preview.png"
-description: "100 papers tracked · 100 NBER · 1 weeks · Updated Feb 25, 2026"
+include-in-header:
+  text: |
+    <meta property="og:title" content="Research Tracker · Shujie Xu">
+    <meta property="og:description" content="100 papers tracked · 100 NBER · 1 weeks · Updated Feb 25, 2026">
+    <meta property="og:image" content="https://shujie-xu.github.io/paper-tracker/preview.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="https://shujie-xu.github.io/paper-tracker/preview.png">
 ---
 
 ```{=html}
