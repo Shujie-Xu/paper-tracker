@@ -227,6 +227,24 @@ console.log(`📝 Written index.qmd (${allPapers.length} papers, ${weeks.length}
 // ── Quarto render ──────────────────────────────────────────────
 try {
   execSync(`cd ${__dirname} && quarto render index.qmd --quiet`, { stdio: 'inherit' });
+
+  // Quarto renders to project root (./index.html + ./index_files/); move to docs/
+  if (!fs.existsSync(OUT_DIR)) fs.mkdirSync(OUT_DIR, { recursive: true });
+
+  // Move index.html
+  const srcHtml  = path.join(__dirname, 'index.html');
+  const destHtml = path.join(OUT_DIR, 'index.html');
+  if (fs.existsSync(srcHtml)) fs.renameSync(srcHtml, destHtml);
+
+  // Move index_files/ (Bootstrap CSS/JS)
+  const srcFiles  = path.join(__dirname, 'index_files');
+  const destFiles = path.join(OUT_DIR, 'index_files');
+  if (fs.existsSync(srcFiles)) {
+    if (fs.existsSync(destFiles))
+      execSync(`rm -rf "${destFiles}"`);
+    fs.renameSync(srcFiles, destFiles);
+  }
+
   console.log(`✅ Rendered → docs/index.html`);
   console.log(`   ${totalPapers} papers · ${weeksCount} weeks · ${nberCount} NBER · ${ssrnCount} SSRN`);
 } catch (e) {
@@ -239,7 +257,7 @@ const shouldPush = process.argv.includes('--push');
 if (shouldPush) {
   try {
     execSync(
-      `cd ${__dirname} && git add docs/ index.qmd && git commit -m "📚 Paper tracker update ${new Date().toLocaleDateString('sv-SE', {timeZone:'Asia/Shanghai'})}" && git push`,
+      `cd ${__dirname} && git add docs/ index.qmd generate.js && git commit -m "📚 Paper tracker update ${new Date().toLocaleDateString('sv-SE', {timeZone:'Asia/Shanghai'})}" && git push`,
       { stdio: 'inherit' }
     );
     console.log('🚀 Pushed to GitHub Pages!');
