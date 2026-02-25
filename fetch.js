@@ -22,20 +22,20 @@ const DRY_RUN = process.argv.includes('--dry-run');
 
 // ── Research profile (used in LLM prompt) ─────────────────────
 const RESEARCH_PROFILE = `
-Shujie Xu is a researcher in Applied Microeconomics, Corporate Finance, and Urban Economics.
+Shujie Xu is a researcher in Applied Microeconomics, Corporate Finance, and Industrial Organization.
 Research interests:
 1. Information economics — information frictions, disclosure, asymmetric information, strategic communication
 2. Corporate political engagement — political connections, lobbying, policy attention, partisan alignment, government-firm relations
-3. Housing and real estate markets — listing prices, bargaining, seller behavior, housing market frictions
-4. Text-based empirical methods — NLP/ML applied to economics, Word2Vec, text mining, earnings calls, political speech analysis
-5. Causal inference — DiD, IV, RD, natural experiments, panel data methods
+3. Text-based empirical methods — NLP/ML applied to economics, Word2Vec, text mining, earnings calls, political speech analysis, LLMs in economics
+4. Causal inference — DiD, IV, RD, natural experiments, panel data methods
+5. Supply chain & networks — firm-level network centrality, risk propagation, inter-firm linkages
 
 Current projects:
-- Housing market: effects of listing price format on bargaining outcomes (NLP measure of seller impatience, HMDA matching)
 - Corporate political: how political attention and partisan alignment affect corporate performance (text-based measures from earnings calls)
 - Supply chain networks: firm centrality and risk exposure from annual report text mining
+- Applied micro methods: large-scale text analysis (80M+ obs), causal inference, structural estimation
 
-Strong interest in: computational economics, large datasets (80M+ observations), working paper methodology, replication materials.
+Strong interest in: computational economics, text-as-data, working paper methodology, replication materials.
 `;
 
 // ── NBER API endpoint ─────────────────────────────────────────
@@ -148,10 +148,10 @@ function getISOWeek(dateStr) {
 const TOPIC_KEYWORDS = {
   'information':          ['information friction', 'information asymmetry', 'disclosure', 'opacity', 'transparency', 'signal', 'uncertainty', 'belief', 'strategic communication', 'private information'],
   'corporate-political':  ['political connection', 'lobbying', 'political attention', 'partisan', 'government relation', 'policy attention', 'political uncertainty', 'corporate political', 'regulatory capture', 'political risk'],
-  'housing':              ['housing market', 'real estate', 'listing price', 'bargaining', 'property', 'mortgage', 'homebuyer', 'seller', 'house price', 'rental'],
-  'text-methods':         ['natural language processing', 'nlp', 'text analysis', 'word embedding', 'word2vec', 'text mining', 'machine learning', 'earnings call', 'textual', 'sentiment analysis', 'large language model', 'bert', 'tf-idf'],
+  'text-methods':         ['natural language processing', 'nlp', 'text analysis', 'word embedding', 'word2vec', 'text mining', 'machine learning', 'earnings call', 'textual', 'sentiment analysis', 'large language model', 'bert', 'tf-idf', 'text-as-data'],
   'causal-inference':     ['difference-in-differences', 'did', 'instrumental variable', 'regression discontinuity', 'natural experiment', 'causal', 'identification strategy', 'plausibly exogenous', 'treatment effect'],
   'corporate-finance':    ['corporate finance', 'firm behavior', 'ceo', 'board', 'governance', 'capital structure', 'investment', 'earnings', 'stock market', 'firm performance'],
+  'supply-chain':         ['supply chain', 'supply network', 'firm network', 'input-output', 'production network', 'network centrality', 'upstream', 'downstream', 'inter-firm', 'trade credit', 'supplier', 'customer concentration'],
 };
 
 function keywordScore(title, abstract) {
@@ -189,13 +189,13 @@ TASK: Score relevance (0–10) and identify matching topics. Output JSON only:
 {
   "relevance_score": <0-10 float>,
   "relevance_reason": "<2 sentences why>",
-  "topics": ["information","corporate-political","housing","text-methods","causal-inference","corporate-finance"],
+  "topics": ["information","corporate-political","text-methods","causal-inference","corporate-finance","supply-chain"],
   "relevance_breakdown": {
     "information_economics": <0-5>,
     "corporate_political": <0-5>,
-    "housing_markets": <0-5>,
     "text_methods": <0-5>,
-    "causal_inference": <0-5>
+    "causal_inference": <0-5>,
+    "supply_chain_networks": <0-5>
   }
 }`;
 }
