@@ -6,7 +6,6 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2026-02-25">
 
 <title>Research Tracker</title>
 <style>
@@ -35,9 +34,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="index_files/libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="index_files/libs/bootstrap/bootstrap.min.js"></script>
 <link href="index_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="index_files/libs/bootstrap/bootstrap-b3db2d0ac26a8fbd0cc03f3f2f150ae9.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
-<style>html{ scroll-behavior: smooth; }</style>
-<meta name="description" content="Weekly NBER + SSRN working paper digest, curated by research area.">
+<link href="index_files/libs/bootstrap/bootstrap-31eb03601d55f7ff1d515a858f38b34f.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 
 
 </head>
@@ -63,12 +60,6 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-title-meta column-page">
 
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">February 25, 2026</p>
-    </div>
-  </div>
   
     
   </div>
@@ -80,1145 +71,1226 @@ ul.task-list li input[type="checkbox"] {
 
 <div class="tracker-stats">
   <span class="stat-item">📄 <strong>100</strong> papers tracked</span>
-  <span class="stat-item">📅 <strong>1</strong> weeks covered</span>
+  <span class="stat-item">📅 <strong>1</strong> weeks</span>
   <span class="stat-item">🏛 <strong>100</strong> NBER</span>
   
+  <span class="stat-item">🎯 <strong>9</strong> AI-scored</span>
   <span class="stat-item">⭐ <strong>1</strong> full reads</span>
-  <span class="stat-item" style="margin-left:auto; color:#adb5bd;">Updated Feb 25, 2026</span>
+  <span class="stat-item" style="margin-left:auto; color:#adb5bd; font-size:0.8rem;">Updated Feb 25, 2026</span>
 </div>
 
 <div class="filter-bar" id="filterBar">
   <span class="filter-label">Filter:</span>
-  <button class="filter-btn active" onclick="filterCards('all', this)">All</button>
-  <button class="filter-btn" onclick="filterCards('top', this)">⭐ Top picks</button>
-  <button class="filter-btn" onclick="filterCards('NBER', this)">NBER</button>
-  <button class="filter-btn" onclick="filterCards('SSRN', this)">SSRN</button>
-  <button class="filter-btn" onclick="filterCards('information', this)">Information</button>
-  <button class="filter-btn" onclick="filterCards('corporate-political', this)">Corp. Political</button>
-  <button class="filter-btn" onclick="filterCards('text-methods', this)">Text Methods</button>
-  <button class="filter-btn" onclick="filterCards('supply-chain', this)">Supply Chain</button>
+  <button class="filter-btn active" onclick="filterCards('all',this)">All</button>
+  <button class="filter-btn" onclick="filterCards('full_read',this)">⭐ Full analysis</button>
+  <button class="filter-btn" onclick="filterCards('NBER',this)">NBER</button>
+  <button class="filter-btn" onclick="filterCards('SSRN',this)">SSRN</button>
+  <button class="filter-btn" onclick="filterCards('information',this)">Information</button>
+  <button class="filter-btn" onclick="filterCards('corporate-political',this)">Corp. Political</button>
+  <button class="filter-btn" onclick="filterCards('text-methods',this)">Text Methods</button>
+  <button class="filter-btn" onclick="filterCards('supply-chain',this)">Supply Chain</button>
 </div>
 <section id="2026-w09" class="level2">
 <h2 class="anchored" data-anchor-id="2026-w09">Week 9 · Feb 23–1, 2026</h2>
 <div class="paper-card top-pick" data-score="8.5" data-source="NBER" data-topics="information">
-  <div class="paper-title"><a href="https://www.nber.org/papers/w34807" target="_blank" rel="noopener">AI, Opinion Ecosystems, and Finance</a></div>
+  <div class="paper-title">
+    <a href="papers/nber-w34807.html">AI, Opinion Ecosystems, and Finance</a>
+  </div>
   <div class="paper-meta">
     <span class="score-badge score-top">8.5</span>
     <span class="source-tag">NBER</span>
     <span class="topic-tag" data-topic="information">Information Econ</span>
+    <span class="source-tag" style="background:#f6ffed; color:#389e0d;">⭐ Full analysis</span>
   </div>
-  <div class="paper-authors">David Hirshleifer, Lin Peng, Qiguang Wang, Weichen Zhang et al.</div>
-  <p class="paper-abstract">Generative AI use for content generation is associated with divergent outcomes on different financial social media platforms: indications of reasoning enhancement on Seeking Alpha, and of belief distortions on WallStreetBets. On Seeking Alpha, adoption is associated with information frictions. AI</p>
-  
-    <div class="analysis-block">
-      <div class="analysis-grid">
-      <div class="analysis-item">
-        <label>Research Question</label>
-        <p>How do AI-generated opinions shape information ecosystems and affect asset pricing?</p>
-      </div>
-      <div class="analysis-item">
-        <label>Data</label>
-        <p>Social media posts + earnings call transcripts + stock return panel, 2015-2025</p>
-      </div>
-      <div class="analysis-item">
-        <label>Identification</label>
-        <p>Quasi-experimental variation in AI content moderation policy changes</p>
-      </div>
-      <div class="analysis-item">
-        <label>Main Findings</label>
-        <p>AI-generated financial commentary increases return comovement by 12-18%, with stronger effects for retail-heavy stocks</p>
-      </div></div>
-      <div class="takeaway-box"><strong>Takeaway:</strong> Method: use large-scale text variation as quasi-experiment; Finding: cite as motivation for why text-based firm signals matter</div>
-    </div>
+  <div class="paper-authors">David Hirshleifer, Lin Peng, Qiguang Wang et al.</div>
 </div>
 <div class="paper-card high-relevance" data-score="7.2" data-source="NBER" data-topics="information,corporate-finance">
-  <div class="paper-title"><a href="https://www.nber.org/papers/w34882" target="_blank" rel="noopener">Intangible Intensity</a></div>
+  <div class="paper-title">
+    <a href="papers/nber-w34882.html">Intangible Intensity</a>
+  </div>
   <div class="paper-meta">
     <span class="score-badge score-high">7.2</span>
     <span class="source-tag">NBER</span>
     <span class="topic-tag" data-topic="information">Information Econ</span><span class="topic-tag" data-topic="corporate-finance">Corp. Finance</span>
+    
   </div>
-  <div class="paper-authors">Andrea L. Eisfeldt, Barney Hartman-Glaser, Edward T. Kim, Ki Beom Lee</div>
-  <p class="paper-abstract">We develop a text-based measure of intangible investment intensity derived from firms 10-K filings, and offer a general methodology for semantic theme scoring (STS). Our approach further classifies disclosure text into knowledge, customer, and organization capital. Firms with high intangible</p>
-  
+  <div class="paper-authors">Andrea L. Eisfeldt, Barney Hartman-Glaser, Edward T. Kim et al.</div>
 </div>
 <div class="paper-card" data-score="6.8" data-source="NBER" data-topics="">
-  <div class="paper-title"><a href="https://www.nber.org/papers/w34859" target="_blank" rel="noopener">Chaining Tasks, Redefining Work: A Theory of AI Automation</a></div>
+  <div class="paper-title">
+    <a href="papers/nber-w34859.html">Chaining Tasks, Redefining Work: A Theory of AI Automation</a>
+  </div>
   <div class="paper-meta">
     <span class="score-badge score-mid">6.8</span>
     <span class="source-tag">NBER</span>
     
+    
   </div>
-  <div class="paper-authors">Mert Demirer, John J. Horton, Nicole Immorlica, Brendan Lucier et al.</div>
-  <p class="paper-abstract">Production is a sequence of steps that can be executed (1) manually, (2) augmented with AI, or (3) fully automated within contiguous AI-executed steps called chains. Firms optimally bundle steps into tasks and then jobs, trading off specialization gains against coordination costs. We characterize</p>
-  
+  <div class="paper-authors">Mert Demirer, John J. Horton, Nicole Immorlica et al.</div>
 </div>
 <div class="paper-card" data-score="6.8" data-source="NBER" data-topics="text-methods">
-  <div class="paper-title"><a href="https://www.nber.org/papers/w34861" target="_blank" rel="noopener">Machine Learning Meets Markowitz</a></div>
+  <div class="paper-title">
+    <a href="papers/nber-w34861.html">Machine Learning Meets Markowitz</a>
+  </div>
   <div class="paper-meta">
     <span class="score-badge score-mid">6.8</span>
     <span class="source-tag">NBER</span>
     <span class="topic-tag" data-topic="text-methods">Text Methods</span>
+    
   </div>
-  <div class="paper-authors">Yijie Wang, Hao Gao, Campbell R. Harvey, Yan Liu et al.</div>
-  <p class="paper-abstract">The standard approach to portfolio selection involves two stages: forecast the asset returns and then plug them into an optimizer. We argue that this separation is deeply problematic. The first stage treats cross-sectional prediction errors as equally important across all securities. However, given</p>
-  
+  <div class="paper-authors">Yijie Wang, Hao Gao, Campbell R. Harvey et al.</div>
 </div>
 <div class="paper-card" data-score="6.8" data-source="NBER" data-topics="">
-  <div class="paper-title"><a href="https://www.nber.org/papers/w34873" target="_blank" rel="noopener">Public Finance in the Age of AI: A Primer</a></div>
+  <div class="paper-title">
+    <a href="papers/nber-w34873.html">Public Finance in the Age of AI: A Primer</a>
+  </div>
   <div class="paper-meta">
     <span class="score-badge score-mid">6.8</span>
     <span class="source-tag">NBER</span>
+    
     
   </div>
   <div class="paper-authors">Anton Korinek, Lee Lockwood</div>
-  <p class="paper-abstract">Transformative artificial intelligence (TAI) - machines capable of performing virtually all economically valuable work - may gradually erode the two main tax bases that underpin modern tax systems: labor income and human consumption. We examine optimal taxation across two stages of artificial</p>
-  
 </div>
 <div class="paper-card" data-score="6.8" data-source="NBER" data-topics="">
-  <div class="paper-title"><a href="https://www.nber.org/papers/w34851" target="_blank" rel="noopener">Does Generative AI Narrow Education-Based Productivity Gaps? Evidence from a Randomized Experiment</a></div>
+  <div class="paper-title">
+    <a href="papers/nber-w34851.html">Does Generative AI Narrow Education-Based Productivity Gaps? Evidence from a Randomized Experiment</a>
+  </div>
   <div class="paper-meta">
     <span class="score-badge score-mid">6.8</span>
     <span class="source-tag">NBER</span>
     
+    
   </div>
-  <div class="paper-authors">Guillermo Cruces, Diego Fernández Meijide, Sebastian Galiani, Ramiro H. Gálvez et al.</div>
-  <p class="paper-abstract">Does generative artificial intelligence (AI) reinforce or reduce productivity differences across workers? Existing evidence largely studies AI within firms and occupations, where organizational selection compresses educational heterogeneity, leaving unclear whether AI narrows productivity gaps</p>
-  
+  <div class="paper-authors">Guillermo Cruces, Diego Fernández Meijide, Sebastian Galiani et al.</div>
 </div>
 <div class="paper-card" data-score="6.8" data-source="NBER" data-topics="corporate-finance">
-  <div class="paper-title"><a href="https://www.nber.org/papers/w34836" target="_blank" rel="noopener">Firm Data on AI</a></div>
+  <div class="paper-title">
+    <a href="papers/nber-w34836.html">Firm Data on AI</a>
+  </div>
   <div class="paper-meta">
     <span class="score-badge score-mid">6.8</span>
     <span class="source-tag">NBER</span>
     <span class="topic-tag" data-topic="corporate-finance">Corp. Finance</span>
+    
   </div>
-  <div class="paper-authors">Ivan Yotzov, Jose Maria Barrero, Nicholas Bloom, Philip Bunn et al.</div>
-  <p class="paper-abstract">We present the first representative international data on firm-level AI use. We survey almost 6000 CFOs, CEOs and executives from stratified firm samples across the US, UK, Germany and Australia. We find four key facts. First, around 70% of firms actively use AI, particularly younger, more</p>
-  
+  <div class="paper-authors">Ivan Yotzov, Jose Maria Barrero, Nicholas Bloom et al.</div>
 </div>
 <div class="paper-card" data-score="6.8" data-source="NBER" data-topics="corporate-political">
-  <div class="paper-title"><a href="https://www.nber.org/papers/w34813" target="_blank" rel="noopener">The Politics of AI</a></div>
+  <div class="paper-title">
+    <a href="papers/nber-w34813.html">The Politics of AI</a>
+  </div>
   <div class="paper-meta">
     <span class="score-badge score-mid">6.8</span>
     <span class="source-tag">NBER</span>
     <span class="topic-tag" data-topic="corporate-political">Corp. Political</span>
+    
   </div>
   <div class="paper-authors">Nicholas Bloom, Christos Makridis</div>
-  <p class="paper-abstract">Using new data from the Gallup Workforce Panel, we document a persistent partisan gap in self-reported AI use at work: Democrats are consistently more likely than Republicans to report frequent use. In 2025:Q4, for example, 27.8% of Democrats report using AI weekly or daily, compared with 22.5% of</p>
-  
 </div>
 <div class="paper-card" data-score="6.8" data-source="NBER" data-topics="">
-  <div class="paper-title"><a href="https://www.nber.org/papers/w34808" target="_blank" rel="noopener">AI Personality Extraction from Faces: Labor Market Implications</a></div>
+  <div class="paper-title">
+    <a href="papers/nber-w34808.html">AI Personality Extraction from Faces: Labor Market Implications</a>
+  </div>
   <div class="paper-meta">
     <span class="score-badge score-mid">6.8</span>
     <span class="source-tag">NBER</span>
     
+    
   </div>
-  <div class="paper-authors">Marius Guenzel, Shimon Kogan, Marina Niessner, Kelly Shue</div>
-  <p class="paper-abstract">Human capitalencompassing cognitive skills and personality traitsis central for labor-market success, yet personality remains difficult to measure at scale. Leveraging advances in AI and comprehensive LinkedIn microdata, we extract the Big 5 personality traits from facial images of 96,000 MBA</p>
-  
+  <div class="paper-authors">Marius Guenzel, Shimon Kogan, Marina Niessner et al.</div>
 </div>
 <div class="paper-card" data-score="3" data-source="NBER" data-topics="causal-inference">
-  <div class="paper-title"><a href="https://www.nber.org/papers/w34860" target="_blank" rel="noopener">Disparate Impacts of Teacher Certification Exams</a></div>
+  <div class="paper-title">
+    <a href="https://www.nber.org/papers/w34860" target="_blank" rel="noopener">Disparate Impacts of Teacher Certification Exams</a>
+  </div>
   <div class="paper-meta">
     <span class="score-badge score-low">3.0</span>
     <span class="source-tag">NBER</span>
-    <span class="topic-tag" data-topic="causal-inference">Causal Inf.</span>
+    <span class="topic-tag" data-topic="causal-inference">Causal Inference</span>
+    
   </div>
   <div class="paper-authors">Christa Deneault, Evan Riehl, Jian Zou</div>
-  <p class="paper-abstract">We use Texas administrative data to assess the long-standing claim that teacher certification exams discriminate against underrepresented minority (URM) candidates. In a regression discontinuity design, we find that failing a certification exam delays entry into teaching and costs the average</p>
-  
 </div>
 <div class="paper-card" data-score="3" data-source="NBER" data-topics="information,causal-inference">
-  <div class="paper-title"><a href="https://www.nber.org/papers/w34862" target="_blank" rel="noopener">Expanding Paternity Leave: Effects on Beliefs, Norms, and Gender Gaps</a></div>
+  <div class="paper-title">
+    <a href="https://www.nber.org/papers/w34862" target="_blank" rel="noopener">Expanding Paternity Leave: Effects on Beliefs, Norms, and Gender Gaps</a>
+  </div>
   <div class="paper-meta">
     <span class="score-badge score-low">3.0</span>
     <span class="source-tag">NBER</span>
-    <span class="topic-tag" data-topic="information">Information Econ</span><span class="topic-tag" data-topic="causal-inference">Causal Inf.</span>
+    <span class="topic-tag" data-topic="information">Information Econ</span><span class="topic-tag" data-topic="causal-inference">Causal Inference</span>
+    
   </div>
-  <div class="paper-authors">Henrik Kleven, Camille Landais, Anne Sophie S. Lassen, Philip Rosenbaum et al.</div>
-  <p class="paper-abstract">We study whether policy can shift gendered beliefs, norms, and labor market outcomes by exploiting a major expansion of earmarked paternity leave in Denmark. The reform generated large first-stage effects, substantially reallocating leave from mothers to fathers. Using a regression discontinuity</p>
-  
+  <div class="paper-authors">Henrik Kleven, Camille Landais, Anne Sophie S. Lassen et al.</div>
 </div>
 <div class="paper-card" data-score="3" data-source="NBER" data-topics="information,corporate-finance">
-  <div class="paper-title"><a href="https://www.nber.org/papers/w34838" target="_blank" rel="noopener">R&amp;D Uncertainty and Cycles</a></div>
+  <div class="paper-title">
+    <a href="https://www.nber.org/papers/w34838" target="_blank" rel="noopener">R&amp;D Uncertainty and Cycles</a>
+  </div>
   <div class="paper-meta">
     <span class="score-badge score-low">3.0</span>
     <span class="source-tag">NBER</span>
     <span class="topic-tag" data-topic="information">Information Econ</span><span class="topic-tag" data-topic="corporate-finance">Corp. Finance</span>
+    
   </div>
   <div class="paper-authors">Nicolas Crouzet, Janice C. Eberly</div>
-  <p class="paper-abstract">Investment in equipment and structures is one of the most cyclical components of GDP, a fact often associated with a negative response to heightened uncertainty in recessions. R&amp;D investment, by contrast, is only mildly procyclical. We show that this difference could arise because of a positive</p>
-  
 </div>
 <div class="paper-card" data-score="1.5" data-source="NBER" data-topics="causal-inference">
-  <div class="paper-title"><a href="https://www.nber.org/papers/w34856" target="_blank" rel="noopener">Government Funding and the Direction of Academic Energy Research</a></div>
+  <div class="paper-title">
+    <a href="https://www.nber.org/papers/w34856" target="_blank" rel="noopener">Government Funding and the Direction of Academic Energy Research</a>
+  </div>
   <div class="paper-meta">
     <span class="score-badge score-low">1.5</span>
     <span class="source-tag">NBER</span>
-    <span class="topic-tag" data-topic="causal-inference">Causal Inf.</span>
+    <span class="topic-tag" data-topic="causal-inference">Causal Inference</span>
+    
   </div>
-  <div class="paper-authors">David Popp, Myriam Gregoire-Zawilski, Lizhen Liang, Daniel Acuna</div>
-  <p class="paper-abstract">Does government funding influence the choice of research topics? Novel grant-making modalities such as the Advanced Research Projects Agency-Energy (ARPA-E) program aim to encourage scientists to take on difficult-to-solve, wicked societal problems such as clean energy. Yet little causal evidence</p>
-  
+  <div class="paper-authors">David Popp, Myriam Gregoire-Zawilski, Lizhen Liang et al.</div>
 </div>
 <div class="paper-card" data-score="1.5" data-source="NBER" data-topics="corporate-finance">
-  <div class="paper-title"><a href="https://www.nber.org/papers/w34863" target="_blank" rel="noopener">Valuation of Regulatory Risk on Pharmaceutical R&amp;D</a></div>
+  <div class="paper-title">
+    <a href="https://www.nber.org/papers/w34863" target="_blank" rel="noopener">Valuation of Regulatory Risk on Pharmaceutical R&amp;D</a>
+  </div>
   <div class="paper-meta">
     <span class="score-badge score-low">1.5</span>
     <span class="source-tag">NBER</span>
     <span class="topic-tag" data-topic="corporate-finance">Corp. Finance</span>
+    
   </div>
   <div class="paper-authors">Teresa Corzo Santamaria, Jose Portela, Eduardo S. Schwartz</div>
-  <p class="paper-abstract">Geopolitical tensions, supply-chain concerns and policy risk have moved to the forefront of the pharmaceutical industry. This paper develops a real options valuation model of drug R&amp;D that captures sequential clinical investment with technical failure, stochastic costs, uncertain cash flows, and</p>
-  
 </div>
 <div class="paper-card" data-score="1.5" data-source="NBER" data-topics="causal-inference">
-  <div class="paper-title"><a href="https://www.nber.org/papers/w34866" target="_blank" rel="noopener">Smartphones, Online Music Streaming, and Traffic Fatalities</a></div>
+  <div class="paper-title">
+    <a href="https://www.nber.org/papers/w34866" target="_blank" rel="noopener">Smartphones, Online Music Streaming, and Traffic Fatalities</a>
+  </div>
   <div class="paper-meta">
     <span class="score-badge score-low">1.5</span>
     <span class="source-tag">NBER</span>
-    <span class="topic-tag" data-topic="causal-inference">Causal Inf.</span>
+    <span class="topic-tag" data-topic="causal-inference">Causal Inference</span>
+    
   </div>
-  <div class="paper-authors">Vishal R. Patel, Christopher M. Worsham, Michael Liu, Anupam B. Jena</div>
-  <p class="paper-abstract">Modern smartphones present new threats to road safety beyond talking and texting, but the real-world effects are difficult to study. One way to causally assess the impact of smartphones on road safety is to identify arbitrarily timed events during which smartphone-related distraction may exogenously</p>
-  
+  <div class="paper-authors">Vishal R. Patel, Christopher M. Worsham, Michael Liu et al.</div>
 </div>
 <div class="paper-card" data-score="1.5" data-source="NBER" data-topics="corporate-finance">
-  <div class="paper-title"><a href="https://www.nber.org/papers/w34869" target="_blank" rel="noopener">Why has Decreasing Schooling Inequality Not Led to Decreasing Earnings Inequality in South Africa?</a></div>
+  <div class="paper-title">
+    <a href="https://www.nber.org/papers/w34869" target="_blank" rel="noopener">Why has Decreasing Schooling Inequality Not Led to Decreasing Earnings Inequality in South Africa?</a>
+  </div>
   <div class="paper-meta">
     <span class="score-badge score-low">1.5</span>
     <span class="source-tag">NBER</span>
     <span class="topic-tag" data-topic="corporate-finance">Corp. Finance</span>
+    
   </div>
-  <div class="paper-authors">David Lam, Murray Leibbrandt, Arden J. Finn, Nicola Branson</div>
-  <p class="paper-abstract">Inequality in education has declined substantially in South Africa since the end of apartheid, with inequality in years of completed education declining by all standard measures of inequality. At the same time, inequality in earnings has not shown significant declines, and has increased by some</p>
-  
+  <div class="paper-authors">David Lam, Murray Leibbrandt, Arden J. Finn et al.</div>
 </div>
 <div class="paper-card" data-score="1.5" data-source="NBER" data-topics="causal-inference">
-  <div class="paper-title"><a href="https://www.nber.org/papers/w34874" target="_blank" rel="noopener">Job Loss and Health Insurance Coverage Before and After the Affordable Care Act</a></div>
+  <div class="paper-title">
+    <a href="https://www.nber.org/papers/w34874" target="_blank" rel="noopener">Job Loss and Health Insurance Coverage Before and After the Affordable Care Act</a>
+  </div>
   <div class="paper-meta">
     <span class="score-badge score-low">1.5</span>
     <span class="source-tag">NBER</span>
-    <span class="topic-tag" data-topic="causal-inference">Causal Inf.</span>
+    <span class="topic-tag" data-topic="causal-inference">Causal Inference</span>
+    
   </div>
   <div class="paper-authors">Jessamyn Schaller, Mariana Zerpa</div>
-  <p class="paper-abstract">We examine how the Affordable Care Act (ACA) altered the insurance consequences of involuntary job loss. Using matched event-study models with longitudinal survey data, we estimate the causal effects of displacement on insurance coverage before and after implementation of the ACAs main provisions.</p>
-  
 </div>
 <div class="paper-card" data-score="1.5" data-source="NBER" data-topics="information">
-  <div class="paper-title"><a href="https://www.nber.org/papers/w34875" target="_blank" rel="noopener">Household Responses to Private Risk Information</a></div>
+  <div class="paper-title">
+    <a href="https://www.nber.org/papers/w34875" target="_blank" rel="noopener">Household Responses to Private Risk Information</a>
+  </div>
   <div class="paper-meta">
     <span class="score-badge score-low">1.5</span>
     <span class="source-tag">NBER</span>
     <span class="topic-tag" data-topic="information">Information Econ</span>
+    
   </div>
   <div class="paper-authors">Benjamin Krebs, Matthew J. Neidell</div>
-  <p class="paper-abstract">We study how private information affects household responses to environmental risk. Using data from residential air quality monitors, we exploit the timing of monitor installation and high-frequency fine particulate matter (PM2.5) readings to identify responses to new information about indoor</p>
-  
 </div>
 <div class="paper-card" data-score="1.5" data-source="NBER" data-topics="supply-chain">
-  <div class="paper-title"><a href="https://www.nber.org/papers/w34884" target="_blank" rel="noopener">Industrial Policies for Multi-Stage Production: The Battle for Battery-Powered Vehicles</a></div>
+  <div class="paper-title">
+    <a href="https://www.nber.org/papers/w34884" target="_blank" rel="noopener">Industrial Policies for Multi-Stage Production: The Battle for Battery-Powered Vehicles</a>
+  </div>
   <div class="paper-meta">
     <span class="score-badge score-low">1.5</span>
     <span class="source-tag">NBER</span>
     <span class="topic-tag" data-topic="supply-chain">Supply Chain</span>
+    
   </div>
-  <div class="paper-authors">Keith Head, Thierry Mayer, Marc Melitz, Chenying Yang</div>
-  <p class="paper-abstract">We model a multi-stage supply chain for EVs from battery production to vehicle distribution. Given industrial policies, firms select where to open facilities at each stage. This is a difficult combinatorial choice problem that we solve with a fast mixed integer linear programming formulation. We</p>
-  
+  <div class="paper-authors">Keith Head, Thierry Mayer, Marc Melitz et al.</div>
 </div>
 <div class="paper-card" data-score="1.5" data-source="NBER" data-topics="information">
-  <div class="paper-title"><a href="https://www.nber.org/papers/w34850" target="_blank" rel="noopener">Managing the Entrepreneur's Miracle Budget</a></div>
+  <div class="paper-title">
+    <a href="https://www.nber.org/papers/w34850" target="_blank" rel="noopener">Managing the Entrepreneur's Miracle Budget</a>
+  </div>
   <div class="paper-meta">
     <span class="score-badge score-low">1.5</span>
     <span class="source-tag">NBER</span>
     <span class="topic-tag" data-topic="information">Information Econ</span>
+    
   </div>
   <div class="paper-authors">Joshua S. Gans</div>
-  <p class="paper-abstract">Entrepreneurial ventures typically require multiple independent conditions to hold simultaneously for success. This paper develops a formal framework for decision-making under such multiplicative uncertainty. When a venture's success depends on several factorseach of which must resolve</p>
-  
 </div>
 <div class="paper-card" data-score="1.5" data-source="NBER" data-topics="causal-inference">
-  <div class="paper-title"><a href="https://www.nber.org/papers/w34852" target="_blank" rel="noopener">The Macroeconomic Effects of Tariffs: Evidence From U.S. Historical Data</a></div>
+  <div class="paper-title">
+    <a href="https://www.nber.org/papers/w34852" target="_blank" rel="noopener">The Macroeconomic Effects of Tariffs: Evidence From U.S. Historical Data</a>
+  </div>
   <div class="paper-meta">
     <span class="score-badge score-low">1.5</span>
     <span class="source-tag">NBER</span>
-    <span class="topic-tag" data-topic="causal-inference">Causal Inf.</span>
+    <span class="topic-tag" data-topic="causal-inference">Causal Inference</span>
+    
   </div>
   <div class="paper-authors">Tamar den Besten, Diego R. Känzig</div>
-  <p class="paper-abstract">We study the macroeconomic effects of tariff policy using U.S. historical data from 18402024. We construct a narrative series of plausibly exogenous tariff changes  based on major legislative actions, multilateral negotiations, and temporary surcharges  and use it as an instrument to identify a</p>
-  
 </div>
 <div class="paper-card" data-score="1.5" data-source="NBER" data-topics="causal-inference">
-  <div class="paper-title"><a href="https://www.nber.org/papers/w34845" target="_blank" rel="noopener">Is Teacher Effectiveness Fully Portable? Evidence from the Random Assignment of Transfer Incentives</a></div>
+  <div class="paper-title">
+    <a href="https://www.nber.org/papers/w34845" target="_blank" rel="noopener">Is Teacher Effectiveness Fully Portable? Evidence from the Random Assignment of Transfer Incentives</a>
+  </div>
   <div class="paper-meta">
     <span class="score-badge score-low">1.5</span>
     <span class="source-tag">NBER</span>
-    <span class="topic-tag" data-topic="causal-inference">Causal Inf.</span>
+    <span class="topic-tag" data-topic="causal-inference">Causal Inference</span>
+    
   </div>
-  <div class="paper-authors">Matthew A. Kraft, John P. Papay, Jessalynn K. James, Manuel Monti-Nussbaum</div>
-  <p class="paper-abstract">We examine how performance changes when teachers transfer across very different school contexts. The Talent Transfer Initiative program created a rare natural experiment to study such transfers by randomly assigning low-achieving schools the ability to offer high-performing teachers at higher</p>
-  
+  <div class="paper-authors">Matthew A. Kraft, John P. Papay, Jessalynn K. James et al.</div>
 </div>
 <div class="paper-card" data-score="1.5" data-source="NBER" data-topics="information">
-  <div class="paper-title"><a href="https://www.nber.org/papers/w34827" target="_blank" rel="noopener">Threshold Disclosure in Collective Decisions</a></div>
+  <div class="paper-title">
+    <a href="https://www.nber.org/papers/w34827" target="_blank" rel="noopener">Threshold Disclosure in Collective Decisions</a>
+  </div>
   <div class="paper-meta">
     <span class="score-badge score-low">1.5</span>
     <span class="source-tag">NBER</span>
     <span class="topic-tag" data-topic="information">Information Econ</span>
+    
   </div>
   <div class="paper-authors">Luca Braghieri, Leonardo Bursztyn, Jan Fasnacht</div>
-  <p class="paper-abstract">Voting-based collective decisions are typically made either anonymously or publicly. Anonymous voting protects truthful expression but conceals individual behavior; public voting provides information about individual votes, but, when one option is socially stigmatized, it can distort participation</p>
-  
 </div>
 <div class="paper-card" data-score="1.5" data-source="NBER" data-topics="corporate-finance">
-  <div class="paper-title"><a href="https://www.nber.org/papers/w34833" target="_blank" rel="noopener">Dynamic Complementarity</a></div>
-  <div class="paper-meta">
-    <span class="score-badge score-low">1.5</span>
-    <span class="source-tag">NBER</span>
-    <span class="topic-tag" data-topic="corporate-finance">Corp. Finance</span>
+  <div class="paper-title">
+    <a href="https://www.nber.org/papers/w34833" target="_blank" rel="noopener">Dynamic Complementarity</a>
   </div>
-  <div class="paper-authors">James J. Heckman, Haihan Tian, Zijian Zhang, Jin Zhou</div>
-  <p class="paper-abstract">Dynamic complementarity is the concept that past investments that lead to higher stocks of skill at one age promote the growth of skills from investment at that age. We define and provide evidence on dynamic complementarity using unique Chinese data from a home visiting program for young children</p>
-  
-</div>
-<div class="paper-card" data-score="1.5" data-source="NBER" data-topics="corporate-finance">
-  <div class="paper-title"><a href="https://www.nber.org/papers/w34837" target="_blank" rel="noopener">Non-Fungible Tokens as Investment</a></div>
   <div class="paper-meta">
     <span class="score-badge score-low">1.5</span>
     <span class="source-tag">NBER</span>
     <span class="topic-tag" data-topic="corporate-finance">Corp. Finance</span>
+    
+  </div>
+  <div class="paper-authors">James J. Heckman, Haihan Tian, Zijian Zhang et al.</div>
+</div>
+<div class="paper-card" data-score="1.5" data-source="NBER" data-topics="corporate-finance">
+  <div class="paper-title">
+    <a href="https://www.nber.org/papers/w34837" target="_blank" rel="noopener">Non-Fungible Tokens as Investment</a>
+  </div>
+  <div class="paper-meta">
+    <span class="score-badge score-low">1.5</span>
+    <span class="source-tag">NBER</span>
+    <span class="topic-tag" data-topic="corporate-finance">Corp. Finance</span>
+    
   </div>
   <div class="paper-authors">William N. Goetzmann, Dong Huang, Milad Nozari</div>
-  <p class="paper-abstract">NFTs provided an extraordinary real-time laboratory for bubble economics: returns were exceptionally right-skewed, illiquidity pervaded even the most active platforms, and a handful of trades drove aggregate performance. Investors extrapolating from realized returns without recognizing selection</p>
-  
 </div>
 <div class="paper-card" data-score="1.5" data-source="NBER" data-topics="corporate-finance">
-  <div class="paper-title"><a href="https://www.nber.org/papers/w34846" target="_blank" rel="noopener">Bidder Pools in Mergers and Acquisitions</a></div>
+  <div class="paper-title">
+    <a href="https://www.nber.org/papers/w34846" target="_blank" rel="noopener">Bidder Pools in Mergers and Acquisitions</a>
+  </div>
   <div class="paper-meta">
     <span class="score-badge score-low">1.5</span>
     <span class="source-tag">NBER</span>
     <span class="topic-tag" data-topic="corporate-finance">Corp. Finance</span>
+    
   </div>
-  <div class="paper-authors">Bruce I. Carlin, Tingting Liu, Micah S. Officer, Agathe Pernoud et al.</div>
-  <p class="paper-abstract">Allocation mechanisms in M&amp;A deals are complex, but a main feature is that a target board controls who to invite to the sale. In a theoretical model, we show that it is optimal for the target to invite fewer potential acquirers when they are more homogeneous (i.e., when their values for the target</p>
-  
+  <div class="paper-authors">Bruce I. Carlin, Tingting Liu, Micah S. Officer et al.</div>
 </div>
 <div class="paper-card" data-score="1.5" data-source="NBER" data-topics="text-methods">
-  <div class="paper-title"><a href="https://www.nber.org/papers/w34849" target="_blank" rel="noopener">Mimicking Finance</a></div>
+  <div class="paper-title">
+    <a href="https://www.nber.org/papers/w34849" target="_blank" rel="noopener">Mimicking Finance</a>
+  </div>
   <div class="paper-meta">
     <span class="score-badge score-low">1.5</span>
     <span class="source-tag">NBER</span>
     <span class="topic-tag" data-topic="text-methods">Text Methods</span>
+    
   </div>
   <div class="paper-authors">Lauren Cohen, Yiwen Lu, Quoc H. Nguyen</div>
-  <p class="paper-abstract">We use frontier advancements in Artificial Intelligence and machine learning to extract and classify the part of key economic agents behaviors that are predictable from past behaviors. Even the agents themselves might view these as novel (innovative) decisions; however, we show in strong contrast</p>
-  
 </div>
 <div class="paper-card" data-score="1.5" data-source="NBER" data-topics="corporate-finance">
-  <div class="paper-title"><a href="https://www.nber.org/papers/w34795" target="_blank" rel="noopener">Younger Firms and CEOs Allow More Work from Home</a></div>
-  <div class="paper-meta">
-    <span class="score-badge score-low">1.5</span>
-    <span class="source-tag">NBER</span>
-    <span class="topic-tag" data-topic="corporate-finance">Corp. Finance</span>
+  <div class="paper-title">
+    <a href="https://www.nber.org/papers/w34795" target="_blank" rel="noopener">Younger Firms and CEOs Allow More Work from Home</a>
   </div>
-  <div class="paper-authors">Cevat Giray Aksoy, Jose Maria Barrero, Nicholas Bloom, Katelyn Cranney et al.</div>
-  <p class="paper-abstract">We establish three facts about work from home (WFH) in the United States. First, employees WFH more often at younger firms  almost twice as often at firms founded after 2015 than at firms founded before 1990. Second, employees working under younger CEOs have higher levels of WFH. The average WFH</p>
-  
-</div>
-<div class="paper-card" data-score="1.5" data-source="NBER" data-topics="corporate-finance">
-  <div class="paper-title"><a href="https://www.nber.org/papers/w34792" target="_blank" rel="noopener">American Investment in Chinese Renminbi</a></div>
   <div class="paper-meta">
     <span class="score-badge score-low">1.5</span>
     <span class="source-tag">NBER</span>
     <span class="topic-tag" data-topic="corporate-finance">Corp. Finance</span>
+    
   </div>
-  <div class="paper-authors">Bruno Cavani, Christopher Clayton, Amanda Dos Santos, Matteo Maggiori et al.</div>
-  <p class="paper-abstract">This paper uses microdata on U.S. mutual fund and ETF portfolios from SEC Form NPORT to study American investment in Chinese Renminbi (RMB)denominated bonds. We show that, even as total foreign holdings of Chinese bonds rebounded in 2024, U.S. holdings of RMB bonds fell sharply and that most of this</p>
-  
+  <div class="paper-authors">Cevat Giray Aksoy, Jose Maria Barrero, Nicholas Bloom et al.</div>
 </div>
 <div class="paper-card" data-score="1.5" data-source="NBER" data-topics="corporate-finance">
-  <div class="paper-title"><a href="https://www.nber.org/papers/w34798" target="_blank" rel="noopener">Indebted Supply and Monetary Policy: A Theory of Financial Dominance</a></div>
+  <div class="paper-title">
+    <a href="https://www.nber.org/papers/w34792" target="_blank" rel="noopener">American Investment in Chinese Renminbi</a>
+  </div>
   <div class="paper-meta">
     <span class="score-badge score-low">1.5</span>
     <span class="source-tag">NBER</span>
     <span class="topic-tag" data-topic="corporate-finance">Corp. Finance</span>
+    
+  </div>
+  <div class="paper-authors">Bruno Cavani, Christopher Clayton, Amanda Dos Santos et al.</div>
+</div>
+<div class="paper-card" data-score="1.5" data-source="NBER" data-topics="corporate-finance">
+  <div class="paper-title">
+    <a href="https://www.nber.org/papers/w34798" target="_blank" rel="noopener">Indebted Supply and Monetary Policy: A Theory of Financial Dominance</a>
+  </div>
+  <div class="paper-meta">
+    <span class="score-badge score-low">1.5</span>
+    <span class="source-tag">NBER</span>
+    <span class="topic-tag" data-topic="corporate-finance">Corp. Finance</span>
+    
   </div>
   <div class="paper-authors">Viral V. Acharya, Guillaume Plantin, Olivier Wang</div>
-  <p class="paper-abstract">We develop a New Keynesian model with financial frictions to study how corporate capital structure shapes static and dynamic monetary policy tradeoffs through the supply side. Ex post, when corporate leverage is high, monetary tightening contracts both demand and supply. As a result, the Phillips</p>
-  
 </div>
 <div class="paper-card" data-score="1.5" data-source="NBER" data-topics="corporate-finance">
-  <div class="paper-title"><a href="https://www.nber.org/papers/w34809" target="_blank" rel="noopener">Progress or Backsliding? Changes in the Gender Wage Gap for Business Professionals</a></div>
+  <div class="paper-title">
+    <a href="https://www.nber.org/papers/w34809" target="_blank" rel="noopener">Progress or Backsliding? Changes in the Gender Wage Gap for Business Professionals</a>
+  </div>
   <div class="paper-meta">
     <span class="score-badge score-low">1.5</span>
     <span class="source-tag">NBER</span>
     <span class="topic-tag" data-topic="corporate-finance">Corp. Finance</span>
+    
   </div>
   <div class="paper-authors">Ann Harrison, Laura J. Kray, Noor Sethi</div>
-  <p class="paper-abstract">In the United States, much of the gap in earnings between men and women is due to the persistent gap for high wage earners. This paper explores changes in the gender wage gap for MBAs graduating from a large public university over 30 years. We document large gender wage gaps on average, which grow</p>
-  
 </div>
 <div class="paper-card" data-score="1.5" data-source="NBER" data-topics="causal-inference">
-  <div class="paper-title"><a href="https://www.nber.org/papers/w34811" target="_blank" rel="noopener">Field Experiments in the Science of Science: Lessons from Peer Review and the Evaluation of New Knowledge</a></div>
+  <div class="paper-title">
+    <a href="https://www.nber.org/papers/w34811" target="_blank" rel="noopener">Field Experiments in the Science of Science: Lessons from Peer Review and the Evaluation of New Knowledge</a>
+  </div>
   <div class="paper-meta">
     <span class="score-badge score-low">1.5</span>
     <span class="source-tag">NBER</span>
-    <span class="topic-tag" data-topic="causal-inference">Causal Inf.</span>
+    <span class="topic-tag" data-topic="causal-inference">Causal Inference</span>
+    
   </div>
   <div class="paper-authors">Kevin Boudreau</div>
-  <p class="paper-abstract">Scientific evaluation and peer review govern the allocation of resources and certification of knowledge in science, yet have been subjected to limited causal investigation. This chapter synthesizes randomized experiments embedded in live peer-evaluation systems at journals, conferences, and funding</p>
-  
 </div>
 <div class="paper-card" data-score="1.5" data-source="NBER" data-topics="information">
-  <div class="paper-title"><a href="https://www.nber.org/papers/w34815" target="_blank" rel="noopener">Screen More, Sell Later: Screening and Dynamic Signaling in the Mortgage Market</a></div>
+  <div class="paper-title">
+    <a href="https://www.nber.org/papers/w34815" target="_blank" rel="noopener">Screen More, Sell Later: Screening and Dynamic Signaling in the Mortgage Market</a>
+  </div>
   <div class="paper-meta">
     <span class="score-badge score-low">1.5</span>
     <span class="source-tag">NBER</span>
     <span class="topic-tag" data-topic="information">Information Econ</span>
+    
   </div>
   <div class="paper-authors">Manuel Adelino, Bin Wei, Feng Zhao</div>
-  <p class="paper-abstract">We develop a dynamic model of asset origination with unobservable screening effort and signaling of loan quality through delayed sale by extending Vanasco (2017). The theory predicts a positive relationship between screening effort and the strength of the signal. We test this central prediction</p>
-  
 </div>
 <div class="paper-card" data-score="0" data-source="NBER" data-topics="">
-  <div class="paper-title"><a href="https://www.nber.org/papers/w34842" target="_blank" rel="noopener">Nonparametric Identification of Demand without Exogenous Product Characteristics</a></div>
+  <div class="paper-title">
+    <a href="https://www.nber.org/papers/w34842" target="_blank" rel="noopener">Nonparametric Identification of Demand without Exogenous Product Characteristics</a>
+  </div>
   <div class="paper-meta">
     <span class="score-badge score-low">0.0</span>
     <span class="source-tag">NBER</span>
     
+    
   </div>
-  <div class="paper-authors">Kirill Borusyak, Jiafeng Chen, Peter Hull, Lihua Lei</div>
-  <p class="paper-abstract">We study identification of differentiated product demand from market-level data when product characteristics can be endogenous. Past work suggests nonparametric identification may be impossible: that is, in addition to standard price instruments, exogenous characteristic-based instruments are</p>
-  
+  <div class="paper-authors">Kirill Borusyak, Jiafeng Chen, Peter Hull et al.</div>
 </div>
 <div class="paper-card" data-score="0" data-source="NBER" data-topics="">
-  <div class="paper-title"><a href="https://www.nber.org/papers/w34857" target="_blank" rel="noopener">Great Expectations: Responses to Current and Future Transfers for Low-Income Individuals</a></div>
+  <div class="paper-title">
+    <a href="https://www.nber.org/papers/w34857" target="_blank" rel="noopener">Great Expectations: Responses to Current and Future Transfers for Low-Income Individuals</a>
+  </div>
   <div class="paper-meta">
     <span class="score-badge score-low">0.0</span>
     <span class="source-tag">NBER</span>
     
+    
   </div>
-  <div class="paper-authors">Achyuta Adhvaryu, Jean-François Gauthier, Pamela Jakiela, Dean Karlan</div>
-  <p class="paper-abstract">How does the expectation of aid change behavior? We propose a simple approach to separate expectations effects from the direct effects of relaxing resource constraints: compare the promise of a program to the program itself. We test this approach in a four-arm randomized controlled trial of cash</p>
-  
+  <div class="paper-authors">Achyuta Adhvaryu, Jean-François Gauthier, Pamela Jakiela et al.</div>
 </div>
 <div class="paper-card" data-score="0" data-source="NBER" data-topics="">
-  <div class="paper-title"><a href="https://www.nber.org/papers/w34864" target="_blank" rel="noopener">Black like us? The Occupational Integration of Black Immigrants</a></div>
+  <div class="paper-title">
+    <a href="https://www.nber.org/papers/w34864" target="_blank" rel="noopener">Black like us? The Occupational Integration of Black Immigrants</a>
+  </div>
   <div class="paper-meta">
     <span class="score-badge score-low">0.0</span>
     <span class="source-tag">NBER</span>
+    
     
   </div>
   <div class="paper-authors">Mwangi wa Gĩthĩnji, Patrick L. Mason</div>
-  <p class="paper-abstract">This paper examines Black immigrant occupational integration. We create an Index of Revealed Advantage in Migration, which captures international differences in selectivity. Except for Caribbean-English and Other Immigrants, first generation Black immigrants have lower occupational achievement than</p>
-  
 </div>
 <div class="paper-card" data-score="0" data-source="NBER" data-topics="">
-  <div class="paper-title"><a href="https://www.nber.org/papers/w34858" target="_blank" rel="noopener">The Promise of Microbial Fertilizer for Affordable and Sustainable Food Production in Africa</a></div>
+  <div class="paper-title">
+    <a href="https://www.nber.org/papers/w34858" target="_blank" rel="noopener">The Promise of Microbial Fertilizer for Affordable and Sustainable Food Production in Africa</a>
+  </div>
   <div class="paper-meta">
     <span class="score-badge score-low">0.0</span>
     <span class="source-tag">NBER</span>
+    
     
   </div>
   <div class="paper-authors">Tavneet Suri, Petar Madjarac, Robert D. van der Hilst</div>
-  <p class="paper-abstract">Food insecurity is an existential threat for Africa (a continent facing rapid population growth and dire climate impacts) and addressing it a global imperative. Over 30% of caloric intake comes from maize, but crop yields are low partly because high costs make synthetic fertilizers uneconomical. A</p>
-  
 </div>
 <div class="paper-card" data-score="0" data-source="NBER" data-topics="">
-  <div class="paper-title"><a href="https://www.nber.org/papers/w34865" target="_blank" rel="noopener">What Drives Money Competition: Comparative Advantage in Payments versus Reserves</a></div>
+  <div class="paper-title">
+    <a href="https://www.nber.org/papers/w34865" target="_blank" rel="noopener">What Drives Money Competition: Comparative Advantage in Payments versus Reserves</a>
+  </div>
   <div class="paper-meta">
     <span class="score-badge score-low">0.0</span>
     <span class="source-tag">NBER</span>
+    
     
   </div>
   <div class="paper-authors">Itay Goldstein, Ming Yang, Yao Zeng</div>
-  <p class="paper-abstract">We study competition between monies that provide separate payment and non-payment (e.g., store-of-value) functions. Our central insight is that payment adoption is governed not by absolute payment superiority, but by comparative advantage between payment and non-payment roles. A money that is too</p>
-  
 </div>
 <div class="paper-card" data-score="0" data-source="NBER" data-topics="">
-  <div class="paper-title"><a href="https://www.nber.org/papers/w34867" target="_blank" rel="noopener">Weather to Arrest</a></div>
+  <div class="paper-title">
+    <a href="https://www.nber.org/papers/w34867" target="_blank" rel="noopener">Weather to Arrest</a>
+  </div>
   <div class="paper-meta">
     <span class="score-badge score-low">0.0</span>
     <span class="source-tag">NBER</span>
+    
     
   </div>
   <div class="paper-authors">Howard Bodenhorn</div>
-  <p class="paper-abstract">The positive correlation between high temperatures and crime is well established. I consider how random, within-month daily high temperature and precipitation affects arrests rather than incidents. I analyze jail records of a Prohibition Era southern city with mean summer daily high temperatures of</p>
-  
 </div>
 <div class="paper-card" data-score="0" data-source="NBER" data-topics="">
-  <div class="paper-title"><a href="https://www.nber.org/papers/w34868" target="_blank" rel="noopener">Venture Fraud</a></div>
+  <div class="paper-title">
+    <a href="https://www.nber.org/papers/w34868" target="_blank" rel="noopener">Venture Fraud</a>
+  </div>
   <div class="paper-meta">
     <span class="score-badge score-low">0.0</span>
     <span class="source-tag">NBER</span>
     
+    
   </div>
-  <div class="paper-authors">Alexander Dyck, Freda Fang, Camille Hebert, Ting Xu</div>
-  <p class="paper-abstract">We assemble the first comprehensive sample of venture fraud cases involving 614 U.S. venture capital (VC)-backed startups founded since 2000. We find that VC-backed firms are 54% more likely to face fraud charges than comparable non-VC-backed firms within a subsample of newly public firms where</p>
-  
+  <div class="paper-authors">Alexander Dyck, Freda Fang, Camille Hebert et al.</div>
 </div>
 <div class="paper-card" data-score="0" data-source="NBER" data-topics="">
-  <div class="paper-title"><a href="https://www.nber.org/papers/w34870" target="_blank" rel="noopener">Why Do Firms Pay Different Interest Rates on Their Bank Loans?</a></div>
+  <div class="paper-title">
+    <a href="https://www.nber.org/papers/w34870" target="_blank" rel="noopener">Why Do Firms Pay Different Interest Rates on Their Bank Loans?</a>
+  </div>
   <div class="paper-meta">
     <span class="score-badge score-low">0.0</span>
     <span class="source-tag">NBER</span>
     
+    
   </div>
-  <div class="paper-authors">Mary Amiti, Anil K Kashyap, Anna Kovner, David Weinstein</div>
-  <p class="paper-abstract">We document significant variation in interest rates among similar commercial and industrial loans using confidential supervisory data on the largest US banks. This dispersion does not appear to be due to risk. We rationalize the data using a search cost model and find that search costs are highest</p>
-  
+  <div class="paper-authors">Mary Amiti, Anil K Kashyap, Anna Kovner et al.</div>
 </div>
 <div class="paper-card" data-score="0" data-source="NBER" data-topics="">
-  <div class="paper-title"><a href="https://www.nber.org/papers/w34871" target="_blank" rel="noopener">Range Anxiety</a></div>
+  <div class="paper-title">
+    <a href="https://www.nber.org/papers/w34871" target="_blank" rel="noopener">Range Anxiety</a>
+  </div>
   <div class="paper-meta">
     <span class="score-badge score-low">0.0</span>
     <span class="source-tag">NBER</span>
+    
     
   </div>
   <div class="paper-authors">Panle Jia Barwick, Shanjun Li, Tianli Xia</div>
-  <p class="paper-abstract">Range anxiety, the fear of depleting battery before reaching a charging station, is often cited as a major barrier to electric vehicle (EV) adoption, yet there has been limited formal economic analysis to quantify its magnitude and examine the policy implications. We develop a continuous-time</p>
-  
 </div>
 <div class="paper-card" data-score="0" data-source="NBER" data-topics="">
-  <div class="paper-title"><a href="https://www.nber.org/papers/w34872" target="_blank" rel="noopener">Good Neighborhoods, Good Neighbors, Good Jobs?</a></div>
+  <div class="paper-title">
+    <a href="https://www.nber.org/papers/w34872" target="_blank" rel="noopener">Good Neighborhoods, Good Neighbors, Good Jobs?</a>
+  </div>
   <div class="paper-meta">
     <span class="score-badge score-low">0.0</span>
     <span class="source-tag">NBER</span>
+    
     
   </div>
   <div class="paper-authors">Stephen B. Billings, Mark Hoekstra, Gabriel Pons Rotger</div>
-  <p class="paper-abstract">While a growing literature has documented the effect of neighborhoods on children, there is little evidence on how neighborhoods impact adults. This study examines the impact of neighborhoods on high-needs families in Denmark who are quasi-randomly assigned to social housing in different</p>
-  
 </div>
 <div class="paper-card" data-score="0" data-source="NBER" data-topics="">
-  <div class="paper-title"><a href="https://www.nber.org/papers/w34876" target="_blank" rel="noopener">A Unified Urban Model With Non-Homothetic Housing Demand</a></div>
+  <div class="paper-title">
+    <a href="https://www.nber.org/papers/w34876" target="_blank" rel="noopener">A Unified Urban Model With Non-Homothetic Housing Demand</a>
+  </div>
   <div class="paper-meta">
     <span class="score-badge score-low">0.0</span>
     <span class="source-tag">NBER</span>
     
+    
   </div>
-  <div class="paper-authors">Frédéric Robert-Nicoud, Pierre-Philippe Combes, Gilles Duranton, Laurent Gobillon</div>
-  <p class="paper-abstract">Canonical urban models fail to jointly account for flexible housing demand, nondegenerate city sizes, and observed urban systems. We introduce a unifying urban framework based on price-independent generalized linear (PIGL) preferences in which housing is a necessity. Non-homothetic housing demand</p>
-  
+  <div class="paper-authors">Frédéric Robert-Nicoud, Pierre-Philippe Combes, Gilles Duranton et al.</div>
 </div>
 <div class="paper-card" data-score="0" data-source="NBER" data-topics="">
-  <div class="paper-title"><a href="https://www.nber.org/papers/w34877" target="_blank" rel="noopener">Job Search, Job Amenities and the Gender Pay Gap</a></div>
+  <div class="paper-title">
+    <a href="https://www.nber.org/papers/w34877" target="_blank" rel="noopener">Job Search, Job Amenities and the Gender Pay Gap</a>
+  </div>
   <div class="paper-meta">
     <span class="score-badge score-low">0.0</span>
     <span class="source-tag">NBER</span>
+    
     
   </div>
   <div class="paper-authors">R. Jason Faberman, Andreas I. Mueller, Ayşegül Şahin</div>
-  <p class="paper-abstract">This paper studies gender gaps in labor-market outcomes, with a focus on job ladder dynamics. We show that women experience substantially lower wage growth conditional on prior wages despite nearly identical job-to-job transition rates for men and women. To reconcile these observations, we document</p>
-  
 </div>
 <div class="paper-card" data-score="0" data-source="NBER" data-topics="">
-  <div class="paper-title"><a href="https://www.nber.org/papers/w34878" target="_blank" rel="noopener">Settlement of Litigation May Increase or Decrease Deterrence and Social Welfare</a></div>
+  <div class="paper-title">
+    <a href="https://www.nber.org/papers/w34878" target="_blank" rel="noopener">Settlement of Litigation May Increase or Decrease Deterrence and Social Welfare</a>
+  </div>
   <div class="paper-meta">
     <span class="score-badge score-low">0.0</span>
     <span class="source-tag">NBER</span>
+    
     
   </div>
   <div class="paper-authors">Steven Shavell</div>
-  <p class="paper-abstract">Although the obvious effect of settlement is to save litigants the costs of trial, settlement also influences deterrenceand for two reasons. First, because settlement is agreed upon by plaintiffs, it raises their expected return from litigation and thus the probability of suit. This augments</p>
-  
 </div>
 <div class="paper-card" data-score="0" data-source="NBER" data-topics="">
-  <div class="paper-title"><a href="https://www.nber.org/papers/w34879" target="_blank" rel="noopener">Bank Runs and Interest Rates: A Revolving Lines Perspective</a></div>
+  <div class="paper-title">
+    <a href="https://www.nber.org/papers/w34879" target="_blank" rel="noopener">Bank Runs and Interest Rates: A Revolving Lines Perspective</a>
+  </div>
   <div class="paper-meta">
     <span class="score-badge score-low">0.0</span>
     <span class="source-tag">NBER</span>
+    
     
   </div>
   <div class="paper-authors">Falk Bräuning, Victoria Ivashina</div>
-  <p class="paper-abstract">Revolving credit is at the core of the banking business. Corporate revolving lines are demandable claims; thus, similar to a traditional run on deposits, sudden and widespread drawdowns can destabilize banks. However, unlike deposits, credit line utilization exhibits substantial interest rate</p>
-  
 </div>
 <div class="paper-card" data-score="0" data-source="NBER" data-topics="">
-  <div class="paper-title"><a href="https://www.nber.org/papers/w34880" target="_blank" rel="noopener">Do Informal Social Markets and Online Sellers Help Youths to Avoid E-Cigarette Taxation?</a></div>
+  <div class="paper-title">
+    <a href="https://www.nber.org/papers/w34880" target="_blank" rel="noopener">Do Informal Social Markets and Online Sellers Help Youths to Avoid E-Cigarette Taxation?</a>
+  </div>
   <div class="paper-meta">
     <span class="score-badge score-low">0.0</span>
     <span class="source-tag">NBER</span>
     
+    
   </div>
-  <div class="paper-authors">Chad D. Cotti, Dhaval M. Dave, Tessie Krishna, Erik T. Nesson et al.</div>
-  <p class="paper-abstract">Youths who vape nicotine rarely make in-person purchases of e-cigarettes from a vendor but instead rely on alternative methods to obtain electronic nicotine delivery system (ENDS) products. This study is the first to explore whether the informal social market and online purchasing options help to</p>
-  
+  <div class="paper-authors">Chad D. Cotti, Dhaval M. Dave, Tessie Krishna et al.</div>
 </div>
 <div class="paper-card" data-score="0" data-source="NBER" data-topics="">
-  <div class="paper-title"><a href="https://www.nber.org/papers/w34881" target="_blank" rel="noopener">The Local Origins of Business Formation: Entry as a Two-Stage Process</a></div>
+  <div class="paper-title">
+    <a href="https://www.nber.org/papers/w34881" target="_blank" rel="noopener">The Local Origins of Business Formation: Entry as a Two-Stage Process</a>
+  </div>
   <div class="paper-meta">
     <span class="score-badge score-low">0.0</span>
     <span class="source-tag">NBER</span>
     
+    
   </div>
-  <div class="paper-authors">Emin Dinlersoz, Timothy Dunne, John C. Haltiwanger, Veronika Penciakova</div>
-  <p class="paper-abstract">The business entry literature typically observes firms only at the first hire. We provide a new perspective using linked administrative microdata tracking the universe of U.S. business applications and their transition into employer firms. We model entry as a two-stage process: pursuit of a business</p>
-  
+  <div class="paper-authors">Emin Dinlersoz, Timothy Dunne, John C. Haltiwanger et al.</div>
 </div>
 <div class="paper-card" data-score="0" data-source="NBER" data-topics="">
-  <div class="paper-title"><a href="https://www.nber.org/papers/w34854" target="_blank" rel="noopener">Building Pro-Worker Artificial Intelligence</a></div>
+  <div class="paper-title">
+    <a href="https://www.nber.org/papers/w34854" target="_blank" rel="noopener">Building Pro-Worker Artificial Intelligence</a>
+  </div>
   <div class="paper-meta">
     <span class="score-badge score-low">0.0</span>
     <span class="source-tag">NBER</span>
+    
     
   </div>
   <div class="paper-authors">Daron Acemoglu, David Autor, Simon Johnson</div>
-  <p class="paper-abstract">This paper defines pro-worker technologies, including Artificial Intelligence, as technologies that make human skills and expertise more valuable by expanding worker capabilities. Our conceptual framework distinguishes among five categories of technological change: labor-augmenting, capital</p>
-  
 </div>
 <div class="paper-card" data-score="0" data-source="NBER" data-topics="">
-  <div class="paper-title"><a href="https://www.nber.org/papers/w34883" target="_blank" rel="noopener">Shopping From Home</a></div>
+  <div class="paper-title">
+    <a href="https://www.nber.org/papers/w34883" target="_blank" rel="noopener">Shopping From Home</a>
+  </div>
   <div class="paper-meta">
     <span class="score-badge score-low">0.0</span>
     <span class="source-tag">NBER</span>
     
+    
   </div>
-  <div class="paper-authors">Scott R. Baker, Nicholas Bloom, Stephanie G. Johnson, Jana Obradović</div>
-  <p class="paper-abstract">Conducting a new survey on the Nielsen Consumer panel we examine the impact of working from home (WFH) on shopping, finding three key results. First, WFH changed shopping modes, increasing online shopping and the fraction of trips to stores on weekdays. Second, WFH increased total spending through</p>
-  
+  <div class="paper-authors">Scott R. Baker, Nicholas Bloom, Stephanie G. Johnson et al.</div>
 </div>
 <div class="paper-card" data-score="0" data-source="NBER" data-topics="">
-  <div class="paper-title"><a href="https://www.nber.org/papers/w34885" target="_blank" rel="noopener">Demographics and Technology Diffusion: Evidence from Mobile Payments</a></div>
+  <div class="paper-title">
+    <a href="https://www.nber.org/papers/w34885" target="_blank" rel="noopener">Demographics and Technology Diffusion: Evidence from Mobile Payments</a>
+  </div>
   <div class="paper-meta">
     <span class="score-badge score-low">0.0</span>
     <span class="source-tag">NBER</span>
     
+    
   </div>
-  <div class="paper-authors">Nicolas Crouzet, Pulak Ghosh, Apoorv Gupta, Filippo Mezzanotti</div>
-  <p class="paper-abstract">We show that the age composition of the population can shape the speed at which businesses adopt new technologies, using evidence from mobile payments in India. Consumers' propensity to use new payment technologies declines with age, creating stronger incentives for businesses serving younger</p>
-  
+  <div class="paper-authors">Nicolas Crouzet, Pulak Ghosh, Apoorv Gupta et al.</div>
 </div>
 <div class="paper-card" data-score="0" data-source="NBER" data-topics="">
-  <div class="paper-title"><a href="https://www.nber.org/papers/w34886" target="_blank" rel="noopener">Shielding Women from Violence: The Effects of Violence Prevention and Monitoring Centers on Intimate Partner Violence in Türkiye</a></div>
+  <div class="paper-title">
+    <a href="https://www.nber.org/papers/w34886" target="_blank" rel="noopener">Shielding Women from Violence: The Effects of Violence Prevention and Monitoring Centers on Intimate Partner Violence in Türkiye</a>
+  </div>
   <div class="paper-meta">
     <span class="score-badge score-low">0.0</span>
     <span class="source-tag">NBER</span>
     
+    
   </div>
-  <div class="paper-authors">Gunes Asik, Bilge Erten, Erdal Tekin, Semih Tumen et al.</div>
-  <p class="paper-abstract">Intimate partner violence remains one of the most serious threats to women's safety worldwide, yet existing evidence on the effectiveness of large-scale institutional protection systems is limited and mixed. This paper evaluates the impact of Violence Prevention and Monitoring Centers on intimate</p>
-  
+  <div class="paper-authors">Gunes Asik, Bilge Erten, Erdal Tekin et al.</div>
 </div>
 <div class="paper-card" data-score="0" data-source="NBER" data-topics="">
-  <div class="paper-title"><a href="https://www.nber.org/papers/w34887" target="_blank" rel="noopener">A Theory of Subsidy Harvesting in Livestock Price Insurance</a></div>
+  <div class="paper-title">
+    <a href="https://www.nber.org/papers/w34887" target="_blank" rel="noopener">A Theory of Subsidy Harvesting in Livestock Price Insurance</a>
+  </div>
   <div class="paper-meta">
     <span class="score-badge score-low">0.0</span>
     <span class="source-tag">NBER</span>
+    
     
   </div>
   <div class="paper-authors">Michael K. Adjemian, A. Ford Ramsey</div>
-  <p class="paper-abstract">USDA designed the Livestock Risk Protection (LRP) program to help producers insure against declining prices for fed cattle, feeder cattle, and swine. Prices in derivatives markets determine program indemnities, making LRP policies similar to put options. Beginning in 2019, USDA made several changes</p>
-  
 </div>
 <div class="paper-card" data-score="0" data-source="NBER" data-topics="">
-  <div class="paper-title"><a href="https://www.nber.org/papers/w34888" target="_blank" rel="noopener">Drivers of Dollar Share in Foreign Exchange Reserves</a></div>
+  <div class="paper-title">
+    <a href="https://www.nber.org/papers/w34888" target="_blank" rel="noopener">Drivers of Dollar Share in Foreign Exchange Reserves</a>
+  </div>
   <div class="paper-meta">
     <span class="score-badge score-low">0.0</span>
     <span class="source-tag">NBER</span>
+    
     
   </div>
   <div class="paper-authors">Linda S. Goldberg, Oliver Hannaoui</div>
-  <p class="paper-abstract">The share of US dollar assets in the official foreign exchange reserve portfolios of central banks, at times, is taken as an indicator of the dollar's global status. We provide a decomposition that shows two distinct channels contributing to the changes in the dollar share of reserves aggregated</p>
-  
 </div>
 <div class="paper-card" data-score="0" data-source="NBER" data-topics="">
-  <div class="paper-title"><a href="https://www.nber.org/papers/w34855" target="_blank" rel="noopener">Trading Goods for Lives: NAFTA’s Mortality Impacts and Implications</a></div>
+  <div class="paper-title">
+    <a href="https://www.nber.org/papers/w34855" target="_blank" rel="noopener">Trading Goods for Lives: NAFTA’s Mortality Impacts and Implications</a>
+  </div>
   <div class="paper-meta">
     <span class="score-badge score-low">0.0</span>
     <span class="source-tag">NBER</span>
+    
     
   </div>
   <div class="paper-authors">Amy Finkelstein, Matthew J. Notowidigdo, Steven X. Shi</div>
-  <p class="paper-abstract">We estimate the mortality impact of local labor market exposure to the 1994 North American Free Trade Agreement (NAFTA) as well as to other local area shocks, and provide a parsimonious empirical explanation for differently-signed mortality estimates across different sources of local labor market</p>
-  
 </div>
 <div class="paper-card" data-score="0" data-source="NBER" data-topics="">
-  <div class="paper-title"><a href="https://www.nber.org/papers/w34889" target="_blank" rel="noopener">Optimal Simple Ratings</a></div>
+  <div class="paper-title">
+    <a href="https://www.nber.org/papers/w34889" target="_blank" rel="noopener">Optimal Simple Ratings</a>
+  </div>
   <div class="paper-meta">
     <span class="score-badge score-low">0.0</span>
     <span class="source-tag">NBER</span>
+    
     
   </div>
   <div class="paper-authors">Hugo Hopenhayn, Maryam Saeedi</div>
-  <p class="paper-abstract">We study optimal simple rating systems that partition sellers into a finite number of tiers. We show that optimal ratings must be threshold partitions, and that for linear supply and Cournot competition with constant marginal cost, optimal thresholds solve a k-means clustering problem requiring only</p>
-  
 </div>
 <div class="paper-card" data-score="0" data-source="NBER" data-topics="">
-  <div class="paper-title"><a href="https://www.nber.org/papers/w34821" target="_blank" rel="noopener">Marriage and the Intergenerational Mobility of Women: Evidence from Marriage Certificates 1850-1920</a></div>
+  <div class="paper-title">
+    <a href="https://www.nber.org/papers/w34821" target="_blank" rel="noopener">Marriage and the Intergenerational Mobility of Women: Evidence from Marriage Certificates 1850-1920</a>
+  </div>
   <div class="paper-meta">
     <span class="score-badge score-low">0.0</span>
     <span class="source-tag">NBER</span>
     
+    
   </div>
-  <div class="paper-authors">Katherine Eriksson, Gregory Niemesh, Myera Rashid, Jacqueline Craig</div>
-  <p class="paper-abstract">We document that womens economic mobility improved nearly a century before married women gained broad labor market opportunities. Using Massachusetts marriage registers linked to U.S. censuses (18501920), we create new fatherchild links for women to estimate intergenerational mobility and</p>
-  
+  <div class="paper-authors">Katherine Eriksson, Gregory Niemesh, Myera Rashid et al.</div>
 </div>
 <div class="paper-card" data-score="0" data-source="NBER" data-topics="">
-  <div class="paper-title"><a href="https://www.nber.org/papers/w34825" target="_blank" rel="noopener">Hierarchy and Performance Pay: Experimental Evidence from the Public Sector</a></div>
+  <div class="paper-title">
+    <a href="https://www.nber.org/papers/w34825" target="_blank" rel="noopener">Hierarchy and Performance Pay: Experimental Evidence from the Public Sector</a>
+  </div>
   <div class="paper-meta">
     <span class="score-badge score-low">0.0</span>
     <span class="source-tag">NBER</span>
+    
     
   </div>
   <div class="paper-authors">Garance Genicot, Zahra Mansoor, Ghazala Mansuri</div>
-  <p class="paper-abstract">Frontline workers in public bureaucracies perform multidimensional tasks and rely on supervisors who both monitor performance and supply essential managerial inputs. We study how incentive design should account for these interactions using a conceptual framework and a province-wide randomized</p>
-  
 </div>
 <div class="paper-card" data-score="0" data-source="NBER" data-topics="">
-  <div class="paper-title"><a href="https://www.nber.org/papers/w34826" target="_blank" rel="noopener">A Population Perspective on the Beneficiaries of Public and Private Assistance Immediately and over the Long-term After a Major Disaster</a></div>
+  <div class="paper-title">
+    <a href="https://www.nber.org/papers/w34826" target="_blank" rel="noopener">A Population Perspective on the Beneficiaries of Public and Private Assistance Immediately and over the Long-term After a Major Disaster</a>
+  </div>
   <div class="paper-meta">
     <span class="score-badge score-low">0.0</span>
     <span class="source-tag">NBER</span>
     
+    
   </div>
-  <div class="paper-authors">Elizabeth Frankenberg, Nicholas Ingwersen, Cecep Sumantri, Duncan Thomas</div>
-  <p class="paper-abstract">Natural disasters undermine economic development, destroying lives, livelihoods, the built and natural environment. Public assistance programs follow, but knowledge of their reach, impact and evolution is limited. We address this gap, analyzing population-representative longitudinal survey data</p>
-  
+  <div class="paper-authors">Elizabeth Frankenberg, Nicholas Ingwersen, Cecep Sumantri et al.</div>
 </div>
 <div class="paper-card" data-score="0" data-source="NBER" data-topics="">
-  <div class="paper-title"><a href="https://www.nber.org/papers/w34853" target="_blank" rel="noopener">Bank Failures: The Roles of Solvency and Liquidity</a></div>
+  <div class="paper-title">
+    <a href="https://www.nber.org/papers/w34853" target="_blank" rel="noopener">Bank Failures: The Roles of Solvency and Liquidity</a>
+  </div>
   <div class="paper-meta">
     <span class="score-badge score-low">0.0</span>
     <span class="source-tag">NBER</span>
+    
     
   </div>
   <div class="paper-authors">Sergio A. Correia, Stephan Luck, Emil Verner</div>
-  <p class="paper-abstract">Bank failures can stem from runs on otherwise solvent banks or from losses that render banks insolvent, regardless of withdrawals. Disentangling the relative importance of liquidity and solvency in explaining bank failures is central to understanding financial crises and designing effective</p>
-  
 </div>
 <div class="paper-card" data-score="0" data-source="NBER" data-topics="">
-  <div class="paper-title"><a href="https://www.nber.org/papers/w34828" target="_blank" rel="noopener">Seeing Green: The Effects of Financial Exposures on Support for Climate Action</a></div>
+  <div class="paper-title">
+    <a href="https://www.nber.org/papers/w34828" target="_blank" rel="noopener">Seeing Green: The Effects of Financial Exposures on Support for Climate Action</a>
+  </div>
   <div class="paper-meta">
     <span class="score-badge score-low">0.0</span>
     <span class="source-tag">NBER</span>
     
+    
   </div>
-  <div class="paper-authors">Michelle Hanlon, Saumitra Jha, Namrata Kala, Nemit Shroff et al.</div>
-  <p class="paper-abstract">Despite the large common net benefits of climate mitigation, broad-based political consensus for large-scale policy action remains elusive. We hypothesize that financial exposure to energy stocks central to the green transition can induce learning and greater support for climate mitigation policies.</p>
-  
+  <div class="paper-authors">Michelle Hanlon, Saumitra Jha, Namrata Kala et al.</div>
 </div>
 <div class="paper-card" data-score="0" data-source="NBER" data-topics="">
-  <div class="paper-title"><a href="https://www.nber.org/papers/w34829" target="_blank" rel="noopener">Mass Media and Contraception Use: An Experimental Test of Modernization Theory in Burkina Faso</a></div>
+  <div class="paper-title">
+    <a href="https://www.nber.org/papers/w34829" target="_blank" rel="noopener">Mass Media and Contraception Use: An Experimental Test of Modernization Theory in Burkina Faso</a>
+  </div>
   <div class="paper-meta">
     <span class="score-badge score-low">0.0</span>
     <span class="source-tag">NBER</span>
+    
     
   </div>
   <div class="paper-authors">Rachel Glennerster, Joanna Murray, Victor Pouliquen</div>
-  <p class="paper-abstract">This paper tests whether the arrival of mass media triggers a decline in fertility, a central prediction of modernization theory. Using a field experiment, we vary exposure to mass media and its content in a quarter of Burkina Faso. We provide radios to 1,600 women without previous access to mass</p>
-  
 </div>
 <div class="paper-card" data-score="0" data-source="NBER" data-topics="">
-  <div class="paper-title"><a href="https://www.nber.org/papers/w34830" target="_blank" rel="noopener">Using Life Satisfaction Data to Measure Parents' Child Gender Preferences</a></div>
+  <div class="paper-title">
+    <a href="https://www.nber.org/papers/w34830" target="_blank" rel="noopener">Using Life Satisfaction Data to Measure Parents' Child Gender Preferences</a>
+  </div>
   <div class="paper-meta">
     <span class="score-badge score-low">0.0</span>
     <span class="source-tag">NBER</span>
+    
     
   </div>
   <div class="paper-authors">Anna Barbeta-Margarit, Seema Jayachandran, Suanna Oh</div>
-  <p class="paper-abstract">Can questions about life satisfaction be used to measure parental preferences for daughters versus sons? Daughter preference has rarely been documented in the literature, even in matrilineal settings. One possible reason is that the commonly used measures of parental gender preference, such as</p>
-  
 </div>
 <div class="paper-card" data-score="0" data-source="NBER" data-topics="">
-  <div class="paper-title"><a href="https://www.nber.org/papers/w34831" target="_blank" rel="noopener">More Hours, More Work: Head Start Expansions Boost Maternal Employment</a></div>
+  <div class="paper-title">
+    <a href="https://www.nber.org/papers/w34831" target="_blank" rel="noopener">More Hours, More Work: Head Start Expansions Boost Maternal Employment</a>
+  </div>
   <div class="paper-meta">
     <span class="score-badge score-low">0.0</span>
     <span class="source-tag">NBER</span>
+    
     
   </div>
   <div class="paper-authors">Chloe Gibbs, Esra Kose, Maria Rosales-Rueda</div>
-  <p class="paper-abstract">Womens employment remains highly sensitive to childcare constraints, making childcare availability a critical lever for supporting mothers labor force attachment. We study the effects of expanded full-day programming in Head Start, using the 2016 federal funding initiative that targeted grantees</p>
-  
 </div>
 <div class="paper-card" data-score="0" data-source="NBER" data-topics="">
-  <div class="paper-title"><a href="https://www.nber.org/papers/w34832" target="_blank" rel="noopener">Gender Norms and Development</a></div>
+  <div class="paper-title">
+    <a href="https://www.nber.org/papers/w34832" target="_blank" rel="noopener">Gender Norms and Development</a>
+  </div>
   <div class="paper-meta">
     <span class="score-badge score-low">0.0</span>
     <span class="source-tag">NBER</span>
+    
     
   </div>
   <div class="paper-authors">Erica M. Field, Madeline McKelway, Alessandra Voena</div>
-  <p class="paper-abstract">Gender normsshared expectations about appropriate behavior by gendershape the outcomes of men and women across societies, and are correlated with GDP per capita. This chapter surveys the literature on gender norms and economic development, focusing on the pervasive and traditional male breadwinner</p>
-  
 </div>
 <div class="paper-card" data-score="0" data-source="NBER" data-topics="">
-  <div class="paper-title"><a href="https://www.nber.org/papers/w34834" target="_blank" rel="noopener">GPT as a Measurement Tool</a></div>
+  <div class="paper-title">
+    <a href="https://www.nber.org/papers/w34834" target="_blank" rel="noopener">GPT as a Measurement Tool</a>
+  </div>
   <div class="paper-meta">
     <span class="score-badge score-low">0.0</span>
     <span class="source-tag">NBER</span>
+    
     
   </div>
   <div class="paper-authors">Hemanth Asirvatham, Elliott Mokski, Andrei Shleifer</div>
-  <p class="paper-abstract">We present the GABRIEL software package, which uses GPT to quantify attributes in qualitative data (e.g. how pro innovation a speech is). GPT is evaluated on classification and attribute rating performance against 1000+ human annotated tasks across a range of topics and data. We find that GPT as a</p>
-  
 </div>
 <div class="paper-card" data-score="0" data-source="NBER" data-topics="">
-  <div class="paper-title"><a href="https://www.nber.org/papers/w34835" target="_blank" rel="noopener">Self-assessed Life-Cycle Saving Behavior in the U.S. and Singapore: Procrastination Versus Economic Shocks</a></div>
+  <div class="paper-title">
+    <a href="https://www.nber.org/papers/w34835" target="_blank" rel="noopener">Self-assessed Life-Cycle Saving Behavior in the U.S. and Singapore: Procrastination Versus Economic Shocks</a>
+  </div>
   <div class="paper-meta">
     <span class="score-badge score-low">0.0</span>
     <span class="source-tag">NBER</span>
+    
     
   </div>
   <div class="paper-authors">Susann Rohwedder, Michael D. Hurd, Axel H. Börsch-Supan</div>
-  <p class="paper-abstract">It is widely believed that procrastination contributes to under-saving. Using household survey data from the United States and Singapore, we find little evidence to support this view. In both countries, indicators of procrastination have only weak, if any, explanatory power for saving regret. About</p>
-  
 </div>
 <div class="paper-card" data-score="0" data-source="NBER" data-topics="">
-  <div class="paper-title"><a href="https://www.nber.org/papers/w34822" target="_blank" rel="noopener">Incentives and Prosocial Discomfort: A Laboratory Experiment</a></div>
+  <div class="paper-title">
+    <a href="https://www.nber.org/papers/w34822" target="_blank" rel="noopener">Incentives and Prosocial Discomfort: A Laboratory Experiment</a>
+  </div>
   <div class="paper-meta">
     <span class="score-badge score-low">0.0</span>
     <span class="source-tag">NBER</span>
     
+    
   </div>
-  <div class="paper-authors">Grace E. Steward, Mario Macis, Nicola Lacetera, Jeffrey P. Kahn et al.</div>
-  <p class="paper-abstract">We conducted a within-subject laboratory experiment in which participants decided whether to experience physical discomfort for charity, with or without additional personal compensation. Acceptance decreased with greater discomfort and increased with both larger charitable donations and personal</p>
-  
+  <div class="paper-authors">Grace E. Steward, Mario Macis, Nicola Lacetera et al.</div>
 </div>
 <div class="paper-card" data-score="0" data-source="NBER" data-topics="">
-  <div class="paper-title"><a href="https://www.nber.org/papers/w34839" target="_blank" rel="noopener">Reconstruction following Destruction: Entrepreneurship in the Aftermath of a Natural Disaster</a></div>
+  <div class="paper-title">
+    <a href="https://www.nber.org/papers/w34839" target="_blank" rel="noopener">Reconstruction following Destruction: Entrepreneurship in the Aftermath of a Natural Disaster</a>
+  </div>
   <div class="paper-meta">
     <span class="score-badge score-low">0.0</span>
     <span class="source-tag">NBER</span>
+    
     
   </div>
   <div class="paper-authors">Richard Lombardo, Elizabeth Frankenberg, Duncan Thomas</div>
-  <p class="paper-abstract">Little is known about the impact on small-scale enterprises of a large negative shock that destroys assets and disrupts local markets. We document the short- and long-run impacts of the 2004 Indian Ocean tsunami using longitudinal household survey data. We leverage topography-driven variation in</p>
-  
 </div>
 <div class="paper-card" data-score="0" data-source="NBER" data-topics="">
-  <div class="paper-title"><a href="https://www.nber.org/papers/w34823" target="_blank" rel="noopener">Currency Pegs, Trade Imbalances and Unemployment: A Reevaluation of the China Shock</a></div>
+  <div class="paper-title">
+    <a href="https://www.nber.org/papers/w34823" target="_blank" rel="noopener">Currency Pegs, Trade Imbalances and Unemployment: A Reevaluation of the China Shock</a>
+  </div>
   <div class="paper-meta">
     <span class="score-badge score-low">0.0</span>
     <span class="source-tag">NBER</span>
+    
     
   </div>
   <div class="paper-authors">Bumsoo Kim, Marc De la Barrea, Masao Fukui</div>
-  <p class="paper-abstract">We develop a dynamic quantitative model of trade and labor adjustment, incorporating nominal wage rigidity and consumptionsaving decisions, to study how Chinas currency peg interacted with its rapid growth in shaping the US economy. We show that the peg temporarily boosts Chinas export growth by</p>
-  
 </div>
 <div class="paper-card" data-score="0" data-source="NBER" data-topics="">
-  <div class="paper-title"><a href="https://www.nber.org/papers/w34824" target="_blank" rel="noopener">Interest Rate Pass-Through With Adjustable Rate Mortgages</a></div>
+  <div class="paper-title">
+    <a href="https://www.nber.org/papers/w34824" target="_blank" rel="noopener">Interest Rate Pass-Through With Adjustable Rate Mortgages</a>
+  </div>
   <div class="paper-meta">
     <span class="score-badge score-low">0.0</span>
     <span class="source-tag">NBER</span>
+    
     
   </div>
   <div class="paper-authors">Manuel Adelino, Miguel A. Ferreira, Sujiao Zhao</div>
-  <p class="paper-abstract">Adjustable-rate mortgages (ARMs) transmit monetary policy less directly than often assumed. We exploit quasi-experimental variation in ARM rate reset timing in Portugalwhere over 92% of mortgages are indexed to Euriboraround the ECBs 20222023 tightening cycle to estimate responses to mortgage</p>
-  
 </div>
 <div class="paper-card" data-score="0" data-source="NBER" data-topics="">
-  <div class="paper-title"><a href="https://www.nber.org/papers/w34840" target="_blank" rel="noopener">The Silk Road of Ashes: Exposure to NAFTA and Adult Mortality</a></div>
+  <div class="paper-title">
+    <a href="https://www.nber.org/papers/w34840" target="_blank" rel="noopener">The Silk Road of Ashes: Exposure to NAFTA and Adult Mortality</a>
+  </div>
   <div class="paper-meta">
     <span class="score-badge score-low">0.0</span>
     <span class="source-tag">NBER</span>
+    
     
   </div>
   <div class="paper-authors">Hamid Noghanibehambari, Jason Fletcher</div>
-  <p class="paper-abstract">The implementation of the North American Free Trade Agreement (NAFTA) in 1994 resulted in a great restructuring in industry composition in the US, with substantial heterogeneity across local areas. In this paper, we investigate the effects of NAFTA on the mortality rates of the working-age</p>
-  
 </div>
 <div class="paper-card" data-score="0" data-source="NBER" data-topics="">
-  <div class="paper-title"><a href="https://www.nber.org/papers/w34841" target="_blank" rel="noopener">Classrooms as Workplaces: How Student Composition Affects Teacher Health</a></div>
+  <div class="paper-title">
+    <a href="https://www.nber.org/papers/w34841" target="_blank" rel="noopener">Classrooms as Workplaces: How Student Composition Affects Teacher Health</a>
+  </div>
   <div class="paper-meta">
     <span class="score-badge score-low">0.0</span>
     <span class="source-tag">NBER</span>
     
+    
   </div>
-  <div class="paper-authors">Krzysztof Karbownik, Helena Svaleryd, Jonas Vlachos, Xuemeng Wang</div>
-  <p class="paper-abstract">Work-related burnout and stress-related sickness absence have become increasingly prevalent, but evidence on which workplace features shape workers mental health remains limited. Using population-level Swedish register data covering all lower- and upper-secondary teachers from 20062024, we show that</p>
-  
+  <div class="paper-authors">Krzysztof Karbownik, Helena Svaleryd, Jonas Vlachos et al.</div>
 </div>
 <div class="paper-card" data-score="0" data-source="NBER" data-topics="">
-  <div class="paper-title"><a href="https://www.nber.org/papers/w34843" target="_blank" rel="noopener">How Do Workers Think About The Costs and Benefits of Freelance Work? New Evidence From a Survey Experiment</a></div>
+  <div class="paper-title">
+    <a href="https://www.nber.org/papers/w34843" target="_blank" rel="noopener">How Do Workers Think About The Costs and Benefits of Freelance Work? New Evidence From a Survey Experiment</a>
+  </div>
   <div class="paper-meta">
     <span class="score-badge score-low">0.0</span>
     <span class="source-tag">NBER</span>
+    
     
   </div>
   <div class="paper-authors">Edward Freeland, Andrew Garin, Dmitri K. Koustas</div>
-  <p class="paper-abstract">We examine how workers perceive the trade-offs of freelancing using a novel survey design that explores the nature of workers' perceptions of their own jobs and the implications of work arrangements for their take-home pay. We find that, across several alternative classifications of freelance work,</p>
-  
 </div>
 <div class="paper-card" data-score="0" data-source="NBER" data-topics="">
-  <div class="paper-title"><a href="https://www.nber.org/papers/w34844" target="_blank" rel="noopener">Liquidity Flows to Bank-Affiliated Broker Dealers: Insights from Volumes and Prices</a></div>
+  <div class="paper-title">
+    <a href="https://www.nber.org/papers/w34844" target="_blank" rel="noopener">Liquidity Flows to Bank-Affiliated Broker Dealers: Insights from Volumes and Prices</a>
+  </div>
   <div class="paper-meta">
     <span class="score-badge score-low">0.0</span>
     <span class="source-tag">NBER</span>
     
+    
   </div>
-  <div class="paper-authors">Jennie Bai, Erik Bostrom, Sebastian Infante, Victoria Ivashina</div>
-  <p class="paper-abstract">Using confidential transaction-level data on overnight tri-party Treasury repo from 20182025, we study liquidity flows within bank holding companies (BHCs) between primary dealers and affiliated entities. Affiliates, especially depository institutions with abundant reserves, provide a large share of</p>
-  
+  <div class="paper-authors">Jennie Bai, Erik Bostrom, Sebastian Infante et al.</div>
 </div>
 <div class="paper-card" data-score="0" data-source="NBER" data-topics="">
-  <div class="paper-title"><a href="https://www.nber.org/papers/w34847" target="_blank" rel="noopener">The Differential Impacts of Critical Mineral Prices and Oil Prices on the Economy</a></div>
+  <div class="paper-title">
+    <a href="https://www.nber.org/papers/w34847" target="_blank" rel="noopener">The Differential Impacts of Critical Mineral Prices and Oil Prices on the Economy</a>
+  </div>
   <div class="paper-meta">
     <span class="score-badge score-low">0.0</span>
     <span class="source-tag">NBER</span>
+    
     
   </div>
   <div class="paper-authors">Adrien Concordel, Phuong Ho, Christopher R. Knittel</div>
-  <p class="paper-abstract">This paper compares the impacts of critical mineral price and oil price on an economy in a unified neoclassical growth model. Unlike oil price shocks, which affect the cost of utilizing existing capital (e.g., cars), critical mineral price shocks influence the cost of creating new capital (e.g.,</p>
-  
 </div>
 <div class="paper-card" data-score="0" data-source="NBER" data-topics="">
-  <div class="paper-title"><a href="https://www.nber.org/papers/w34788" target="_blank" rel="noopener">Coca’s Return and the American Overdose Fallout</a></div>
+  <div class="paper-title">
+    <a href="https://www.nber.org/papers/w34788" target="_blank" rel="noopener">Coca’s Return and the American Overdose Fallout</a>
+  </div>
   <div class="paper-meta">
     <span class="score-badge score-low">0.0</span>
     <span class="source-tag">NBER</span>
     
+    
   </div>
-  <div class="paper-authors">Xinming Du, Benjamin Hansen, Shan Zhang, Eric Zou</div>
-  <p class="paper-abstract">Colombian coca cultivation fell dramatically between 2000 and 2015, a period that saw intense U.S.-backed eradication and interdiction efforts. That progress reversed in 2015, when peace talks and legal rulings in Colombia opened enforcement gaps. Coca plantation has since increased to record levels</p>
-  
+  <div class="paper-authors">Xinming Du, Benjamin Hansen, Shan Zhang et al.</div>
 </div>
 <div class="paper-card" data-score="0" data-source="NBER" data-topics="">
-  <div class="paper-title"><a href="https://www.nber.org/papers/w34794" target="_blank" rel="noopener">ICE Arrests across Trump's First and Second Terms: Variation in Targeting, Method, and Geography</a></div>
+  <div class="paper-title">
+    <a href="https://www.nber.org/papers/w34794" target="_blank" rel="noopener">ICE Arrests across Trump's First and Second Terms: Variation in Targeting, Method, and Geography</a>
+  </div>
   <div class="paper-meta">
     <span class="score-badge score-low">0.0</span>
     <span class="source-tag">NBER</span>
+    
     
   </div>
   <div class="paper-authors">Chloe N. East, Caitlin Patler, Elizabeth Cox</div>
-  <p class="paper-abstract">Deportation is often framed as a necessary tool to protect public safety by removing people who commit crimes. We use newly available, and externally validated, administrative data containing all US Immigration and Customs Enforcement (ICE) arrests from September 2015-October 2025. Beyond</p>
-  
 </div>
 <div class="paper-card" data-score="0" data-source="NBER" data-topics="">
-  <div class="paper-title"><a href="https://www.nber.org/papers/w34814" target="_blank" rel="noopener">Interest Rates and Equity Valuations</a></div>
+  <div class="paper-title">
+    <a href="https://www.nber.org/papers/w34814" target="_blank" rel="noopener">Interest Rates and Equity Valuations</a>
+  </div>
   <div class="paper-meta">
     <span class="score-badge score-low">0.0</span>
     <span class="source-tag">NBER</span>
+    
     
   </div>
   <div class="paper-authors">Niels Joachim Gormsen, Eben Lazarus</div>
-  <p class="paper-abstract">A large body of work has sought to measure the effect of interest rates on equity valuations. The challenge in doing so is that both are endogenous, and their comovement depends on the forces driving interest-rate changes. To address this problem, we develop and estimate a decomposition that splits</p>
-  
 </div>
 <div class="paper-card" data-score="0" data-source="NBER" data-topics="">
-  <div class="paper-title"><a href="https://www.nber.org/papers/w34816" target="_blank" rel="noopener">Extractive Taxation and the French Revolution</a></div>
+  <div class="paper-title">
+    <a href="https://www.nber.org/papers/w34816" target="_blank" rel="noopener">Extractive Taxation and the French Revolution</a>
+  </div>
   <div class="paper-meta">
     <span class="score-badge score-low">0.0</span>
     <span class="source-tag">NBER</span>
+    
     
   </div>
   <div class="paper-authors">Tommaso Giommoni, Gabriel Loumeau, Marco Tabellini</div>
-  <p class="paper-abstract">In this paper, we provide systematic evidence in support of the long-standing hypothesis that taxation was an important driver of the French Revolution. We first document that areas with heavier taxes experienced more riots between 1750 and 1789 and voiced more complaints against taxation in the</p>
-  
 </div>
 <div class="paper-card" data-score="0" data-source="NBER" data-topics="">
-  <div class="paper-title"><a href="https://www.nber.org/papers/w34796" target="_blank" rel="noopener">Clustered Network Connectedness: A New Measurement Framework, with Application to Global Equity Markets</a></div>
+  <div class="paper-title">
+    <a href="https://www.nber.org/papers/w34796" target="_blank" rel="noopener">Clustered Network Connectedness: A New Measurement Framework, with Application to Global Equity Markets</a>
+  </div>
   <div class="paper-meta">
     <span class="score-badge score-low">0.0</span>
     <span class="source-tag">NBER</span>
+    
     
   </div>
   <div class="paper-authors">Bastien Buchwalter, Francis X. Diebold, Kamil Yilmaz</div>
-  <p class="paper-abstract">Network connections, both across and within markets, are central in countless economic contexts. In recent decades, a large literature has developed and applied flexible methods for measuring network connectedness and its evolution, based on variance decompositions from vector autoregressions (VARs)</p>
-  
 </div>
 <div class="paper-card" data-score="0" data-source="NBER" data-topics="">
-  <div class="paper-title"><a href="https://www.nber.org/papers/w34805" target="_blank" rel="noopener">School Vaping Bans and Youth E-Cigarette Use</a></div>
+  <div class="paper-title">
+    <a href="https://www.nber.org/papers/w34805" target="_blank" rel="noopener">School Vaping Bans and Youth E-Cigarette Use</a>
+  </div>
   <div class="paper-meta">
     <span class="score-badge score-low">0.0</span>
     <span class="source-tag">NBER</span>
     
+    
   </div>
-  <div class="paper-authors">Dhaval M. Dave, Jooyoung Kim, Nikolaos Prodromidis, Joseph J. Sabia</div>
-  <p class="paper-abstract">With the goal of curbing electronic nicotine delivery systems (ENDS) use among youths, 40 states and the District of Columbia have adopted restrictions on nicotine vaping at elementary and secondary (K-12) schools. This study is the first to estimate the effect of K-12 school vaping restrictions</p>
-  
+  <div class="paper-authors">Dhaval M. Dave, Jooyoung Kim, Nikolaos Prodromidis et al.</div>
 </div>
 <div class="paper-card" data-score="0" data-source="NBER" data-topics="">
-  <div class="paper-title"><a href="https://www.nber.org/papers/w34806" target="_blank" rel="noopener">Heaven or Earth? The Evolving Role of Global Shocks for Domestic Monetary Policy</a></div>
+  <div class="paper-title">
+    <a href="https://www.nber.org/papers/w34806" target="_blank" rel="noopener">Heaven or Earth? The Evolving Role of Global Shocks for Domestic Monetary Policy</a>
+  </div>
   <div class="paper-meta">
     <span class="score-badge score-low">0.0</span>
     <span class="source-tag">NBER</span>
+    
     
   </div>
   <div class="paper-authors">Kristin Forbes, Jongrim Ha, M. Ayhan Kose</div>
-  <p class="paper-abstract">Business cycles are increasingly driven by global shocks, rather than the domestic demand shocks prominent in earlier decades, posing challenges for central banks seeking to meet domestic mandates and communicate their policy decisions. This paper analyzes the evolving influence and characteristics</p>
-  
 </div>
 <div class="paper-card" data-score="0" data-source="NBER" data-topics="">
-  <div class="paper-title"><a href="https://www.nber.org/papers/w34787" target="_blank" rel="noopener">Protest Matters: The Effects of Protests on Economic Redistribution</a></div>
+  <div class="paper-title">
+    <a href="https://www.nber.org/papers/w34787" target="_blank" rel="noopener">Protest Matters: The Effects of Protests on Economic Redistribution</a>
+  </div>
   <div class="paper-meta">
     <span class="score-badge score-low">0.0</span>
     <span class="source-tag">NBER</span>
     
+    
   </div>
-  <div class="paper-authors">Belinda Archibong, Chinemelu Okafor, Evans S. Osabuohien, Tom Moerenhout</div>
-  <p class="paper-abstract">Can citizen-led protests lead to meaningful economic redistribution and nudge governments to increase redistributive fiscal transfers? We study the effects of protests on fiscal redistribution using evidence from Nigeria. We digitized twenty-six years of public finance data from 1988 to 2016 to</p>
-  
+  <div class="paper-authors">Belinda Archibong, Chinemelu Okafor, Evans S. Osabuohien et al.</div>
 </div>
 <div class="paper-card" data-score="0" data-source="NBER" data-topics="">
-  <div class="paper-title"><a href="https://www.nber.org/papers/w34790" target="_blank" rel="noopener">The Economic Impact of Mass Deportations</a></div>
+  <div class="paper-title">
+    <a href="https://www.nber.org/papers/w34790" target="_blank" rel="noopener">The Economic Impact of Mass Deportations</a>
+  </div>
   <div class="paper-meta">
     <span class="score-badge score-low">0.0</span>
     <span class="source-tag">NBER</span>
     
+    
   </div>
-  <div class="paper-authors">Javier Cravino, Andrei A. Levchenko, Francesc Ortega, Nitya Pandalai-Nayar</div>
-  <p class="paper-abstract">This paper quantifies the effects of large-scale deportations on wages, prices, and real incomes in the United States. We impute the legal status for each worker in the American Community Survey by combining detailed individual information with group-level visa records. In 2024, 3.2% of US workers</p>
-  
+  <div class="paper-authors">Javier Cravino, Andrei A. Levchenko, Francesc Ortega et al.</div>
 </div>
 <div class="paper-card" data-score="0" data-source="NBER" data-topics="">
-  <div class="paper-title"><a href="https://www.nber.org/papers/w34791" target="_blank" rel="noopener">Is Immigration Good for Health? The Effect of Immigration on Older Adult Mortality in the United States</a></div>
+  <div class="paper-title">
+    <a href="https://www.nber.org/papers/w34791" target="_blank" rel="noopener">Is Immigration Good for Health? The Effect of Immigration on Older Adult Mortality in the United States</a>
+  </div>
   <div class="paper-meta">
     <span class="score-badge score-low">0.0</span>
     <span class="source-tag">NBER</span>
+    
     
   </div>
   <div class="paper-authors">David C. Grabowski, Jonathan Gruber, Brian E. McGarry</div>
-  <p class="paper-abstract">We measure the impact of increased immigration on mortality among elderly Americans, who rely on the immigrant-intensive health and long-term care sectors. Using a shift-share approach we find a strong impact of immigration on the size of the immigrant care workforce: admitting 1,000 new immigrants</p>
-  
 </div>
 <div class="paper-card" data-score="0" data-source="NBER" data-topics="">
-  <div class="paper-title"><a href="https://www.nber.org/papers/w34797" target="_blank" rel="noopener">Contract Design and Insurance Demand</a></div>
+  <div class="paper-title">
+    <a href="https://www.nber.org/papers/w34797" target="_blank" rel="noopener">Contract Design and Insurance Demand</a>
+  </div>
   <div class="paper-meta">
     <span class="score-badge score-low">0.0</span>
     <span class="source-tag">NBER</span>
+    
     
   </div>
   <div class="paper-authors">Jing Cai</div>
-  <p class="paper-abstract">We introduce experimental variation in the insurance contracts offered to rice farmers in China to study how contract design affects insurance takeup. We compare a single-contract offering with menus that include multiple contracts differing in premiums and payouts. Expanding the contract menu</p>
-  
 </div>
 <div class="paper-card" data-score="0" data-source="NBER" data-topics="">
-  <div class="paper-title"><a href="https://www.nber.org/papers/w34799" target="_blank" rel="noopener">The Effect of Exposure: Evidence from Spatial Choices in Nairobi</a></div>
+  <div class="paper-title">
+    <a href="https://www.nber.org/papers/w34799" target="_blank" rel="noopener">The Effect of Exposure: Evidence from Spatial Choices in Nairobi</a>
+  </div>
   <div class="paper-meta">
     <span class="score-badge score-low">0.0</span>
     <span class="source-tag">NBER</span>
+    
     
   </div>
   <div class="paper-authors">Joshua T. Dean, Gabriel Kreindler, Oluchi Mbonu</div>
-  <p class="paper-abstract">How much do people dislike opportunities they have never been exposed to, and why? We study how exposure affects work location decisions of casual workers. We offer short-term employment and randomize training locations to induce novel exposures. Participants sacrifice 22% of the median daily wage</p>
-  
 </div>
 <div class="paper-card" data-score="0" data-source="NBER" data-topics="">
-  <div class="paper-title"><a href="https://www.nber.org/papers/w34800" target="_blank" rel="noopener">Class Mobility in the Era of Rising Inequality: A Synthetic Dynasty Analysis</a></div>
+  <div class="paper-title">
+    <a href="https://www.nber.org/papers/w34800" target="_blank" rel="noopener">Class Mobility in the Era of Rising Inequality: A Synthetic Dynasty Analysis</a>
+  </div>
   <div class="paper-meta">
     <span class="score-badge score-low">0.0</span>
     <span class="source-tag">NBER</span>
     
+    
   </div>
-  <div class="paper-authors">Geoffrey Wodtke, Weiqi Wang, Kristina Butaeva, Steven N. Durlauf</div>
-  <p class="paper-abstract">This paper studies contemporary trends in class mobility using a new approach based on the synthetic dynasties represented in Markov chains. This approach yields several novel measures of movement and memory, which respectively capture how class positions differ from one generation to the next and</p>
-  
+  <div class="paper-authors">Geoffrey Wodtke, Weiqi Wang, Kristina Butaeva et al.</div>
 </div>
 <div class="paper-card" data-score="0" data-source="NBER" data-topics="">
-  <div class="paper-title"><a href="https://www.nber.org/papers/w34801" target="_blank" rel="noopener">Loan-funded Loans: Equity-like Liabilities inside Bank Holding Companies</a></div>
+  <div class="paper-title">
+    <a href="https://www.nber.org/papers/w34801" target="_blank" rel="noopener">Loan-funded Loans: Equity-like Liabilities inside Bank Holding Companies</a>
+  </div>
   <div class="paper-meta">
     <span class="score-badge score-low">0.0</span>
     <span class="source-tag">NBER</span>
+    
     
   </div>
   <div class="paper-authors">Jennie Bai, Murillo Campello, Pradeep Muthukrishnan</div>
-  <p class="paper-abstract">Leveraging regulatory data on fund flows within bank holding companies (BHCs), we characterize internal loans as a critical funding source for commercial banks. Although recorded as bank liabilities, parent-to-bank internal loans function as contingent support that resembles capital. We show that</p>
-  
 </div>
 <div class="paper-card" data-score="0" data-source="NBER" data-topics="">
-  <div class="paper-title"><a href="https://www.nber.org/papers/w34802" target="_blank" rel="noopener">Competition and Fraud in Health Care</a></div>
+  <div class="paper-title">
+    <a href="https://www.nber.org/papers/w34802" target="_blank" rel="noopener">Competition and Fraud in Health Care</a>
+  </div>
   <div class="paper-meta">
     <span class="score-badge score-low">0.0</span>
     <span class="source-tag">NBER</span>
     
+    
   </div>
-  <div class="paper-authors">Renuka M. Diwan, Paul J. Eliason, Riley League, Jetson Leder-Luis et al.</div>
-  <p class="paper-abstract">Governments rely on private firms to provide public goods and services. Although competition among these firms reduces prices and the costs of procurement, it has an ambiguous effect on fraud: competition can both dissipate the rents that attracted fraudulent firms to the market while at the same</p>
-  
+  <div class="paper-authors">Renuka M. Diwan, Paul J. Eliason, Riley League et al.</div>
 </div>
 <div class="paper-card" data-score="0" data-source="NBER" data-topics="">
-  <div class="paper-title"><a href="https://www.nber.org/papers/w34803" target="_blank" rel="noopener">Inferring Prices from Quantities</a></div>
+  <div class="paper-title">
+    <a href="https://www.nber.org/papers/w34803" target="_blank" rel="noopener">Inferring Prices from Quantities</a>
+  </div>
   <div class="paper-meta">
     <span class="score-badge score-low">0.0</span>
     <span class="source-tag">NBER</span>
+    
     
   </div>
   <div class="paper-authors">David Argente, Chang-Tai Hsieh, Munseob Lee</div>
-  <p class="paper-abstract">Measuring aggregate inflation is subject to two opposing biases: unobserved quality and variety growth, and the use of incorrect weights when new varieties are misclassified. We show that it is possible to measure an aggregate price index free of these biases when we have a subset of products where</p>
-  
 </div>
 <div class="paper-card" data-score="0" data-source="NBER" data-topics="">
-  <div class="paper-title"><a href="https://www.nber.org/papers/w34804" target="_blank" rel="noopener">Aggregate Employment and the Rise of Services across Time and Countries</a></div>
+  <div class="paper-title">
+    <a href="https://www.nber.org/papers/w34804" target="_blank" rel="noopener">Aggregate Employment and the Rise of Services across Time and Countries</a>
+  </div>
   <div class="paper-meta">
     <span class="score-badge score-low">0.0</span>
     <span class="source-tag">NBER</span>
+    
     
   </div>
   <div class="paper-authors">Margarida Duarte, Diego Restuccia</div>
-  <p class="paper-abstract">We study the sectoral reallocation of employment over time and across countries, with a focus on the rise of services. We document substantial changes in the ratio of aggregate employment to working-age population across countries that are not systematically related to productivity growth or income</p>
-  
 </div>
 <div class="paper-card" data-score="0" data-source="NBER" data-topics="">
-  <div class="paper-title"><a href="https://www.nber.org/papers/w34810" target="_blank" rel="noopener">Searching for Fish in Trees (緣木求魚)? Economic Development when Context Matters</a></div>
+  <div class="paper-title">
+    <a href="https://www.nber.org/papers/w34810" target="_blank" rel="noopener">Searching for Fish in Trees (緣木求魚)? Economic Development when Context Matters</a>
+  </div>
   <div class="paper-meta">
     <span class="score-badge score-low">0.0</span>
     <span class="source-tag">NBER</span>
+    
     
   </div>
   <div class="paper-authors">Jacob Moscona, Nathan Nunn, James A. Robinson</div>
-  <p class="paper-abstract">In this chapter, we develop a framework for analyzing the determinants of economic development and their implications for policy. We distinguish between classical determinantssuch as inputs into education and health, access to credit, and geographyand non-classical determinantsincluding cultural</p>
-  
 </div>
 <div class="paper-card" data-score="0" data-source="NBER" data-topics="">
-  <div class="paper-title"><a href="https://www.nber.org/papers/w34812" target="_blank" rel="noopener">Early Learning Across Decades: Advances in Measuring Head Start Effectiveness</a></div>
+  <div class="paper-title">
+    <a href="https://www.nber.org/papers/w34812" target="_blank" rel="noopener">Early Learning Across Decades: Advances in Measuring Head Start Effectiveness</a>
+  </div>
   <div class="paper-meta">
     <span class="score-badge score-low">0.0</span>
     <span class="source-tag">NBER</span>
+    
     
   </div>
   <div class="paper-authors">Chloe Gibbs</div>
-  <p class="paper-abstract">The Head Start program, launched in 1965 and targeted to children from disadvantaged backgrounds, remains the largest early childhood care and education (ECE) program in the United States and the only one deployed at the federal level. As such, the Head Start literature spans several decades and now</p>
-  
 </div>
 <div class="paper-card" data-score="0" data-source="NBER" data-topics="">
-  <div class="paper-title"><a href="https://www.nber.org/papers/w34817" target="_blank" rel="noopener">International Currency Dominance</a></div>
+  <div class="paper-title">
+    <a href="https://www.nber.org/papers/w34817" target="_blank" rel="noopener">International Currency Dominance</a>
+  </div>
   <div class="paper-meta">
     <span class="score-badge score-low">0.0</span>
     <span class="source-tag">NBER</span>
+    
     
   </div>
   <div class="paper-authors">Joseph Abadi, Jesús Fernández-Villaverde, Daniel Sanches</div>
-  <p class="paper-abstract">We present a micro-founded monetary model of the world economy to study international currency competition. Our model features "unipolar'' equilibria, with a single dominant international currency, and "multipolar'' equilibria, in which multiple currencies circulate internationally. Long-run</p>
-  
 </div>
 <div class="paper-card" data-score="0" data-source="NBER" data-topics="">
-  <div class="paper-title"><a href="https://www.nber.org/papers/w34818" target="_blank" rel="noopener">Residential Segregation and Unequal Access to Local Public Services in India: Evidence from 1.5m Neighborhoods</a></div>
+  <div class="paper-title">
+    <a href="https://www.nber.org/papers/w34818" target="_blank" rel="noopener">Residential Segregation and Unequal Access to Local Public Services in India: Evidence from 1.5m Neighborhoods</a>
+  </div>
   <div class="paper-meta">
     <span class="score-badge score-low">0.0</span>
     <span class="source-tag">NBER</span>
     
+    
   </div>
-  <div class="paper-authors">Sam Asher, Kritarth Jha, Paul Novosad, Anjali Adukia et al.</div>
-  <p class="paper-abstract">We study residential segregation and access to public services across 1.5 million urban and rural neighborhoods in India. Muslim and Scheduled Caste segregation in India is high by global standards, and only slightly lower than Black-White segregation in the U.S. Within cities, public facilities and</p>
-  
+  <div class="paper-authors">Sam Asher, Kritarth Jha, Paul Novosad et al.</div>
 </div>
 <div class="paper-card" data-score="0" data-source="NBER" data-topics="">
-  <div class="paper-title"><a href="https://www.nber.org/papers/w34819" target="_blank" rel="noopener">Financial Incentives, Health Screening, and Selection into Mental Health Care: Experimental Evidence from College Students in India</a></div>
+  <div class="paper-title">
+    <a href="https://www.nber.org/papers/w34819" target="_blank" rel="noopener">Financial Incentives, Health Screening, and Selection into Mental Health Care: Experimental Evidence from College Students in India</a>
+  </div>
   <div class="paper-meta">
     <span class="score-badge score-low">0.0</span>
     <span class="source-tag">NBER</span>
     
+    
   </div>
-  <div class="paper-authors">Emily Breza, Kevin Carney, Vijaya Raghavan, Kailash Rajah et al.</div>
-  <p class="paper-abstract">In an RCT with college students in Chennai (N=340), we test how modest financial incentives and personalized feedback affect the uptake and targeting (by symptom severity) of free therapy. Despite 56% of students screening positive for at least mild depression or anxiety, only 3% in the control</p>
-  
+  <div class="paper-authors">Emily Breza, Kevin Carney, Vijaya Raghavan et al.</div>
 </div>
 <div class="paper-card" data-score="0" data-source="NBER" data-topics="">
-  <div class="paper-title"><a href="https://www.nber.org/papers/w34820" target="_blank" rel="noopener">Are Government Bonds Safe in Times of War and Pandemic?</a></div>
+  <div class="paper-title">
+    <a href="https://www.nber.org/papers/w34820" target="_blank" rel="noopener">Are Government Bonds Safe in Times of War and Pandemic?</a>
+  </div>
   <div class="paper-meta">
     <span class="score-badge score-low">0.0</span>
     <span class="source-tag">NBER</span>
     
+    
   </div>
-  <div class="paper-authors">Zhengyang Jiang, Hanno Lustig, Stijn Van Nieuwerburgh, Mindy Z. Xiaolan</div>
-  <p class="paper-abstract">We analyze real returns on U.S. and U.K. government debt during major wars and the COVID-19 pandemic over the past three centuries. Wars are associated with sharply negative real returns on outstanding government debt, with returns falling far below economic growth, in contrast to peacetime periods</p>
-  
+  <div class="paper-authors">Zhengyang Jiang, Hanno Lustig, Stijn Van Nieuwerburgh et al.</div>
 </div>
 <script>
 function filterCards(filter, btn) {
@@ -1228,8 +1300,8 @@ function filterCards(filter, btn) {
     let show = false;
     if (filter === 'all') {
       show = true;
-    } else if (filter === 'top') {
-      show = parseFloat(card.dataset.score) >= 8.5;
+    } else if (filter === 'full_read') {
+      show = card.querySelector('.source-tag[style*="f6ffed"]') !== null;
     } else if (filter === 'NBER' || filter === 'SSRN') {
       show = card.dataset.source === filter;
     } else {
@@ -1237,11 +1309,10 @@ function filterCards(filter, btn) {
     }
     card.classList.toggle('hidden', !show);
   });
-  // Show/hide week headers based on visible cards
   document.querySelectorAll('h2').forEach(h2 => {
     const section = h2.closest('section') || h2.parentElement;
     if (!section) return;
-    const visible = section.querySelectorAll('.paper-card:not(.hidden)').length > 0;
+    const visible = [...section.querySelectorAll('.paper-card')].some(c => !c.classList.contains('hidden'));
     h2.style.display = visible ? '' : 'none';
   });
 }
@@ -1337,11 +1408,6 @@ function filterCards(filter, btn) {
           if (link.dataset.originalHref !== undefined) {
             link.href = link.dataset.originalHref;
           }
-            // target, if specified
-            link.setAttribute("target", "_blank");
-            if (link.getAttribute("rel") === null) {
-              link.setAttribute("rel", "noopener");
-            }
         }
       }
     function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
@@ -1660,5 +1726,4 @@ function filterCards(filter, btn) {
 
 
 
-<script src="index_files/libs/quarto-html/zenscroll-min.js"></script>
 </body></html>

@@ -1,0 +1,69 @@
+---
+title: "AI, Opinion Ecosystems, and Finance"
+format:
+  html:
+    toc: true
+    toc-location: left
+    toc-title: "Sections"
+    page-layout: article
+---
+
+```{=html}
+<div style="margin-bottom:1rem;">
+  <a href="../index.html" style="font-size:0.85rem; color:#6c757d; text-decoration:none;">← Back to all papers</a>
+</div>
+<div style="display:flex; flex-wrap:wrap; gap:0.4rem; align-items:center; margin-bottom:1rem;">
+  <span class="score-badge score-top" style="font-size:0.9rem; padding:0.2rem 0.6rem;">8.5 / 10</span>
+  <span class="source-tag">NBER</span>
+  <span class="topic-tag">Information Econ</span>
+</div>
+```
+
+**Authors:** David Hirshleifer, Lin Peng, Qiguang Wang, Weichen Zhang, Xiaoyan Zhang
+
+**Published:** 2026-02-25 · [View on NBER](https://www.nber.org/papers/w34807){target="_blank"}
+· [PDF](https://www.nber.org/system/files/working_papers/w34807/w34807.pdf){target="_blank"}
+
+---
+
+## Abstract
+
+Generative AI use for content generation is associated with divergent outcomes on different financial social media platforms: indications of reasoning enhancement on Seeking Alpha, and of belief distortions on WallStreetBets. On Seeking Alpha, adoption is associated with information frictions. AI
+
+
+---
+
+## Analysis
+
+
+### Research Question
+How do AI-generated opinions shape information ecosystems and affect asset pricing?
+
+
+### Data
+Social media posts + earnings call transcripts + stock return panel, 2015-2025
+
+
+### Identification Strategy
+Quasi-experimental variation in AI content moderation policy changes
+
+
+### Main Findings
+AI-generated financial commentary increases return comovement by 12-18%, with stronger effects for retail-heavy stocks
+
+
+### Limitations
+Cannot fully separate AI content from AI-amplified human content
+
+
+---
+
+### Connection to Current Research
+
+Directly relevant to the earnings call text analysis project — the mechanism (text → investor beliefs → prices) mirrors the partisan alignment → firm performance channel
+
+::: {.callout-tip}
+## Key Takeaway
+Method: use large-scale text variation as quasi-experiment; Finding: cite as motivation for why text-based firm signals matter
+:::
+

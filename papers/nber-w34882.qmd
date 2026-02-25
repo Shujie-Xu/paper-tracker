@@ -1,0 +1,41 @@
+---
+title: "Intangible Intensity"
+format:
+  html:
+    toc: true
+    toc-location: left
+    toc-title: "Sections"
+    page-layout: article
+---
+
+```{=html}
+<div style="margin-bottom:1rem;">
+  <a href="../index.html" style="font-size:0.85rem; color:#6c757d; text-decoration:none;">← Back to all papers</a>
+</div>
+<div style="display:flex; flex-wrap:wrap; gap:0.4rem; align-items:center; margin-bottom:1rem;">
+  <span class="score-badge score-high" style="font-size:0.9rem; padding:0.2rem 0.6rem;">7.2 / 10</span>
+  <span class="source-tag">NBER</span>
+  <span class="topic-tag">Information Econ</span> <span class="topic-tag">Corp. Finance</span>
+</div>
+```
+
+**Authors:** Andrea L. Eisfeldt, Barney Hartman-Glaser, Edward T. Kim, Ki Beom Lee
+
+**Published:** 2026-02-25 · [View on NBER](https://www.nber.org/papers/w34882){target="_blank"}
+· [PDF](https://www.nber.org/system/files/working_papers/w34882/w34882.pdf){target="_blank"}
+
+---
+
+## Abstract
+
+We develop a text-based measure of intangible investment intensity derived from firms 10-K filings, and offer a general methodology for semantic theme scoring (STS). Our approach further classifies disclosure text into knowledge, customer, and organization capital. Firms with high intangible
+
+
+---
+
+::: {.callout-note}
+## Analysis Pending
+This paper has been relevance-scored (7.2/10).
+Full analysis is generated for papers scoring ≥ 7.5.
+:::
+

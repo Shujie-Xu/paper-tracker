@@ -5,21 +5,11 @@ project:
 website:
   title: "Research Tracker"
   description: "Weekly NBER + SSRN working paper digest · Shujie Xu"
-  favicon: ""
-  repo-url: https://github.com/Shujie-Xu/paper-tracker
-  repo-actions: []
+  navbar: false
 
 format:
   html:
     theme: [flatly, custom.scss]
-    toc: true
-    toc-location: left
-    toc-title: "Weeks"
-    toc-depth: 1
-    page-layout: full
-    self-contained: false
+    toc: false
     smooth-scroll: true
     link-external-newwindow: true
-    include-in-header:
-      text: |
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">

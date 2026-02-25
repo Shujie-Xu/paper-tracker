@@ -1,0 +1,41 @@
+---
+title: "The Politics of AI"
+format:
+  html:
+    toc: true
+    toc-location: left
+    toc-title: "Sections"
+    page-layout: article
+---
+
+```{=html}
+<div style="margin-bottom:1rem;">
+  <a href="../index.html" style="font-size:0.85rem; color:#6c757d; text-decoration:none;">← Back to all papers</a>
+</div>
+<div style="display:flex; flex-wrap:wrap; gap:0.4rem; align-items:center; margin-bottom:1rem;">
+  <span class="score-badge score-mid" style="font-size:0.9rem; padding:0.2rem 0.6rem;">6.8 / 10</span>
+  <span class="source-tag">NBER</span>
+  <span class="topic-tag">Corp. Political</span>
+</div>
+```
+
+**Authors:** Nicholas Bloom, Christos Makridis
+
+**Published:** 2026-02-25 · [View on NBER](https://www.nber.org/papers/w34813){target="_blank"}
+· [PDF](https://www.nber.org/system/files/working_papers/w34813/w34813.pdf){target="_blank"}
+
+---
+
+## Abstract
+
+Using new data from the Gallup Workforce Panel, we document a persistent partisan gap in self-reported AI use at work: Democrats are consistently more likely than Republicans to report frequent use. In 2025:Q4, for example, 27.8% of Democrats report using AI weekly or daily, compared with 22.5% of
+
+
+---
+
+::: {.callout-note}
+## Analysis Pending
+This paper has been relevance-scored (6.8/10).
+Full analysis is generated for papers scoring ≥ 7.5.
+:::
+

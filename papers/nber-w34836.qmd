@@ -1,0 +1,41 @@
+---
+title: "Firm Data on AI"
+format:
+  html:
+    toc: true
+    toc-location: left
+    toc-title: "Sections"
+    page-layout: article
+---
+
+```{=html}
+<div style="margin-bottom:1rem;">
+  <a href="../index.html" style="font-size:0.85rem; color:#6c757d; text-decoration:none;">← Back to all papers</a>
+</div>
+<div style="display:flex; flex-wrap:wrap; gap:0.4rem; align-items:center; margin-bottom:1rem;">
+  <span class="score-badge score-mid" style="font-size:0.9rem; padding:0.2rem 0.6rem;">6.8 / 10</span>
+  <span class="source-tag">NBER</span>
+  <span class="topic-tag">Corp. Finance</span>
+</div>
+```
+
+**Authors:** Ivan Yotzov, Jose Maria Barrero, Nicholas Bloom, Philip Bunn, Steven J. Davis, Kevin M. Foster, Aaron Jalca, Brent H. Meyer, Paul Mizen, Michael A. Navarrete, Pawel Smietanka, Gregory Thwaites, Ben Zhe Wang
+
+**Published:** 2026-02-25 · [View on NBER](https://www.nber.org/papers/w34836){target="_blank"}
+· [PDF](https://www.nber.org/system/files/working_papers/w34836/w34836.pdf){target="_blank"}
+
+---
+
+## Abstract
+
+We present the first representative international data on firm-level AI use. We survey almost 6000 CFOs, CEOs and executives from stratified firm samples across the US, UK, Germany and Australia. We find four key facts. First, around 70% of firms actively use AI, particularly younger, more
+
+
+---
+
+::: {.callout-note}
+## Analysis Pending
+This paper has been relevance-scored (6.8/10).
+Full analysis is generated for papers scoring ≥ 7.5.
+:::
+

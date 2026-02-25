@@ -1,0 +1,41 @@
+---
+title: "Chaining Tasks, Redefining Work: A Theory of AI Automation"
+format:
+  html:
+    toc: true
+    toc-location: left
+    toc-title: "Sections"
+    page-layout: article
+---
+
+```{=html}
+<div style="margin-bottom:1rem;">
+  <a href="../index.html" style="font-size:0.85rem; color:#6c757d; text-decoration:none;">← Back to all papers</a>
+</div>
+<div style="display:flex; flex-wrap:wrap; gap:0.4rem; align-items:center; margin-bottom:1rem;">
+  <span class="score-badge score-mid" style="font-size:0.9rem; padding:0.2rem 0.6rem;">6.8 / 10</span>
+  <span class="source-tag">NBER</span>
+  
+</div>
+```
+
+**Authors:** Mert Demirer, John J. Horton, Nicole Immorlica, Brendan Lucier, Peyman Shahidi
+
+**Published:** 2026-02-25 · [View on NBER](https://www.nber.org/papers/w34859){target="_blank"}
+· [PDF](https://www.nber.org/system/files/working_papers/w34859/w34859.pdf){target="_blank"}
+
+---
+
+## Abstract
+
+Production is a sequence of steps that can be executed (1) manually, (2) augmented with AI, or (3) fully automated within contiguous AI-executed steps called chains. Firms optimally bundle steps into tasks and then jobs, trading off specialization gains against coordination costs. We characterize
+
+
+---
+
+::: {.callout-note}
+## Analysis Pending
+This paper has been relevance-scored (6.8/10).
+Full analysis is generated for papers scoring ≥ 7.5.
+:::
+
