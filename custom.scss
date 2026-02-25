@@ -1,0 +1,185 @@
+/*-- scss:defaults --*/
+$font-family-sans-serif: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+$font-family-serif: "Georgia", "Times New Roman", serif;
+$headings-font-family: "Georgia", "Times New Roman", serif;
+$body-color: #212529;
+$link-color: #2c6fad;
+
+/*-- scss:rules --*/
+
+/* ── Header ────────────────────────────────────────────────────── */
+.quarto-title-block {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #dee2e6;
+}
+.quarto-title h1 { font-size: 1.8rem; font-weight: 600; }
+.quarto-title .subtitle { color: #6c757d; font-style: italic; font-size: 1rem; }
+
+/* ── Stats bar ─────────────────────────────────────────────────── */
+.tracker-stats {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  padding: 0.75rem 1rem;
+  background: #f8f9fa;
+  border-radius: 6px;
+  margin-bottom: 1.5rem;
+  font-size: 0.85rem;
+  color: #495057;
+}
+.stat-item strong { color: #212529; }
+
+/* ── Filter bar ────────────────────────────────────────────────── */
+.filter-bar {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+  align-items: center;
+}
+.filter-bar .filter-label {
+  font-size: 0.78rem;
+  color: #6c757d;
+  margin-right: 0.25rem;
+  font-style: italic;
+}
+.filter-btn {
+  font-size: 0.78rem;
+  padding: 0.2rem 0.65rem;
+  border-radius: 20px;
+  border: 1px solid #dee2e6;
+  background: white;
+  color: #495057;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+.filter-btn:hover, .filter-btn.active {
+  background: #2c6fad;
+  border-color: #2c6fad;
+  color: white;
+}
+
+/* ── Paper card ────────────────────────────────────────────────── */
+.paper-card {
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  padding: 1.1rem 1.25rem;
+  margin-bottom: 0.9rem;
+  background: white;
+  transition: box-shadow 0.15s, border-color 0.15s;
+}
+.paper-card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); border-color: #adb5bd; }
+.paper-card.top-pick  { border-left: 4px solid #d4380d; }
+.paper-card.high-relevance { border-left: 4px solid #fa8c16; }
+.paper-card.hidden { display: none !important; }
+
+.paper-title {
+  font-size: 0.97rem;
+  font-weight: 600;
+  font-family: $headings-font-family;
+  margin-bottom: 0.3rem;
+  line-height: 1.4;
+}
+.paper-title a { color: inherit; text-decoration: none; }
+.paper-title a:hover { color: #2c6fad; text-decoration: underline; }
+
+.paper-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  font-size: 0.78rem;
+}
+.score-badge {
+  font-weight: 700;
+  padding: 0.1rem 0.4rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+}
+.score-top  { background: #fff1f0; color: #d4380d; }
+.score-high { background: #fff7e6; color: #d46b08; }
+.score-mid  { background: #f6ffed; color: #389e0d; }
+.score-low  { background: #f5f5f5; color: #595959; }
+
+.topic-tag {
+  font-size: 0.72rem;
+  padding: 0.1rem 0.45rem;
+  border-radius: 20px;
+  background: #e8f4fd;
+  color: #2c6fad;
+}
+.source-tag {
+  font-size: 0.72rem;
+  padding: 0.1rem 0.45rem;
+  border-radius: 20px;
+  background: #f0f0f0;
+  color: #595959;
+}
+
+.paper-authors {
+  font-size: 0.8rem;
+  color: #6c757d;
+  margin-bottom: 0.4rem;
+  font-style: italic;
+}
+
+.paper-abstract {
+  font-size: 0.84rem;
+  color: #495057;
+  line-height: 1.55;
+  margin-bottom: 0;
+}
+
+/* ── Analysis section (full_read papers) ───────────────────────── */
+.analysis-block {
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid #e9ecef;
+  font-size: 0.83rem;
+}
+.analysis-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem 1rem;
+  margin-bottom: 0.5rem;
+}
+.analysis-item label {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #6c757d;
+  margin-bottom: 0.15rem;
+}
+.analysis-item p { color: #212529; margin: 0; }
+.takeaway-box {
+  background: #fff8e6;
+  border-left: 3px solid #fa8c16;
+  border-radius: 0 4px 4px 0;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.83rem;
+  color: #333;
+}
+.takeaway-box strong { color: #d46b08; }
+
+/* ── Week heading ──────────────────────────────────────────────── */
+h2.week-heading {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #495057;
+  border-bottom: 1px solid #e9ecef;
+  padding-bottom: 0.4rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+/* ── Responsive ────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .analysis-grid { grid-template-columns: 1fr; }
+  .tracker-stats { gap: 0.75rem; }
+  .paper-card { padding: 0.85rem 1rem; }
+  /* Quarto sidebar becomes offcanvas on mobile automatically */
+}
