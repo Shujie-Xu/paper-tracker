@@ -1,0 +1,127 @@
+---
+title: "Screen More, Sell Later: Screening and Dynamic Signaling in the Mortgage Market"
+format:
+  html:
+    toc: true
+    toc-location: left
+    toc-title: "Sections"
+    page-layout: article
+---
+
+```{=html}
+<style>
+body { font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+h1,h2,h3,h4,h5 { font-family: "Georgia", "Times New Roman", serif; }
+a { color: #2c6fad; }
+
+/* Stats bar */
+.tracker-stats { display:flex; flex-wrap:wrap; gap:1.25rem; padding:0.75rem 1rem;
+  background:#f8f9fa; border-radius:6px; margin-bottom:1.25rem; font-size:0.85rem; color:#495057; }
+.tracker-stats strong { color:#212529; }
+
+/* Filter bar */
+.filter-bar { display:flex; flex-wrap:wrap; gap:0.4rem; margin-bottom:1.5rem; align-items:center; }
+.filter-label { font-size:0.78rem; color:#6c757d; font-style:italic; margin-right:0.25rem; }
+.filter-btn { font-size:0.78rem; padding:0.2rem 0.65rem; border-radius:20px;
+  border:1px solid #dee2e6; background:white; color:#495057; cursor:pointer; transition:all .15s; }
+.filter-btn:hover, .filter-btn.active { background:#2c6fad; border-color:#2c6fad; color:white; }
+
+/* Paper card */
+.paper-card { border:1px solid #dee2e6; border-radius:8px; padding:1rem 1.2rem;
+  margin-bottom:0.85rem; background:white; transition:box-shadow .15s, border-color .15s; }
+.paper-card:hover { box-shadow:0 2px 8px rgba(0,0,0,.08); border-color:#adb5bd; }
+.paper-card.top-pick { border-left:4px solid #d4380d; }
+.paper-card.high-relevance { border-left:4px solid #fa8c16; }
+.paper-card.hidden { display:none !important; }
+
+.paper-title { font-size:0.96rem; font-weight:600; font-family:Georgia,serif;
+  margin-bottom:0.3rem; line-height:1.4; }
+.paper-title a { color:inherit; text-decoration:none; }
+.paper-title a:hover { color:#2c6fad; text-decoration:underline; }
+
+.paper-meta { display:flex; flex-wrap:wrap; gap:0.35rem; align-items:center;
+  margin-bottom:0.4rem; font-size:0.78rem; }
+.paper-authors { font-size:0.8rem; color:#6c757d; font-style:italic; margin-bottom:0.35rem; }
+
+/* Badges */
+.score-badge { font-weight:700; padding:0.1rem 0.4rem; border-radius:4px; font-size:0.75rem; }
+.score-top    { background:#fff1f0; color:#d4380d; }
+.score-high   { background:#fff7e6; color:#d46b08; }
+.score-mid    { background:#f6ffed; color:#389e0d; }
+.score-low    { background:#f5f5f5; color:#595959; }
+.topic-tag  { font-size:0.72rem; padding:0.1rem 0.45rem; border-radius:20px;
+  background:#e8f4fd; color:#2c6fad; }
+.source-tag { font-size:0.72rem; padding:0.1rem 0.45rem; border-radius:20px;
+  background:#f0f0f0; color:#595959; }
+
+/* Analysis (detail pages) */
+.analysis-block { margin-top:0.75rem; padding-top:0.75rem;
+  border-top:1px solid #e9ecef; font-size:0.83rem; }
+.analysis-grid { display:grid; grid-template-columns:1fr 1fr; gap:0.5rem 1.2rem; margin-bottom:0.5rem; }
+.analysis-item label { display:block; font-size:0.72rem; font-weight:600;
+  text-transform:uppercase; letter-spacing:.04em; color:#6c757d; margin-bottom:.15rem; }
+.analysis-item p { color:#212529; margin:0; }
+.takeaway-box { background:#fff8e6; border-left:3px solid #fa8c16;
+  border-radius:0 4px 4px 0; padding:0.5rem 0.75rem; color:#333; }
+.takeaway-box strong { color:#d46b08; }
+
+@media(max-width:768px) { .analysis-grid { grid-template-columns:1fr; } }
+</style>
+<div style="margin-bottom:1rem;">
+  <a href="../index.html" style="font-size:0.85rem; color:#6c757d; text-decoration:none;">← Back to all papers</a>
+</div>
+<div style="display:flex; flex-wrap:wrap; gap:0.4rem; align-items:center; margin-bottom:1rem;">
+  <span class="score-badge score-low" style="font-size:0.9rem; padding:0.2rem 0.6rem;">1.5 / 10</span>
+  <span class="source-tag">NBER</span>
+  <span class="topic-tag">Information Econ</span> <span class="topic-tag">housing</span> <span class="topic-tag">Causal Inference</span>
+</div>
+```
+
+**Authors:** Manuel Adelino, Bin Wei, Feng Zhao
+
+**Published:** 2026-02-25 · [View on NBER](https://www.nber.org/papers/w34815){target="_blank"}
+· [PDF](https://www.nber.org/system/files/working_papers/w34815/w34815.pdf){target="_blank"}
+
+---
+
+## Abstract
+
+We develop a dynamic model of asset origination with unobservable screening effort and signaling of loan quality through delayed sale by extending Vanasco (2017). The theory predicts a positive relationship between screening effort and the strength of the signal. We test this central prediction
+
+
+---
+
+## Analysis
+
+
+### Research Question
+How do mortgage originators use delayed loan sale as a signal of loan quality, and what is the relationship between screening effort and signaling strength?
+
+
+### Data
+Mortgage origination data; Vanasco (2017) extension; empirical tests of originator behavior using secondary market sale timing
+
+
+### Identification Strategy
+Dynamic model predictions tested empirically; positive relationship between screening effort and signal strength (timing of sale)
+
+
+### Main Findings
+Originators who screen more tend to delay loan sales as a quality signal. Theory predicts and data confirms: stronger screening → stronger signal → higher delay. Model rationalizes cross-sectional patterns in originator behavior and pricing.
+
+
+### Limitations
+Relies on timing of sale as proxy for screening effort which may confound with liquidity needs; model abstracts from regulatory constraints on originator behavior
+
+
+---
+
+### Connection to Current Research
+
+Closely relevant to Project 1 (HMDA matching, housing/mortgage market): this paper models information asymmetry in mortgage origination — exactly the institutional context of HMDA data. The screening-signaling framework could inform how listing price formats (round vs. precise) signal seller information/quality to buyers, analogous to how originators signal loan quality through sale timing. Also provides theoretical grounding for information frictions in housing transactions.
+
+::: {.callout-tip}
+## Key Takeaway
+The Vanasco (2017) extension is a clean model of unobservable effort + signaling in financial markets — worth reading as theoretical complement to our housing bargaining paper. The empirical strategy (using transaction timing as proxy for hidden action) is methodologically relevant for identifying hidden seller behavior in listing data.
+:::
+

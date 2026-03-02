@@ -9,7 +9,7 @@ page-layout: full
 include-in-header:
   text: |
     <meta property="og:title" content="Research Tracker · Shujie Xu">
-    <meta property="og:description" content="100 papers tracked · 100 NBER · 1 weeks · Updated Feb 25, 2026">
+    <meta property="og:description" content="26 papers tracked · 23 NBER · 3 weeks · Updated Mar 2, 2026">
     <meta property="og:image" content="https://shujie-xu.github.io/paper-tracker/preview.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -78,13 +78,13 @@ a { color: #2c6fad; }
 @media(max-width:768px) { .analysis-grid { grid-template-columns:1fr; } }
 </style>
 <div class="tracker-stats">
-  <span class="stat-item">📄 <strong>100</strong> papers tracked</span>
-  <span class="stat-item">📅 <strong>1</strong> weeks</span>
-  <span class="stat-item">🏛 <strong>100</strong> NBER</span>
-  
+  <span class="stat-item">📄 <strong>26</strong> papers tracked</span>
+  <span class="stat-item">📅 <strong>3</strong> weeks</span>
+  <span class="stat-item">🏛 <strong>23</strong> NBER</span>
+  <span class="stat-item">📑 <strong>3</strong> SSRN</span>
   <span class="stat-item">🎯 <strong>9</strong> AI-scored</span>
-  <span class="stat-item">⭐ <strong>1</strong> full reads</span>
-  <span class="stat-item" style="margin-left:auto; color:#adb5bd; font-size:0.8rem;">Updated Feb 25, 2026</span>
+  <span class="stat-item">⭐ <strong>4</strong> full reads</span>
+  <span class="stat-item" style="margin-left:auto; color:#adb5bd; font-size:0.8rem;">Updated Mar 2, 2026</span>
 </div>
 
 <div class="filter-bar" id="filterBar">
@@ -97,6 +97,23 @@ a { color: #2c6fad; }
   <button class="filter-btn" onclick="filterCards('corporate-political',this)">Corp. Political</button>
   <button class="filter-btn" onclick="filterCards('text-methods',this)">Text Methods</button>
   <button class="filter-btn" onclick="filterCards('supply-chain',this)">Supply Chain</button>
+</div>
+```
+
+## Week 10 · Mar 2–8, 2026 {#2026-w10}
+
+```{=html}
+<div class="paper-card" data-score="1.5" data-source="NBER" data-topics="information,corporate-political">
+  <div class="paper-title">
+    <a href="papers/nber-w34909.html">Multidimensional Signaling and the Rise of Cultural Politics</a>
+  </div>
+  <div class="paper-meta">
+    <span class="score-badge score-low">1.5</span>
+    <span class="source-tag">NBER</span>
+    <span class="topic-tag" data-topic="information">Information Econ</span><span class="topic-tag" data-topic="corporate-political">Corp. Political</span>
+    <span class="source-tag" style="background:#f6ffed; color:#389e0d;">⭐ Full analysis</span>
+  </div>
+  <div class="paper-authors">Daron Acemoglu, Georgy Egorov, Konstantin Sonin</div>
 </div>
 ```
 
@@ -211,1097 +228,202 @@ a { color: #2c6fad; }
   </div>
   <div class="paper-authors">Marius Guenzel, Shimon Kogan, Marina Niessner et al.</div>
 </div>
-<div class="paper-card" data-score="3" data-source="NBER" data-topics="causal-inference">
-  <div class="paper-title">
-    <a href="https://www.nber.org/papers/w34860" target="_blank" rel="noopener">Disparate Impacts of Teacher Certification Exams</a>
-  </div>
-  <div class="paper-meta">
-    <span class="score-badge score-low">3.0</span>
-    <span class="source-tag">NBER</span>
-    <span class="topic-tag" data-topic="causal-inference">Causal Inference</span>
-    
-  </div>
-  <div class="paper-authors">Christa Deneault, Evan Riehl, Jian Zou</div>
-</div>
-<div class="paper-card" data-score="3" data-source="NBER" data-topics="information,causal-inference">
-  <div class="paper-title">
-    <a href="https://www.nber.org/papers/w34862" target="_blank" rel="noopener">Expanding Paternity Leave: Effects on Beliefs, Norms, and Gender Gaps</a>
-  </div>
-  <div class="paper-meta">
-    <span class="score-badge score-low">3.0</span>
-    <span class="source-tag">NBER</span>
-    <span class="topic-tag" data-topic="information">Information Econ</span><span class="topic-tag" data-topic="causal-inference">Causal Inference</span>
-    
-  </div>
-  <div class="paper-authors">Henrik Kleven, Camille Landais, Anne Sophie S. Lassen et al.</div>
-</div>
-<div class="paper-card" data-score="3" data-source="NBER" data-topics="information,corporate-finance">
-  <div class="paper-title">
-    <a href="https://www.nber.org/papers/w34838" target="_blank" rel="noopener">R&amp;D Uncertainty and Cycles</a>
-  </div>
-  <div class="paper-meta">
-    <span class="score-badge score-low">3.0</span>
-    <span class="source-tag">NBER</span>
-    <span class="topic-tag" data-topic="information">Information Econ</span><span class="topic-tag" data-topic="corporate-finance">Corp. Finance</span>
-    
-  </div>
-  <div class="paper-authors">Nicolas Crouzet, Janice C. Eberly</div>
-</div>
-<div class="paper-card" data-score="1.5" data-source="NBER" data-topics="causal-inference">
-  <div class="paper-title">
-    <a href="https://www.nber.org/papers/w34856" target="_blank" rel="noopener">Government Funding and the Direction of Academic Energy Research</a>
-  </div>
-  <div class="paper-meta">
-    <span class="score-badge score-low">1.5</span>
-    <span class="source-tag">NBER</span>
-    <span class="topic-tag" data-topic="causal-inference">Causal Inference</span>
-    
-  </div>
-  <div class="paper-authors">David Popp, Myriam Gregoire-Zawilski, Lizhen Liang et al.</div>
-</div>
-<div class="paper-card" data-score="1.5" data-source="NBER" data-topics="corporate-finance">
-  <div class="paper-title">
-    <a href="https://www.nber.org/papers/w34863" target="_blank" rel="noopener">Valuation of Regulatory Risk on Pharmaceutical R&amp;D</a>
-  </div>
-  <div class="paper-meta">
-    <span class="score-badge score-low">1.5</span>
-    <span class="source-tag">NBER</span>
-    <span class="topic-tag" data-topic="corporate-finance">Corp. Finance</span>
-    
-  </div>
-  <div class="paper-authors">Teresa Corzo Santamaria, Jose Portela, Eduardo S. Schwartz</div>
-</div>
-<div class="paper-card" data-score="1.5" data-source="NBER" data-topics="causal-inference">
-  <div class="paper-title">
-    <a href="https://www.nber.org/papers/w34866" target="_blank" rel="noopener">Smartphones, Online Music Streaming, and Traffic Fatalities</a>
-  </div>
-  <div class="paper-meta">
-    <span class="score-badge score-low">1.5</span>
-    <span class="source-tag">NBER</span>
-    <span class="topic-tag" data-topic="causal-inference">Causal Inference</span>
-    
-  </div>
-  <div class="paper-authors">Vishal R. Patel, Christopher M. Worsham, Michael Liu et al.</div>
-</div>
-<div class="paper-card" data-score="1.5" data-source="NBER" data-topics="corporate-finance">
-  <div class="paper-title">
-    <a href="https://www.nber.org/papers/w34869" target="_blank" rel="noopener">Why has Decreasing Schooling Inequality Not Led to Decreasing Earnings Inequality in South Africa?</a>
-  </div>
-  <div class="paper-meta">
-    <span class="score-badge score-low">1.5</span>
-    <span class="source-tag">NBER</span>
-    <span class="topic-tag" data-topic="corporate-finance">Corp. Finance</span>
-    
-  </div>
-  <div class="paper-authors">David Lam, Murray Leibbrandt, Arden J. Finn et al.</div>
-</div>
-<div class="paper-card" data-score="1.5" data-source="NBER" data-topics="causal-inference">
-  <div class="paper-title">
-    <a href="https://www.nber.org/papers/w34874" target="_blank" rel="noopener">Job Loss and Health Insurance Coverage Before and After the Affordable Care Act</a>
-  </div>
-  <div class="paper-meta">
-    <span class="score-badge score-low">1.5</span>
-    <span class="source-tag">NBER</span>
-    <span class="topic-tag" data-topic="causal-inference">Causal Inference</span>
-    
-  </div>
-  <div class="paper-authors">Jessamyn Schaller, Mariana Zerpa</div>
-</div>
-<div class="paper-card" data-score="1.5" data-source="NBER" data-topics="information">
+<div class="paper-card" data-score="1.5" data-source="NBER" data-topics="information,causal-inference">
   <div class="paper-title">
     <a href="https://www.nber.org/papers/w34875" target="_blank" rel="noopener">Household Responses to Private Risk Information</a>
   </div>
   <div class="paper-meta">
     <span class="score-badge score-low">1.5</span>
     <span class="source-tag">NBER</span>
-    <span class="topic-tag" data-topic="information">Information Econ</span>
+    <span class="topic-tag" data-topic="information">Information Econ</span><span class="topic-tag" data-topic="causal-inference">Causal Inference</span>
     
   </div>
   <div class="paper-authors">Benjamin Krebs, Matthew J. Neidell</div>
 </div>
-<div class="paper-card" data-score="1.5" data-source="NBER" data-topics="supply-chain">
-  <div class="paper-title">
-    <a href="https://www.nber.org/papers/w34884" target="_blank" rel="noopener">Industrial Policies for Multi-Stage Production: The Battle for Battery-Powered Vehicles</a>
-  </div>
-  <div class="paper-meta">
-    <span class="score-badge score-low">1.5</span>
-    <span class="source-tag">NBER</span>
-    <span class="topic-tag" data-topic="supply-chain">Supply Chain</span>
-    
-  </div>
-  <div class="paper-authors">Keith Head, Thierry Mayer, Marc Melitz et al.</div>
-</div>
-<div class="paper-card" data-score="1.5" data-source="NBER" data-topics="information">
-  <div class="paper-title">
-    <a href="https://www.nber.org/papers/w34850" target="_blank" rel="noopener">Managing the Entrepreneur's Miracle Budget</a>
-  </div>
-  <div class="paper-meta">
-    <span class="score-badge score-low">1.5</span>
-    <span class="source-tag">NBER</span>
-    <span class="topic-tag" data-topic="information">Information Econ</span>
-    
-  </div>
-  <div class="paper-authors">Joshua S. Gans</div>
-</div>
-<div class="paper-card" data-score="1.5" data-source="NBER" data-topics="causal-inference">
-  <div class="paper-title">
-    <a href="https://www.nber.org/papers/w34852" target="_blank" rel="noopener">The Macroeconomic Effects of Tariffs: Evidence From U.S. Historical Data</a>
-  </div>
-  <div class="paper-meta">
-    <span class="score-badge score-low">1.5</span>
-    <span class="source-tag">NBER</span>
-    <span class="topic-tag" data-topic="causal-inference">Causal Inference</span>
-    
-  </div>
-  <div class="paper-authors">Tamar den Besten, Diego R. Känzig</div>
-</div>
-<div class="paper-card" data-score="1.5" data-source="NBER" data-topics="causal-inference">
-  <div class="paper-title">
-    <a href="https://www.nber.org/papers/w34845" target="_blank" rel="noopener">Is Teacher Effectiveness Fully Portable? Evidence from the Random Assignment of Transfer Incentives</a>
-  </div>
-  <div class="paper-meta">
-    <span class="score-badge score-low">1.5</span>
-    <span class="source-tag">NBER</span>
-    <span class="topic-tag" data-topic="causal-inference">Causal Inference</span>
-    
-  </div>
-  <div class="paper-authors">Matthew A. Kraft, John P. Papay, Jessalynn K. James et al.</div>
-</div>
-<div class="paper-card" data-score="1.5" data-source="NBER" data-topics="information">
+<div class="paper-card" data-score="1.5" data-source="NBER" data-topics="information,corporate-finance">
   <div class="paper-title">
     <a href="https://www.nber.org/papers/w34827" target="_blank" rel="noopener">Threshold Disclosure in Collective Decisions</a>
   </div>
   <div class="paper-meta">
     <span class="score-badge score-low">1.5</span>
     <span class="source-tag">NBER</span>
-    <span class="topic-tag" data-topic="information">Information Econ</span>
+    <span class="topic-tag" data-topic="information">Information Econ</span><span class="topic-tag" data-topic="corporate-finance">Corp. Finance</span>
     
   </div>
   <div class="paper-authors">Luca Braghieri, Leonardo Bursztyn, Jan Fasnacht</div>
 </div>
-<div class="paper-card" data-score="1.5" data-source="NBER" data-topics="corporate-finance">
-  <div class="paper-title">
-    <a href="https://www.nber.org/papers/w34833" target="_blank" rel="noopener">Dynamic Complementarity</a>
-  </div>
-  <div class="paper-meta">
-    <span class="score-badge score-low">1.5</span>
-    <span class="source-tag">NBER</span>
-    <span class="topic-tag" data-topic="corporate-finance">Corp. Finance</span>
-    
-  </div>
-  <div class="paper-authors">James J. Heckman, Haihan Tian, Zijian Zhang et al.</div>
-</div>
-<div class="paper-card" data-score="1.5" data-source="NBER" data-topics="corporate-finance">
-  <div class="paper-title">
-    <a href="https://www.nber.org/papers/w34837" target="_blank" rel="noopener">Non-Fungible Tokens as Investment</a>
-  </div>
-  <div class="paper-meta">
-    <span class="score-badge score-low">1.5</span>
-    <span class="source-tag">NBER</span>
-    <span class="topic-tag" data-topic="corporate-finance">Corp. Finance</span>
-    
-  </div>
-  <div class="paper-authors">William N. Goetzmann, Dong Huang, Milad Nozari</div>
-</div>
-<div class="paper-card" data-score="1.5" data-source="NBER" data-topics="corporate-finance">
+<div class="paper-card" data-score="1.5" data-source="NBER" data-topics="corporate-finance,information">
   <div class="paper-title">
     <a href="https://www.nber.org/papers/w34846" target="_blank" rel="noopener">Bidder Pools in Mergers and Acquisitions</a>
   </div>
   <div class="paper-meta">
     <span class="score-badge score-low">1.5</span>
     <span class="source-tag">NBER</span>
-    <span class="topic-tag" data-topic="corporate-finance">Corp. Finance</span>
+    <span class="topic-tag" data-topic="corporate-finance">Corp. Finance</span><span class="topic-tag" data-topic="information">Information Econ</span>
     
   </div>
   <div class="paper-authors">Bruce I. Carlin, Tingting Liu, Micah S. Officer et al.</div>
 </div>
-<div class="paper-card" data-score="1.5" data-source="NBER" data-topics="text-methods">
+<div class="paper-card" data-score="1.5" data-source="NBER" data-topics="text-methods,corporate-finance">
   <div class="paper-title">
     <a href="https://www.nber.org/papers/w34849" target="_blank" rel="noopener">Mimicking Finance</a>
   </div>
   <div class="paper-meta">
     <span class="score-badge score-low">1.5</span>
     <span class="source-tag">NBER</span>
-    <span class="topic-tag" data-topic="text-methods">Text Methods</span>
+    <span class="topic-tag" data-topic="text-methods">Text Methods</span><span class="topic-tag" data-topic="corporate-finance">Corp. Finance</span>
     
   </div>
   <div class="paper-authors">Lauren Cohen, Yiwen Lu, Quoc H. Nguyen</div>
 </div>
-<div class="paper-card" data-score="1.5" data-source="NBER" data-topics="corporate-finance">
+<div class="paper-card" data-score="1.5" data-source="NBER" data-topics="information,housing,causal-inference">
   <div class="paper-title">
-    <a href="https://www.nber.org/papers/w34795" target="_blank" rel="noopener">Younger Firms and CEOs Allow More Work from Home</a>
+    <a href="papers/nber-w34815.html">Screen More, Sell Later: Screening and Dynamic Signaling in the Mortgage Market</a>
   </div>
   <div class="paper-meta">
     <span class="score-badge score-low">1.5</span>
     <span class="source-tag">NBER</span>
-    <span class="topic-tag" data-topic="corporate-finance">Corp. Finance</span>
-    
-  </div>
-  <div class="paper-authors">Cevat Giray Aksoy, Jose Maria Barrero, Nicholas Bloom et al.</div>
-</div>
-<div class="paper-card" data-score="1.5" data-source="NBER" data-topics="corporate-finance">
-  <div class="paper-title">
-    <a href="https://www.nber.org/papers/w34792" target="_blank" rel="noopener">American Investment in Chinese Renminbi</a>
-  </div>
-  <div class="paper-meta">
-    <span class="score-badge score-low">1.5</span>
-    <span class="source-tag">NBER</span>
-    <span class="topic-tag" data-topic="corporate-finance">Corp. Finance</span>
-    
-  </div>
-  <div class="paper-authors">Bruno Cavani, Christopher Clayton, Amanda Dos Santos et al.</div>
-</div>
-<div class="paper-card" data-score="1.5" data-source="NBER" data-topics="corporate-finance">
-  <div class="paper-title">
-    <a href="https://www.nber.org/papers/w34798" target="_blank" rel="noopener">Indebted Supply and Monetary Policy: A Theory of Financial Dominance</a>
-  </div>
-  <div class="paper-meta">
-    <span class="score-badge score-low">1.5</span>
-    <span class="source-tag">NBER</span>
-    <span class="topic-tag" data-topic="corporate-finance">Corp. Finance</span>
-    
-  </div>
-  <div class="paper-authors">Viral V. Acharya, Guillaume Plantin, Olivier Wang</div>
-</div>
-<div class="paper-card" data-score="1.5" data-source="NBER" data-topics="corporate-finance">
-  <div class="paper-title">
-    <a href="https://www.nber.org/papers/w34809" target="_blank" rel="noopener">Progress or Backsliding? Changes in the Gender Wage Gap for Business Professionals</a>
-  </div>
-  <div class="paper-meta">
-    <span class="score-badge score-low">1.5</span>
-    <span class="source-tag">NBER</span>
-    <span class="topic-tag" data-topic="corporate-finance">Corp. Finance</span>
-    
-  </div>
-  <div class="paper-authors">Ann Harrison, Laura J. Kray, Noor Sethi</div>
-</div>
-<div class="paper-card" data-score="1.5" data-source="NBER" data-topics="causal-inference">
-  <div class="paper-title">
-    <a href="https://www.nber.org/papers/w34811" target="_blank" rel="noopener">Field Experiments in the Science of Science: Lessons from Peer Review and the Evaluation of New Knowledge</a>
-  </div>
-  <div class="paper-meta">
-    <span class="score-badge score-low">1.5</span>
-    <span class="source-tag">NBER</span>
-    <span class="topic-tag" data-topic="causal-inference">Causal Inference</span>
-    
-  </div>
-  <div class="paper-authors">Kevin Boudreau</div>
-</div>
-<div class="paper-card" data-score="1.5" data-source="NBER" data-topics="information">
-  <div class="paper-title">
-    <a href="https://www.nber.org/papers/w34815" target="_blank" rel="noopener">Screen More, Sell Later: Screening and Dynamic Signaling in the Mortgage Market</a>
-  </div>
-  <div class="paper-meta">
-    <span class="score-badge score-low">1.5</span>
-    <span class="source-tag">NBER</span>
-    <span class="topic-tag" data-topic="information">Information Econ</span>
-    
+    <span class="topic-tag" data-topic="information">Information Econ</span><span class="topic-tag" data-topic="housing">housing</span><span class="topic-tag" data-topic="causal-inference">Causal Inference</span>
+    <span class="source-tag" style="background:#f6ffed; color:#389e0d;">⭐ Full analysis</span>
   </div>
   <div class="paper-authors">Manuel Adelino, Bin Wei, Feng Zhao</div>
 </div>
-<div class="paper-card" data-score="0" data-source="NBER" data-topics="">
+<div class="paper-card" data-score="0" data-source="NBER" data-topics="causal-inference">
   <div class="paper-title">
     <a href="https://www.nber.org/papers/w34842" target="_blank" rel="noopener">Nonparametric Identification of Demand without Exogenous Product Characteristics</a>
   </div>
   <div class="paper-meta">
     <span class="score-badge score-low">0.0</span>
     <span class="source-tag">NBER</span>
-    
+    <span class="topic-tag" data-topic="causal-inference">Causal Inference</span>
     
   </div>
   <div class="paper-authors">Kirill Borusyak, Jiafeng Chen, Peter Hull et al.</div>
 </div>
-<div class="paper-card" data-score="0" data-source="NBER" data-topics="">
-  <div class="paper-title">
-    <a href="https://www.nber.org/papers/w34857" target="_blank" rel="noopener">Great Expectations: Responses to Current and Future Transfers for Low-Income Individuals</a>
-  </div>
-  <div class="paper-meta">
-    <span class="score-badge score-low">0.0</span>
-    <span class="source-tag">NBER</span>
-    
-    
-  </div>
-  <div class="paper-authors">Achyuta Adhvaryu, Jean-François Gauthier, Pamela Jakiela et al.</div>
-</div>
-<div class="paper-card" data-score="0" data-source="NBER" data-topics="">
-  <div class="paper-title">
-    <a href="https://www.nber.org/papers/w34864" target="_blank" rel="noopener">Black like us? The Occupational Integration of Black Immigrants</a>
-  </div>
-  <div class="paper-meta">
-    <span class="score-badge score-low">0.0</span>
-    <span class="source-tag">NBER</span>
-    
-    
-  </div>
-  <div class="paper-authors">Mwangi wa Gĩthĩnji, Patrick L. Mason</div>
-</div>
-<div class="paper-card" data-score="0" data-source="NBER" data-topics="">
-  <div class="paper-title">
-    <a href="https://www.nber.org/papers/w34858" target="_blank" rel="noopener">The Promise of Microbial Fertilizer for Affordable and Sustainable Food Production in Africa</a>
-  </div>
-  <div class="paper-meta">
-    <span class="score-badge score-low">0.0</span>
-    <span class="source-tag">NBER</span>
-    
-    
-  </div>
-  <div class="paper-authors">Tavneet Suri, Petar Madjarac, Robert D. van der Hilst</div>
-</div>
-<div class="paper-card" data-score="0" data-source="NBER" data-topics="">
-  <div class="paper-title">
-    <a href="https://www.nber.org/papers/w34865" target="_blank" rel="noopener">What Drives Money Competition: Comparative Advantage in Payments versus Reserves</a>
-  </div>
-  <div class="paper-meta">
-    <span class="score-badge score-low">0.0</span>
-    <span class="source-tag">NBER</span>
-    
-    
-  </div>
-  <div class="paper-authors">Itay Goldstein, Ming Yang, Yao Zeng</div>
-</div>
-<div class="paper-card" data-score="0" data-source="NBER" data-topics="">
-  <div class="paper-title">
-    <a href="https://www.nber.org/papers/w34867" target="_blank" rel="noopener">Weather to Arrest</a>
-  </div>
-  <div class="paper-meta">
-    <span class="score-badge score-low">0.0</span>
-    <span class="source-tag">NBER</span>
-    
-    
-  </div>
-  <div class="paper-authors">Howard Bodenhorn</div>
-</div>
-<div class="paper-card" data-score="0" data-source="NBER" data-topics="">
+<div class="paper-card" data-score="0" data-source="NBER" data-topics="corporate-finance,information">
   <div class="paper-title">
     <a href="https://www.nber.org/papers/w34868" target="_blank" rel="noopener">Venture Fraud</a>
   </div>
   <div class="paper-meta">
     <span class="score-badge score-low">0.0</span>
     <span class="source-tag">NBER</span>
-    
+    <span class="topic-tag" data-topic="corporate-finance">Corp. Finance</span><span class="topic-tag" data-topic="information">Information Econ</span>
     
   </div>
   <div class="paper-authors">Alexander Dyck, Freda Fang, Camille Hebert et al.</div>
 </div>
-<div class="paper-card" data-score="0" data-source="NBER" data-topics="">
+<div class="paper-card" data-score="0" data-source="NBER" data-topics="corporate-finance,information">
   <div class="paper-title">
     <a href="https://www.nber.org/papers/w34870" target="_blank" rel="noopener">Why Do Firms Pay Different Interest Rates on Their Bank Loans?</a>
   </div>
   <div class="paper-meta">
     <span class="score-badge score-low">0.0</span>
     <span class="source-tag">NBER</span>
-    
+    <span class="topic-tag" data-topic="corporate-finance">Corp. Finance</span><span class="topic-tag" data-topic="information">Information Econ</span>
     
   </div>
   <div class="paper-authors">Mary Amiti, Anil K Kashyap, Anna Kovner et al.</div>
 </div>
-<div class="paper-card" data-score="0" data-source="NBER" data-topics="">
-  <div class="paper-title">
-    <a href="https://www.nber.org/papers/w34871" target="_blank" rel="noopener">Range Anxiety</a>
-  </div>
-  <div class="paper-meta">
-    <span class="score-badge score-low">0.0</span>
-    <span class="source-tag">NBER</span>
-    
-    
-  </div>
-  <div class="paper-authors">Panle Jia Barwick, Shanjun Li, Tianli Xia</div>
-</div>
-<div class="paper-card" data-score="0" data-source="NBER" data-topics="">
-  <div class="paper-title">
-    <a href="https://www.nber.org/papers/w34872" target="_blank" rel="noopener">Good Neighborhoods, Good Neighbors, Good Jobs?</a>
-  </div>
-  <div class="paper-meta">
-    <span class="score-badge score-low">0.0</span>
-    <span class="source-tag">NBER</span>
-    
-    
-  </div>
-  <div class="paper-authors">Stephen B. Billings, Mark Hoekstra, Gabriel Pons Rotger</div>
-</div>
-<div class="paper-card" data-score="0" data-source="NBER" data-topics="">
+<div class="paper-card" data-score="0" data-source="NBER" data-topics="housing">
   <div class="paper-title">
     <a href="https://www.nber.org/papers/w34876" target="_blank" rel="noopener">A Unified Urban Model With Non-Homothetic Housing Demand</a>
   </div>
   <div class="paper-meta">
     <span class="score-badge score-low">0.0</span>
     <span class="source-tag">NBER</span>
-    
+    <span class="topic-tag" data-topic="housing">housing</span>
     
   </div>
   <div class="paper-authors">Frédéric Robert-Nicoud, Pierre-Philippe Combes, Gilles Duranton et al.</div>
 </div>
-<div class="paper-card" data-score="0" data-source="NBER" data-topics="">
-  <div class="paper-title">
-    <a href="https://www.nber.org/papers/w34877" target="_blank" rel="noopener">Job Search, Job Amenities and the Gender Pay Gap</a>
-  </div>
-  <div class="paper-meta">
-    <span class="score-badge score-low">0.0</span>
-    <span class="source-tag">NBER</span>
-    
-    
-  </div>
-  <div class="paper-authors">R. Jason Faberman, Andreas I. Mueller, Ayşegül Şahin</div>
-</div>
-<div class="paper-card" data-score="0" data-source="NBER" data-topics="">
-  <div class="paper-title">
-    <a href="https://www.nber.org/papers/w34878" target="_blank" rel="noopener">Settlement of Litigation May Increase or Decrease Deterrence and Social Welfare</a>
-  </div>
-  <div class="paper-meta">
-    <span class="score-badge score-low">0.0</span>
-    <span class="source-tag">NBER</span>
-    
-    
-  </div>
-  <div class="paper-authors">Steven Shavell</div>
-</div>
-<div class="paper-card" data-score="0" data-source="NBER" data-topics="">
-  <div class="paper-title">
-    <a href="https://www.nber.org/papers/w34879" target="_blank" rel="noopener">Bank Runs and Interest Rates: A Revolving Lines Perspective</a>
-  </div>
-  <div class="paper-meta">
-    <span class="score-badge score-low">0.0</span>
-    <span class="source-tag">NBER</span>
-    
-    
-  </div>
-  <div class="paper-authors">Falk Bräuning, Victoria Ivashina</div>
-</div>
-<div class="paper-card" data-score="0" data-source="NBER" data-topics="">
-  <div class="paper-title">
-    <a href="https://www.nber.org/papers/w34880" target="_blank" rel="noopener">Do Informal Social Markets and Online Sellers Help Youths to Avoid E-Cigarette Taxation?</a>
-  </div>
-  <div class="paper-meta">
-    <span class="score-badge score-low">0.0</span>
-    <span class="source-tag">NBER</span>
-    
-    
-  </div>
-  <div class="paper-authors">Chad D. Cotti, Dhaval M. Dave, Tessie Krishna et al.</div>
-</div>
-<div class="paper-card" data-score="0" data-source="NBER" data-topics="">
-  <div class="paper-title">
-    <a href="https://www.nber.org/papers/w34881" target="_blank" rel="noopener">The Local Origins of Business Formation: Entry as a Two-Stage Process</a>
-  </div>
-  <div class="paper-meta">
-    <span class="score-badge score-low">0.0</span>
-    <span class="source-tag">NBER</span>
-    
-    
-  </div>
-  <div class="paper-authors">Emin Dinlersoz, Timothy Dunne, John C. Haltiwanger et al.</div>
-</div>
-<div class="paper-card" data-score="0" data-source="NBER" data-topics="">
-  <div class="paper-title">
-    <a href="https://www.nber.org/papers/w34854" target="_blank" rel="noopener">Building Pro-Worker Artificial Intelligence</a>
-  </div>
-  <div class="paper-meta">
-    <span class="score-badge score-low">0.0</span>
-    <span class="source-tag">NBER</span>
-    
-    
-  </div>
-  <div class="paper-authors">Daron Acemoglu, David Autor, Simon Johnson</div>
-</div>
-<div class="paper-card" data-score="0" data-source="NBER" data-topics="">
-  <div class="paper-title">
-    <a href="https://www.nber.org/papers/w34883" target="_blank" rel="noopener">Shopping From Home</a>
-  </div>
-  <div class="paper-meta">
-    <span class="score-badge score-low">0.0</span>
-    <span class="source-tag">NBER</span>
-    
-    
-  </div>
-  <div class="paper-authors">Scott R. Baker, Nicholas Bloom, Stephanie G. Johnson et al.</div>
-</div>
-<div class="paper-card" data-score="0" data-source="NBER" data-topics="">
-  <div class="paper-title">
-    <a href="https://www.nber.org/papers/w34885" target="_blank" rel="noopener">Demographics and Technology Diffusion: Evidence from Mobile Payments</a>
-  </div>
-  <div class="paper-meta">
-    <span class="score-badge score-low">0.0</span>
-    <span class="source-tag">NBER</span>
-    
-    
-  </div>
-  <div class="paper-authors">Nicolas Crouzet, Pulak Ghosh, Apoorv Gupta et al.</div>
-</div>
-<div class="paper-card" data-score="0" data-source="NBER" data-topics="">
-  <div class="paper-title">
-    <a href="https://www.nber.org/papers/w34886" target="_blank" rel="noopener">Shielding Women from Violence: The Effects of Violence Prevention and Monitoring Centers on Intimate Partner Violence in Türkiye</a>
-  </div>
-  <div class="paper-meta">
-    <span class="score-badge score-low">0.0</span>
-    <span class="source-tag">NBER</span>
-    
-    
-  </div>
-  <div class="paper-authors">Gunes Asik, Bilge Erten, Erdal Tekin et al.</div>
-</div>
-<div class="paper-card" data-score="0" data-source="NBER" data-topics="">
-  <div class="paper-title">
-    <a href="https://www.nber.org/papers/w34887" target="_blank" rel="noopener">A Theory of Subsidy Harvesting in Livestock Price Insurance</a>
-  </div>
-  <div class="paper-meta">
-    <span class="score-badge score-low">0.0</span>
-    <span class="source-tag">NBER</span>
-    
-    
-  </div>
-  <div class="paper-authors">Michael K. Adjemian, A. Ford Ramsey</div>
-</div>
-<div class="paper-card" data-score="0" data-source="NBER" data-topics="">
-  <div class="paper-title">
-    <a href="https://www.nber.org/papers/w34888" target="_blank" rel="noopener">Drivers of Dollar Share in Foreign Exchange Reserves</a>
-  </div>
-  <div class="paper-meta">
-    <span class="score-badge score-low">0.0</span>
-    <span class="source-tag">NBER</span>
-    
-    
-  </div>
-  <div class="paper-authors">Linda S. Goldberg, Oliver Hannaoui</div>
-</div>
-<div class="paper-card" data-score="0" data-source="NBER" data-topics="">
-  <div class="paper-title">
-    <a href="https://www.nber.org/papers/w34855" target="_blank" rel="noopener">Trading Goods for Lives: NAFTA’s Mortality Impacts and Implications</a>
-  </div>
-  <div class="paper-meta">
-    <span class="score-badge score-low">0.0</span>
-    <span class="source-tag">NBER</span>
-    
-    
-  </div>
-  <div class="paper-authors">Amy Finkelstein, Matthew J. Notowidigdo, Steven X. Shi</div>
-</div>
-<div class="paper-card" data-score="0" data-source="NBER" data-topics="">
+<div class="paper-card" data-score="0" data-source="NBER" data-topics="information,corporate-finance">
   <div class="paper-title">
     <a href="https://www.nber.org/papers/w34889" target="_blank" rel="noopener">Optimal Simple Ratings</a>
   </div>
   <div class="paper-meta">
     <span class="score-badge score-low">0.0</span>
     <span class="source-tag">NBER</span>
-    
+    <span class="topic-tag" data-topic="information">Information Econ</span><span class="topic-tag" data-topic="corporate-finance">Corp. Finance</span>
     
   </div>
   <div class="paper-authors">Hugo Hopenhayn, Maryam Saeedi</div>
 </div>
-<div class="paper-card" data-score="0" data-source="NBER" data-topics="">
+<div class="paper-card" data-score="0" data-source="NBER" data-topics="text-methods,corporate-political">
   <div class="paper-title">
-    <a href="https://www.nber.org/papers/w34821" target="_blank" rel="noopener">Marriage and the Intergenerational Mobility of Women: Evidence from Marriage Certificates 1850-1920</a>
+    <a href="papers/nber-w34834.html">GPT as a Measurement Tool</a>
   </div>
   <div class="paper-meta">
     <span class="score-badge score-low">0.0</span>
     <span class="source-tag">NBER</span>
-    
-    
-  </div>
-  <div class="paper-authors">Katherine Eriksson, Gregory Niemesh, Myera Rashid et al.</div>
-</div>
-<div class="paper-card" data-score="0" data-source="NBER" data-topics="">
-  <div class="paper-title">
-    <a href="https://www.nber.org/papers/w34825" target="_blank" rel="noopener">Hierarchy and Performance Pay: Experimental Evidence from the Public Sector</a>
-  </div>
-  <div class="paper-meta">
-    <span class="score-badge score-low">0.0</span>
-    <span class="source-tag">NBER</span>
-    
-    
-  </div>
-  <div class="paper-authors">Garance Genicot, Zahra Mansoor, Ghazala Mansuri</div>
-</div>
-<div class="paper-card" data-score="0" data-source="NBER" data-topics="">
-  <div class="paper-title">
-    <a href="https://www.nber.org/papers/w34826" target="_blank" rel="noopener">A Population Perspective on the Beneficiaries of Public and Private Assistance Immediately and over the Long-term After a Major Disaster</a>
-  </div>
-  <div class="paper-meta">
-    <span class="score-badge score-low">0.0</span>
-    <span class="source-tag">NBER</span>
-    
-    
-  </div>
-  <div class="paper-authors">Elizabeth Frankenberg, Nicholas Ingwersen, Cecep Sumantri et al.</div>
-</div>
-<div class="paper-card" data-score="0" data-source="NBER" data-topics="">
-  <div class="paper-title">
-    <a href="https://www.nber.org/papers/w34853" target="_blank" rel="noopener">Bank Failures: The Roles of Solvency and Liquidity</a>
-  </div>
-  <div class="paper-meta">
-    <span class="score-badge score-low">0.0</span>
-    <span class="source-tag">NBER</span>
-    
-    
-  </div>
-  <div class="paper-authors">Sergio A. Correia, Stephan Luck, Emil Verner</div>
-</div>
-<div class="paper-card" data-score="0" data-source="NBER" data-topics="">
-  <div class="paper-title">
-    <a href="https://www.nber.org/papers/w34828" target="_blank" rel="noopener">Seeing Green: The Effects of Financial Exposures on Support for Climate Action</a>
-  </div>
-  <div class="paper-meta">
-    <span class="score-badge score-low">0.0</span>
-    <span class="source-tag">NBER</span>
-    
-    
-  </div>
-  <div class="paper-authors">Michelle Hanlon, Saumitra Jha, Namrata Kala et al.</div>
-</div>
-<div class="paper-card" data-score="0" data-source="NBER" data-topics="">
-  <div class="paper-title">
-    <a href="https://www.nber.org/papers/w34829" target="_blank" rel="noopener">Mass Media and Contraception Use: An Experimental Test of Modernization Theory in Burkina Faso</a>
-  </div>
-  <div class="paper-meta">
-    <span class="score-badge score-low">0.0</span>
-    <span class="source-tag">NBER</span>
-    
-    
-  </div>
-  <div class="paper-authors">Rachel Glennerster, Joanna Murray, Victor Pouliquen</div>
-</div>
-<div class="paper-card" data-score="0" data-source="NBER" data-topics="">
-  <div class="paper-title">
-    <a href="https://www.nber.org/papers/w34830" target="_blank" rel="noopener">Using Life Satisfaction Data to Measure Parents' Child Gender Preferences</a>
-  </div>
-  <div class="paper-meta">
-    <span class="score-badge score-low">0.0</span>
-    <span class="source-tag">NBER</span>
-    
-    
-  </div>
-  <div class="paper-authors">Anna Barbeta-Margarit, Seema Jayachandran, Suanna Oh</div>
-</div>
-<div class="paper-card" data-score="0" data-source="NBER" data-topics="">
-  <div class="paper-title">
-    <a href="https://www.nber.org/papers/w34831" target="_blank" rel="noopener">More Hours, More Work: Head Start Expansions Boost Maternal Employment</a>
-  </div>
-  <div class="paper-meta">
-    <span class="score-badge score-low">0.0</span>
-    <span class="source-tag">NBER</span>
-    
-    
-  </div>
-  <div class="paper-authors">Chloe Gibbs, Esra Kose, Maria Rosales-Rueda</div>
-</div>
-<div class="paper-card" data-score="0" data-source="NBER" data-topics="">
-  <div class="paper-title">
-    <a href="https://www.nber.org/papers/w34832" target="_blank" rel="noopener">Gender Norms and Development</a>
-  </div>
-  <div class="paper-meta">
-    <span class="score-badge score-low">0.0</span>
-    <span class="source-tag">NBER</span>
-    
-    
-  </div>
-  <div class="paper-authors">Erica M. Field, Madeline McKelway, Alessandra Voena</div>
-</div>
-<div class="paper-card" data-score="0" data-source="NBER" data-topics="">
-  <div class="paper-title">
-    <a href="https://www.nber.org/papers/w34834" target="_blank" rel="noopener">GPT as a Measurement Tool</a>
-  </div>
-  <div class="paper-meta">
-    <span class="score-badge score-low">0.0</span>
-    <span class="source-tag">NBER</span>
-    
-    
+    <span class="topic-tag" data-topic="text-methods">Text Methods</span><span class="topic-tag" data-topic="corporate-political">Corp. Political</span>
+    <span class="source-tag" style="background:#f6ffed; color:#389e0d;">⭐ Full analysis</span>
   </div>
   <div class="paper-authors">Hemanth Asirvatham, Elliott Mokski, Andrei Shleifer</div>
 </div>
-<div class="paper-card" data-score="0" data-source="NBER" data-topics="">
-  <div class="paper-title">
-    <a href="https://www.nber.org/papers/w34835" target="_blank" rel="noopener">Self-assessed Life-Cycle Saving Behavior in the U.S. and Singapore: Procrastination Versus Economic Shocks</a>
-  </div>
-  <div class="paper-meta">
-    <span class="score-badge score-low">0.0</span>
-    <span class="source-tag">NBER</span>
-    
-    
-  </div>
-  <div class="paper-authors">Susann Rohwedder, Michael D. Hurd, Axel H. Börsch-Supan</div>
-</div>
-<div class="paper-card" data-score="0" data-source="NBER" data-topics="">
-  <div class="paper-title">
-    <a href="https://www.nber.org/papers/w34822" target="_blank" rel="noopener">Incentives and Prosocial Discomfort: A Laboratory Experiment</a>
-  </div>
-  <div class="paper-meta">
-    <span class="score-badge score-low">0.0</span>
-    <span class="source-tag">NBER</span>
-    
-    
-  </div>
-  <div class="paper-authors">Grace E. Steward, Mario Macis, Nicola Lacetera et al.</div>
-</div>
-<div class="paper-card" data-score="0" data-source="NBER" data-topics="">
-  <div class="paper-title">
-    <a href="https://www.nber.org/papers/w34839" target="_blank" rel="noopener">Reconstruction following Destruction: Entrepreneurship in the Aftermath of a Natural Disaster</a>
-  </div>
-  <div class="paper-meta">
-    <span class="score-badge score-low">0.0</span>
-    <span class="source-tag">NBER</span>
-    
-    
-  </div>
-  <div class="paper-authors">Richard Lombardo, Elizabeth Frankenberg, Duncan Thomas</div>
-</div>
-<div class="paper-card" data-score="0" data-source="NBER" data-topics="">
-  <div class="paper-title">
-    <a href="https://www.nber.org/papers/w34823" target="_blank" rel="noopener">Currency Pegs, Trade Imbalances and Unemployment: A Reevaluation of the China Shock</a>
-  </div>
-  <div class="paper-meta">
-    <span class="score-badge score-low">0.0</span>
-    <span class="source-tag">NBER</span>
-    
-    
-  </div>
-  <div class="paper-authors">Bumsoo Kim, Marc De la Barrea, Masao Fukui</div>
-</div>
-<div class="paper-card" data-score="0" data-source="NBER" data-topics="">
+<div class="paper-card" data-score="0" data-source="NBER" data-topics="housing,causal-inference">
   <div class="paper-title">
     <a href="https://www.nber.org/papers/w34824" target="_blank" rel="noopener">Interest Rate Pass-Through With Adjustable Rate Mortgages</a>
   </div>
   <div class="paper-meta">
     <span class="score-badge score-low">0.0</span>
     <span class="source-tag">NBER</span>
-    
+    <span class="topic-tag" data-topic="housing">housing</span><span class="topic-tag" data-topic="causal-inference">Causal Inference</span>
     
   </div>
   <div class="paper-authors">Manuel Adelino, Miguel A. Ferreira, Sujiao Zhao</div>
 </div>
-<div class="paper-card" data-score="0" data-source="NBER" data-topics="">
-  <div class="paper-title">
-    <a href="https://www.nber.org/papers/w34840" target="_blank" rel="noopener">The Silk Road of Ashes: Exposure to NAFTA and Adult Mortality</a>
-  </div>
-  <div class="paper-meta">
-    <span class="score-badge score-low">0.0</span>
-    <span class="source-tag">NBER</span>
-    
-    
-  </div>
-  <div class="paper-authors">Hamid Noghanibehambari, Jason Fletcher</div>
-</div>
-<div class="paper-card" data-score="0" data-source="NBER" data-topics="">
-  <div class="paper-title">
-    <a href="https://www.nber.org/papers/w34841" target="_blank" rel="noopener">Classrooms as Workplaces: How Student Composition Affects Teacher Health</a>
-  </div>
-  <div class="paper-meta">
-    <span class="score-badge score-low">0.0</span>
-    <span class="source-tag">NBER</span>
-    
-    
-  </div>
-  <div class="paper-authors">Krzysztof Karbownik, Helena Svaleryd, Jonas Vlachos et al.</div>
-</div>
-<div class="paper-card" data-score="0" data-source="NBER" data-topics="">
-  <div class="paper-title">
-    <a href="https://www.nber.org/papers/w34843" target="_blank" rel="noopener">How Do Workers Think About The Costs and Benefits of Freelance Work? New Evidence From a Survey Experiment</a>
-  </div>
-  <div class="paper-meta">
-    <span class="score-badge score-low">0.0</span>
-    <span class="source-tag">NBER</span>
-    
-    
-  </div>
-  <div class="paper-authors">Edward Freeland, Andrew Garin, Dmitri K. Koustas</div>
-</div>
-<div class="paper-card" data-score="0" data-source="NBER" data-topics="">
-  <div class="paper-title">
-    <a href="https://www.nber.org/papers/w34844" target="_blank" rel="noopener">Liquidity Flows to Bank-Affiliated Broker Dealers: Insights from Volumes and Prices</a>
-  </div>
-  <div class="paper-meta">
-    <span class="score-badge score-low">0.0</span>
-    <span class="source-tag">NBER</span>
-    
-    
-  </div>
-  <div class="paper-authors">Jennie Bai, Erik Bostrom, Sebastian Infante et al.</div>
-</div>
-<div class="paper-card" data-score="0" data-source="NBER" data-topics="">
-  <div class="paper-title">
-    <a href="https://www.nber.org/papers/w34847" target="_blank" rel="noopener">The Differential Impacts of Critical Mineral Prices and Oil Prices on the Economy</a>
-  </div>
-  <div class="paper-meta">
-    <span class="score-badge score-low">0.0</span>
-    <span class="source-tag">NBER</span>
-    
-    
-  </div>
-  <div class="paper-authors">Adrien Concordel, Phuong Ho, Christopher R. Knittel</div>
-</div>
-<div class="paper-card" data-score="0" data-source="NBER" data-topics="">
-  <div class="paper-title">
-    <a href="https://www.nber.org/papers/w34788" target="_blank" rel="noopener">Coca’s Return and the American Overdose Fallout</a>
-  </div>
-  <div class="paper-meta">
-    <span class="score-badge score-low">0.0</span>
-    <span class="source-tag">NBER</span>
-    
-    
-  </div>
-  <div class="paper-authors">Xinming Du, Benjamin Hansen, Shan Zhang et al.</div>
-</div>
-<div class="paper-card" data-score="0" data-source="NBER" data-topics="">
-  <div class="paper-title">
-    <a href="https://www.nber.org/papers/w34794" target="_blank" rel="noopener">ICE Arrests across Trump's First and Second Terms: Variation in Targeting, Method, and Geography</a>
-  </div>
-  <div class="paper-meta">
-    <span class="score-badge score-low">0.0</span>
-    <span class="source-tag">NBER</span>
-    
-    
-  </div>
-  <div class="paper-authors">Chloe N. East, Caitlin Patler, Elizabeth Cox</div>
-</div>
-<div class="paper-card" data-score="0" data-source="NBER" data-topics="">
-  <div class="paper-title">
-    <a href="https://www.nber.org/papers/w34814" target="_blank" rel="noopener">Interest Rates and Equity Valuations</a>
-  </div>
-  <div class="paper-meta">
-    <span class="score-badge score-low">0.0</span>
-    <span class="source-tag">NBER</span>
-    
-    
-  </div>
-  <div class="paper-authors">Niels Joachim Gormsen, Eben Lazarus</div>
-</div>
-<div class="paper-card" data-score="0" data-source="NBER" data-topics="">
-  <div class="paper-title">
-    <a href="https://www.nber.org/papers/w34816" target="_blank" rel="noopener">Extractive Taxation and the French Revolution</a>
-  </div>
-  <div class="paper-meta">
-    <span class="score-badge score-low">0.0</span>
-    <span class="source-tag">NBER</span>
-    
-    
-  </div>
-  <div class="paper-authors">Tommaso Giommoni, Gabriel Loumeau, Marco Tabellini</div>
-</div>
-<div class="paper-card" data-score="0" data-source="NBER" data-topics="">
+<div class="paper-card" data-score="0" data-source="NBER" data-topics="causal-inference">
   <div class="paper-title">
     <a href="https://www.nber.org/papers/w34796" target="_blank" rel="noopener">Clustered Network Connectedness: A New Measurement Framework, with Application to Global Equity Markets</a>
   </div>
   <div class="paper-meta">
     <span class="score-badge score-low">0.0</span>
     <span class="source-tag">NBER</span>
-    
+    <span class="topic-tag" data-topic="causal-inference">Causal Inference</span>
     
   </div>
   <div class="paper-authors">Bastien Buchwalter, Francis X. Diebold, Kamil Yilmaz</div>
 </div>
-<div class="paper-card" data-score="0" data-source="NBER" data-topics="">
+```
+
+## Week 1 · Dec 29–4, 2026 {#2026-w01}
+
+```{=html}
+<div class="paper-card" data-score="0" data-source="SSRN" data-topics="corporate-political,text-methods">
   <div class="paper-title">
-    <a href="https://www.nber.org/papers/w34805" target="_blank" rel="noopener">School Vaping Bans and Youth E-Cigarette Use</a>
+    <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5191573" target="_blank" rel="noopener">Comments that Count: Corporate Influence in SEC Governance Rulemaking</a>
   </div>
   <div class="paper-meta">
     <span class="score-badge score-low">0.0</span>
-    <span class="source-tag">NBER</span>
-    
+    <span class="source-tag">SSRN</span>
+    <span class="topic-tag" data-topic="corporate-political">Corp. Political</span><span class="topic-tag" data-topic="text-methods">Text Methods</span>
     
   </div>
-  <div class="paper-authors">Dhaval M. Dave, Jooyoung Kim, Nikolaos Prodromidis et al.</div>
+  <div class="paper-authors">Qianzhou Du, Jiekun Huang, Pengfei Ye et al.</div>
 </div>
-<div class="paper-card" data-score="0" data-source="NBER" data-topics="">
+<div class="paper-card" data-score="0" data-source="SSRN" data-topics="text-methods,corporate-political">
   <div class="paper-title">
-    <a href="https://www.nber.org/papers/w34806" target="_blank" rel="noopener">Heaven or Earth? The Evolving Role of Global Shocks for Domestic Monetary Policy</a>
+    <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5024250" target="_blank" rel="noopener">Economic Surveillance Using Corporate Text</a>
   </div>
   <div class="paper-meta">
     <span class="score-badge score-low">0.0</span>
-    <span class="source-tag">NBER</span>
-    
+    <span class="source-tag">SSRN</span>
+    <span class="topic-tag" data-topic="text-methods">Text Methods</span><span class="topic-tag" data-topic="corporate-political">Corp. Political</span>
     
   </div>
-  <div class="paper-authors">Kristin Forbes, Jongrim Ha, M. Ayhan Kose</div>
+  <div class="paper-authors">Tarek A. Hassan, Stephan Hollander, Aakash Kalyani et al.</div>
 </div>
-<div class="paper-card" data-score="0" data-source="NBER" data-topics="">
+<div class="paper-card" data-score="0" data-source="SSRN" data-topics="corporate-political">
   <div class="paper-title">
-    <a href="https://www.nber.org/papers/w34787" target="_blank" rel="noopener">Protest Matters: The Effects of Protests on Economic Redistribution</a>
+    <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5006884" target="_blank" rel="noopener">Lobbying Congress versus Agencies</a>
   </div>
   <div class="paper-meta">
     <span class="score-badge score-low">0.0</span>
-    <span class="source-tag">NBER</span>
-    
-    
-  </div>
-  <div class="paper-authors">Belinda Archibong, Chinemelu Okafor, Evans S. Osabuohien et al.</div>
-</div>
-<div class="paper-card" data-score="0" data-source="NBER" data-topics="">
-  <div class="paper-title">
-    <a href="https://www.nber.org/papers/w34790" target="_blank" rel="noopener">The Economic Impact of Mass Deportations</a>
-  </div>
-  <div class="paper-meta">
-    <span class="score-badge score-low">0.0</span>
-    <span class="source-tag">NBER</span>
-    
+    <span class="source-tag">SSRN</span>
+    <span class="topic-tag" data-topic="corporate-political">Corp. Political</span>
     
   </div>
-  <div class="paper-authors">Javier Cravino, Andrei A. Levchenko, Francesc Ortega et al.</div>
-</div>
-<div class="paper-card" data-score="0" data-source="NBER" data-topics="">
-  <div class="paper-title">
-    <a href="https://www.nber.org/papers/w34791" target="_blank" rel="noopener">Is Immigration Good for Health? The Effect of Immigration on Older Adult Mortality in the United States</a>
-  </div>
-  <div class="paper-meta">
-    <span class="score-badge score-low">0.0</span>
-    <span class="source-tag">NBER</span>
-    
-    
-  </div>
-  <div class="paper-authors">David C. Grabowski, Jonathan Gruber, Brian E. McGarry</div>
-</div>
-<div class="paper-card" data-score="0" data-source="NBER" data-topics="">
-  <div class="paper-title">
-    <a href="https://www.nber.org/papers/w34797" target="_blank" rel="noopener">Contract Design and Insurance Demand</a>
-  </div>
-  <div class="paper-meta">
-    <span class="score-badge score-low">0.0</span>
-    <span class="source-tag">NBER</span>
-    
-    
-  </div>
-  <div class="paper-authors">Jing Cai</div>
-</div>
-<div class="paper-card" data-score="0" data-source="NBER" data-topics="">
-  <div class="paper-title">
-    <a href="https://www.nber.org/papers/w34799" target="_blank" rel="noopener">The Effect of Exposure: Evidence from Spatial Choices in Nairobi</a>
-  </div>
-  <div class="paper-meta">
-    <span class="score-badge score-low">0.0</span>
-    <span class="source-tag">NBER</span>
-    
-    
-  </div>
-  <div class="paper-authors">Joshua T. Dean, Gabriel Kreindler, Oluchi Mbonu</div>
-</div>
-<div class="paper-card" data-score="0" data-source="NBER" data-topics="">
-  <div class="paper-title">
-    <a href="https://www.nber.org/papers/w34800" target="_blank" rel="noopener">Class Mobility in the Era of Rising Inequality: A Synthetic Dynasty Analysis</a>
-  </div>
-  <div class="paper-meta">
-    <span class="score-badge score-low">0.0</span>
-    <span class="source-tag">NBER</span>
-    
-    
-  </div>
-  <div class="paper-authors">Geoffrey Wodtke, Weiqi Wang, Kristina Butaeva et al.</div>
-</div>
-<div class="paper-card" data-score="0" data-source="NBER" data-topics="">
-  <div class="paper-title">
-    <a href="https://www.nber.org/papers/w34801" target="_blank" rel="noopener">Loan-funded Loans: Equity-like Liabilities inside Bank Holding Companies</a>
-  </div>
-  <div class="paper-meta">
-    <span class="score-badge score-low">0.0</span>
-    <span class="source-tag">NBER</span>
-    
-    
-  </div>
-  <div class="paper-authors">Jennie Bai, Murillo Campello, Pradeep Muthukrishnan</div>
-</div>
-<div class="paper-card" data-score="0" data-source="NBER" data-topics="">
-  <div class="paper-title">
-    <a href="https://www.nber.org/papers/w34802" target="_blank" rel="noopener">Competition and Fraud in Health Care</a>
-  </div>
-  <div class="paper-meta">
-    <span class="score-badge score-low">0.0</span>
-    <span class="source-tag">NBER</span>
-    
-    
-  </div>
-  <div class="paper-authors">Renuka M. Diwan, Paul J. Eliason, Riley League et al.</div>
-</div>
-<div class="paper-card" data-score="0" data-source="NBER" data-topics="">
-  <div class="paper-title">
-    <a href="https://www.nber.org/papers/w34803" target="_blank" rel="noopener">Inferring Prices from Quantities</a>
-  </div>
-  <div class="paper-meta">
-    <span class="score-badge score-low">0.0</span>
-    <span class="source-tag">NBER</span>
-    
-    
-  </div>
-  <div class="paper-authors">David Argente, Chang-Tai Hsieh, Munseob Lee</div>
-</div>
-<div class="paper-card" data-score="0" data-source="NBER" data-topics="">
-  <div class="paper-title">
-    <a href="https://www.nber.org/papers/w34804" target="_blank" rel="noopener">Aggregate Employment and the Rise of Services across Time and Countries</a>
-  </div>
-  <div class="paper-meta">
-    <span class="score-badge score-low">0.0</span>
-    <span class="source-tag">NBER</span>
-    
-    
-  </div>
-  <div class="paper-authors">Margarida Duarte, Diego Restuccia</div>
-</div>
-<div class="paper-card" data-score="0" data-source="NBER" data-topics="">
-  <div class="paper-title">
-    <a href="https://www.nber.org/papers/w34810" target="_blank" rel="noopener">Searching for Fish in Trees (緣木求魚)? Economic Development when Context Matters</a>
-  </div>
-  <div class="paper-meta">
-    <span class="score-badge score-low">0.0</span>
-    <span class="source-tag">NBER</span>
-    
-    
-  </div>
-  <div class="paper-authors">Jacob Moscona, Nathan Nunn, James A. Robinson</div>
-</div>
-<div class="paper-card" data-score="0" data-source="NBER" data-topics="">
-  <div class="paper-title">
-    <a href="https://www.nber.org/papers/w34812" target="_blank" rel="noopener">Early Learning Across Decades: Advances in Measuring Head Start Effectiveness</a>
-  </div>
-  <div class="paper-meta">
-    <span class="score-badge score-low">0.0</span>
-    <span class="source-tag">NBER</span>
-    
-    
-  </div>
-  <div class="paper-authors">Chloe Gibbs</div>
-</div>
-<div class="paper-card" data-score="0" data-source="NBER" data-topics="">
-  <div class="paper-title">
-    <a href="https://www.nber.org/papers/w34817" target="_blank" rel="noopener">International Currency Dominance</a>
-  </div>
-  <div class="paper-meta">
-    <span class="score-badge score-low">0.0</span>
-    <span class="source-tag">NBER</span>
-    
-    
-  </div>
-  <div class="paper-authors">Joseph Abadi, Jesús Fernández-Villaverde, Daniel Sanches</div>
-</div>
-<div class="paper-card" data-score="0" data-source="NBER" data-topics="">
-  <div class="paper-title">
-    <a href="https://www.nber.org/papers/w34818" target="_blank" rel="noopener">Residential Segregation and Unequal Access to Local Public Services in India: Evidence from 1.5m Neighborhoods</a>
-  </div>
-  <div class="paper-meta">
-    <span class="score-badge score-low">0.0</span>
-    <span class="source-tag">NBER</span>
-    
-    
-  </div>
-  <div class="paper-authors">Sam Asher, Kritarth Jha, Paul Novosad et al.</div>
-</div>
-<div class="paper-card" data-score="0" data-source="NBER" data-topics="">
-  <div class="paper-title">
-    <a href="https://www.nber.org/papers/w34819" target="_blank" rel="noopener">Financial Incentives, Health Screening, and Selection into Mental Health Care: Experimental Evidence from College Students in India</a>
-  </div>
-  <div class="paper-meta">
-    <span class="score-badge score-low">0.0</span>
-    <span class="source-tag">NBER</span>
-    
-    
-  </div>
-  <div class="paper-authors">Emily Breza, Kevin Carney, Vijaya Raghavan et al.</div>
-</div>
-<div class="paper-card" data-score="0" data-source="NBER" data-topics="">
-  <div class="paper-title">
-    <a href="https://www.nber.org/papers/w34820" target="_blank" rel="noopener">Are Government Bonds Safe in Times of War and Pandemic?</a>
-  </div>
-  <div class="paper-meta">
-    <span class="score-badge score-low">0.0</span>
-    <span class="source-tag">NBER</span>
-    
-    
-  </div>
-  <div class="paper-authors">Zhengyang Jiang, Hanno Lustig, Stijn Van Nieuwerburgh et al.</div>
+  <div class="paper-authors">Michelle Lowry, Ekaterina Volkova</div>
 </div>
 ```
 
